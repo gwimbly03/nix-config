@@ -1,17 +1,13 @@
-  {
-  config,
-  pkgs,
-  inputs,
-  ...
-}:
+{ pkgs, ... }:
 
-{
-  environment.systemPackages = with pkgs; [
-    wget
-    git
-    nodePackages.prettier
-    xwayland
-    ffmpeg
-    typst 
-  ];
-  }
+with pkgs;
+
+[
+  wget
+  git
+  nodePackages.prettier
+  xwayland
+  ffmpeg
+  typst
+]
+

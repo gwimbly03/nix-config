@@ -1,16 +1,18 @@
-{ config, pkgs, inputs, self, ... }:
+{ config, pkgs, inputs, ... }:
 
 let
   inherit (pkgs.stdenv.hostPlatform) system;
-  allPackages = import ../../pkgs/packages.nix { inherit pkgs; };
-  nixvim-package = inputs.nixvim-config.packages.${system}.default;
-  extended-nixvim = nixvim-package.extend config.stylix.targets.nixvim.exportedModule;
-in {
+
+  # Import your custom packages
+  allPackages = import ../../pkgs/hm_packages.nix { inherit pkgs; };
+in
+{
   home = {
     username = "gwimbly";
     homeDirectory = "/home/gwimbly";
     stateVersion = "25.05";
 
+    # Home Manager packages
     packages = allPackages;
 
     sessionVariables = {
@@ -31,8 +33,7 @@ in {
 
     # Local modules
     ../../env/stylix/stylix.nix
-    ../../apps/steam.nix
-    ../../apps/lact.nix
+    #../../apps/steam.nix
     ../../apps/fish/fish.nix
     ../../apps/niri/niri.nix
     ../../apps/nixcord.nix
@@ -81,6 +82,10 @@ in {
       extraPackages = with pkgs; [ wl-clipboard ];
       opts.clipboard = [ "unnamedplus" ];
     };
+
+    #steam = {
+    #  enable = true;
+    #};
   };
 }
 
