@@ -1,4 +1,5 @@
 { config, pkgs, inputs, lib, self, ... }:
+
 {
   imports = [
     ./hardware-configuration.nix
@@ -104,15 +105,19 @@
       packages = [ pkgs.bluez ];
     };
 
-    xserver.enable = false;
+    xserver.enable = false; # Hyprland (Wayland) does not need X11
+
     openssh.settings = {
       PermitRootLogin = "no";
       PasswordAuthentication = "no";
     };
+
+    # NVIDIA persistence daemon
+    nvidia-persistenced.enable = true;
   };
 
   networking = {
-    hostName = "Cyclonus";
+    hostName = "Megatronus";
     wireless = {
       enable = false;
       userControlled.enable = false;
@@ -129,6 +134,13 @@
   hardware = {
     enableRedistributableFirmware = true;
     bluetooth.enable = true;
+
+    # NVIDIA DKMS for linux-zen
+    nvidia.package = pkgs.nvidiaPackages.dkms;
+
+    # OpenGL and Vulkan support for Wayland/Hyprland
+    opengl.enable = true;
+    opengl.extraPackages = with pkgs; [ nvidia-x11 ];
   };
 
   i18n = {

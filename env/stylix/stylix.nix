@@ -5,7 +5,8 @@
     enable = true;
     autoEnable = true;
     enableReleaseChecks = false;
-
+    
+    polarity = "dark";
     # Transparency
     opacity.terminal = 0.8;
 
@@ -41,9 +42,16 @@
     # Cursor
     cursor = {
       package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Dark";
+      name = "Bibata-Modern-Classic";
       size = 14;
     };
+
+    iconTheme = {
+      enable = true;
+      package = pkgs.candy-icons; # Replace with actual package if different
+      light = "candy-icons";
+      dark = "candy-icons";
+    };  
   };
 }
 

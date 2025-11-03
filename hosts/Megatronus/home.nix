@@ -24,10 +24,10 @@ in
 
   imports = [
     # Inputs
-    inputs.niri.homeModules.niri
+    inputs.hyprland.homeModules.hyprland
     inputs.stylix.homeModules.stylix
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
+    inputs.dankMaterialShell.homeModules.dankMaterialShell.hyprland
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
@@ -35,7 +35,7 @@ in
     ../../env/stylix/stylix.nix
     #../../apps/steam.nix
     ../../apps/fish/fish.nix
-    ../../apps/niri/niri.nix
+    ../../apps/hypr/hypr.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
@@ -82,6 +82,9 @@ in
       opts.clipboard = [ "unnamedplus" ];
     };
     
+    protontricks = {
+      enable = true; # this is enough to install it if it exists in Nixpkgs
+    };
     #steam = {
     #  enable = true;
     #};
