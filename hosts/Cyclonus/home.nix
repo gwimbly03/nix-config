@@ -34,6 +34,7 @@ in
     # Local modules
     ../../env/stylix/stylix.nix
     #../../apps/steam.nix
+    ../../apps/thunar.nix
     ../../apps/fish/fish.nix
     ../../apps/niri/niri.nix
     ../../apps/nixcord.nix

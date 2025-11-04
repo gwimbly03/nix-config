@@ -8,15 +8,12 @@
     acpi
     lm_sensors
     power-profiles-daemon
+    networkmanagerapplet
 
     # Gaming
     steam
 
-    file-roller
-    obsidian
-    xfce.thunar
     adw-gtk3
-    font-manager
     feishin
 
     # TUI
@@ -70,12 +67,6 @@
     docker-compose
     wireshark
     nmap
-
-    # Quickshell
-    qt6Packages.qt5compat
-    libsForQt5.qt5.qtgraphicaleffects
-    kdePackages.qtbase
-    kdePackages.qtdeclarative
 
     # Niri
     xwayland-satellite
