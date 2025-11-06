@@ -74,8 +74,12 @@
   ];
 
   boot = {
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
+    loader.grub = {
+      enable = true;
+      version = 2;
+      device = "/dev/nvme0n1p1"; # change to match pc
+      efiSupport = true;
+      efiInstallAsRemovable = true; # optional, useful for some EFI setups
     kernelPackages = pkgs.linuxPackages_zen;
     kernelModules = [ "i2c-dev" ];
     initrd.availableKernelModules = [ "i2c-dev" ];
@@ -95,6 +99,7 @@
     printing.enable = true;
     gvfs.enable = true;
     tumbler.enable = true;
+
     tailscale = {
       enable = true;
       useRoutingFeatures = "client";
@@ -135,12 +140,27 @@
     enableRedistributableFirmware = true;
     bluetooth.enable = true;
 
-    # NVIDIA DKMS for linux-zen
-    nvidia.package = pkgs.nvidiaPackages.dkms;
-
     # OpenGL and Vulkan support for Wayland/Hyprland
     opengl.enable = true;
     opengl.extraPackages = with pkgs; [ nvidia-x11 ];
+
+    # Enable OpenGL/graphics
+    graphics.enable = true;
+
+    # NVIDIA settings
+    nvidia = {
+      modesetting.enable = true;
+      powerManagement.enable = false;
+      powerManagement.finegrained = false;
+      open = true;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.latest;
+    };
+  };
+
+  # NVIDIA-specific environment optimization
+  environment.variables = {
+    WLR_NO_HARDWARE_CURSORS = "1"; # fixes cursor issues with Hyprland
   };
 
   i18n = {
@@ -184,5 +204,7 @@
   services.udev.packages = [ pkgs.rwedid ];
 
   system.stateVersion = "25.05";
+
+  services.xserver.videoDrivers = ["nvidia"];
 }
 
