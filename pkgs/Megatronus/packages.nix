@@ -10,12 +10,6 @@
     power-profiles-daemon
 
     # Gaming
-    steam
-    lutris
-    steamcmd
-    protonup-qt
-    nexusmods-app
-    winetricks
     openrgb-with-all-plugins
 
     file-roller

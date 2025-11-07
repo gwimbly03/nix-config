@@ -24,10 +24,11 @@ in
 
   imports = [
     # Inputs
-    inputs.hyprland.homeModules.hyprland
+    #inputs.hyprland.homeModules.hyprland
+    #inputs.hyprland.homeConfigurations."gwimbly".activationPackage
     inputs.stylix.homeModules.stylix
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.hyprland
+    #inputs.dankMaterialShell.homeModules.dankMaterialShell.hyprland
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
@@ -85,9 +86,6 @@ in
       opts.clipboard = [ "unnamedplus" ];
     };
     
-    protontricks = {
-      enable = true; # this is enough to install it if it exists in Nixpkgs
-    };
     #steam = {
     #  enable = true;
     #};

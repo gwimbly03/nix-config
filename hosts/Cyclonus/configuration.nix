@@ -7,8 +7,7 @@
     ../../env/env.nix
     ../../pkgs/packages.nix
     ../../apps/steam.nix
-    ../../apps/thunar.nix
-
+    "${self}/apps/nautilus.nix"
   ];
 
   time.timeZone = "America/Vancouver";

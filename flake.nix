@@ -51,28 +51,28 @@
   };
 
   outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, hyprland, niri, dankMaterialShell, nixcord, ... }@inputs:
-    {
-      nixosConfigurations = {
-        Cyclonus = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit self inputs; };
-          modules = [
-            ./hosts/Cyclonus/configuration.nix
-            inputs.stylix.nixosModules.stylix
-            inputs.home-manager.nixosModules.default
-          ];
-        };
-
-        Megatronus = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit self inputs; };
-          modules = [
-            ./hosts/Megatronus/configuration.nix
-            inputs.stylix.nixosModules.stylix
-            inputs.home-manager.nixosModules.default
-          ];
-        };
-      };
+{
+  nixosConfigurations = {
+    Cyclonus = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = { inherit self inputs; };
+      modules = [
+        ./hosts/Cyclonus/configuration.nix
+        inputs.stylix.nixosModules.stylix
+        inputs.home-manager.nixosModules.default
+      ];
     };
+
+    Megatronus = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = { inherit self inputs; };
+      modules = [
+        ./hosts/Megatronus/configuration.nix
+        inputs.stylix.nixosModules.stylix
+        inputs.home-manager.nixosModules.default
+      ];
+    };
+  };
+};
 }
 
