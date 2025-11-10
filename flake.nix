@@ -6,8 +6,6 @@
     nixvim.url = "github:nix-community/nixvim";
     home-manager.url = "github:nix-community/home-manager";
     nur.url = "github:nix-community/NUR";
-    hyprland.url = "github:hyprwm/Hyprland";
-
 
     stylix = {
       url = "github:danth/stylix";
@@ -36,11 +34,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #hyprland = {
-    #  url = "github:hyprwm/Hyprland";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -52,7 +45,7 @@
     };
   };
 
-outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, hyprland, niri, dankMaterialShell, nixcord, ... }@inputs:
+outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, niri, dankMaterialShell, nixcord, ... }@inputs:
   let
     systems = [ "x86_64-linux" ];
   in
