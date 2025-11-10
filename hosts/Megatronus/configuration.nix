@@ -6,7 +6,7 @@
     inputs.home-manager.nixosModules.default
     inputs.dankMaterialShell.nixosModules.greeter
     ../../env/env.nix
-    ../../pkgs/packages.nix
+    ../../pkgs/Megatronus/packages.nix
     ../../apps/steam.nix
     ../../apps/lact.nix
   ];
@@ -148,16 +148,26 @@
   hardware = {
     enableRedistributableFirmware = true;
     bluetooth.enable = true;
-    opengl.enable = true;
-    opengl.extraPackages = with pkgs; [ nvidia-x11 ];
+
+    opengl = {
+      enable = true;
+      driSupport32Bit = true;
+      extraPackages = with pkgs; [
+        config.boot.kernelPackages.nvidiaPackages.latest
+      ];
+    };
+
     graphics.enable = true;
 
     nvidia = {
       modesetting.enable = true;
       package = config.boot.kernelPackages.nvidiaPackages.latest;
       powerManagement.enable = false;
+      open = true;
     };
   };
+
+
 
 
   i18n = {

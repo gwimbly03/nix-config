@@ -36,7 +36,7 @@
 
     hyprland = {
       url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
 
     niri = {
@@ -67,13 +67,22 @@ outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, hyprland, niri, da
       };
 
       Megatronus = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit self inputs; };
-        modules = [
-          ./hosts/Megatronus/configuration.nix
-          inputs.stylix.nixosModules.stylix
-          inputs.home-manager.nixosModules.default
-        ];
+          system = "x86_64-linux";
+          specialArgs = { inherit self inputs; };
+          modules = [
+            ({ ... }: {
+              nix.settings = {
+                substituters = [ "https://hyprland.cachix.org" ];
+                trusted-public-keys = [
+                  "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+                ];
+              };
+            })
+
+            ./hosts/Megatronus/configuration.nix
+            inputs.stylix.nixosModules.stylix
+            inputs.home-manager.nixosModules.default        
+          ];
       };
     };
   };

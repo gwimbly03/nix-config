@@ -4,13 +4,13 @@ let
   inherit (pkgs.stdenv.hostPlatform) system;
 
   # Import your custom packages
-  allPackages = import ../../pkgs/hm_packages.nix { inherit pkgs; };
+  allPackages = import ../../pkgs/Megatronus/hm_packages.nix { inherit pkgs; };
 in
 {
   home = {
     username = "gwimbly";
     homeDirectory = "/home/gwimbly";
-    stateVersion = "25.05";
+    stateVersion = "25.11";
 
     # Home Manager packages
     packages = allPackages;
@@ -23,28 +23,22 @@ in
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    # Inputs
-    #inputs.hyprland.homeModules.hyprland
-    #inputs.hyprland.homeConfigurations."gwimbly".activationPackage
     inputs.stylix.homeModules.stylix
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-    #inputs.dankMaterialShell.homeModules.dankMaterialShell.hyprland
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
-    # Local modules
     ../../env/stylix/stylix.nix
-    #../../apps/steam.nix
     ../../apps/fish/fish.nix
     ../../apps/hypr/hypr.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
     ../../apps/git.nix
+    ../../apps/fastfetch.nix
     ../../apps/ghostty.nix
     ../../apps/obs.nix
     ../../apps/brave.nix
-    ../../apps/lazygit.nix
     ../../apps/btop.nix
     ../../apps/superfile.nix
     ../../apps/starship/starship.nix
@@ -84,11 +78,7 @@ in
     nixvim = {
       extraPackages = with pkgs; [ wl-clipboard ];
       opts.clipboard = [ "unnamedplus" ];
-    };
-    
-    #steam = {
-    #  enable = true;
-    #};
+    };  
   };
 }
 
