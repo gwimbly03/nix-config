@@ -1,12 +1,13 @@
 { config, pkgs, lib, inputs, ... }:
 
+let
+  inherit (pkgs.stdenv.hostPlatform) system;
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
-
-    # Pull the package and portal package from the flake
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    package = inputs.hyprland.packages.${system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
 
     systemd.variables = [ "--all" ];
 
@@ -18,5 +19,4 @@
     ];
   };
 }
-
 
