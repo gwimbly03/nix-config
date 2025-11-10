@@ -35,7 +35,7 @@ in
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
     ../../apps/git.nix
-    ../../apps/fastfetch.nix
+    #../../apps/fastfetch.nix
     ../../apps/ghostty.nix
     ../../apps/obs.nix
     ../../apps/brave.nix

@@ -9,6 +9,7 @@
     ../../pkgs/Megatronus/packages.nix
     ../../apps/steam.nix
     ../../apps/lact.nix
+    "${self}/apps/nautilus.nix"
   ];
 
   # Timezone
@@ -131,7 +132,7 @@
   };
 
   networking = {
-    hostName = "Cyclonus";
+    hostName = "Megatronus";
     wireless = {
       enable = false;
       userControlled.enable = false;
