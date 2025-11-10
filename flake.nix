@@ -6,6 +6,8 @@
     nixvim.url = "github:nix-community/nixvim";
     home-manager.url = "github:nix-community/home-manager";
     nur.url = "github:nix-community/NUR";
+    hyprland.url = "github:hyprwm/Hyprland";
+
 
     stylix = {
       url = "github:danth/stylix";
@@ -34,10 +36,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      #inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #hyprland = {
+    #  url = "github:hyprwm/Hyprland";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     niri = {
       url = "github:sodiboo/niri-flake";
@@ -70,15 +72,6 @@ outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, hyprland, niri, da
           system = "x86_64-linux";
           specialArgs = { inherit self inputs; };
           modules = [
-            ({ ... }: {
-              nix.settings = {
-                substituters = [ "https://hyprland.cachix.org" ];
-                trusted-public-keys = [
-                  "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-                ];
-              };
-            })
-
             ./hosts/Megatronus/configuration.nix
             inputs.stylix.nixosModules.stylix
             inputs.home-manager.nixosModules.default        
