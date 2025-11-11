@@ -31,7 +31,7 @@
       isNormalUser = true;
       description = "gwimbly";
       shell = pkgs.fish;
-      extraGroups = [ "wheel" "networkmanager" "audio" "video" "input" "plugdev" "bluetooth" "i2c" "wireshark" ];
+      extraGroups = [ "wheel" "networkmanager" "audio" "video" "input" "plugdev" "bluetooth" "i2c" "wireshark" "libvirtd" ];
     };
   };
 
