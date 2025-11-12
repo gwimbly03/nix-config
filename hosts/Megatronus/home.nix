@@ -31,13 +31,13 @@ in
     inputs.nixcord.homeModules.nixcord
 
     ../../env/stylix/stylix.nix
-    ../../apps/fish/fish.nix
+    ../../apps/fish/hypr_fish.nix
     ../../apps/hypr/hypr.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
     ../../apps/git.nix
-    #../../apps/fastfetch.nix
+    ../../apps/fastfetch/fastfetch.nix
     ../../apps/ghostty.nix
     ../../apps/obs.nix
     ../../apps/brave.nix

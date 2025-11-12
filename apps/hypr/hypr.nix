@@ -12,6 +12,11 @@
       // (import ./rules.nix)
       // {
         decoration.shadow.color = lib.mkForce "rgba(0, 0, 0, 0.25)";
+        exec-once = [
+          "discord"
+          "steam"
+          "feishin"
+        ];
       };
   };
 
