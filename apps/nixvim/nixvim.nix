@@ -90,6 +90,12 @@
       cmp = {
         enable = true;
         settings = {
+          mapping = {
+            "<Tab>" = "cmp.mapping.select_next_item()";
+            "<C-n>" = "cmp.mapping.select_prev_item()";
+            "<CR>" = "cmp.mapping.confirm({ select = true })";
+          };
+
           sources = [
             { name = "nvim_lsp"; }
             { name = "buffer"; }
