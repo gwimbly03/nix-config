@@ -78,7 +78,20 @@
             enable = true;
             settings.formatting.command = [ "nixpkgs-fmt" ];
           };
-          pyright.enable = true;
+          pyright = {
+            enable = true;
+            settings = {
+              python = {
+                analysis = {
+                  typeCheckingMode = "basic"; # "strict" for even more diagnostics
+                  autoSearchPaths = true;
+                  useLibraryCodeForTypes = true;
+                  diagnosticMode = "workspace";
+                  autoImportCompletions = true;
+                };
+              };
+            };
+          };          
           gopls.enable = true;
           jdtls.enable = true;
           clangd.enable = true;
