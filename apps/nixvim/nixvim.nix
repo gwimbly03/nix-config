@@ -146,6 +146,36 @@
         action = "<cmd>NvimTreeFindFile<cr>";
         options.desc = "Find current file in explorer";
       }
+      {
+        mode = [ "n" "i" "v" ]; # normal, insert, visual
+        key = "<Up>";
+        action = "<Nop>";
+        options.desc = "Disable Up arrow";
+      }
+      {
+        mode = [ "n" "i" "v" ];
+        key = "<Down>";
+        action = "<Nop>";
+        options.desc = "Disable Down arrow";
+      }
+      {
+        mode = [ "n" "i" "v" ];
+        key = "<Left>";
+        action = "<Nop>";
+        options.desc = "Disable Left arrow";
+      }
+      {
+        mode = [ "n" "i" "v" ];
+        key = "<Right>";
+        action = "<Nop>";
+        options.desc = "Disable Right arrow";
+      }
+      {
+        mode = [ "n" "i" "v" ];
+        key = "<Up>";
+        action = "<cmd>echo 'Use hjkl instead!'<cr>";
+        options.desc = "Remind to use hjkl";
+      }
     ];
   };
 }
