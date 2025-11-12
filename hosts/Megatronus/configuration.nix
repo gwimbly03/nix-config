@@ -152,30 +152,40 @@
     };
   };
 
-  hardware = {
-    enableRedistributableFirmware = true;
-    bluetooth.enable = true;
+ hardware = {
+  enableRedistributableFirmware = true;
+  bluetooth.enable = true;
 
-    graphics = {
-      enable = true;
-      enable32Bit = true;
+  graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      config.boot.kernelPackages.nvidiaPackages.latest
+    ];
+  };
 
-      extraPackages = with pkgs; [
-        config.boot.kernelPackages.nvidiaPackages.latest
-      ];
-    };
+  nvidia = {
+    # Required for Wayland + modesetting
+    modesetting.enable = true;
 
-    nvidia = {
-      modesetting.enable = true;
-      package = config.boot.kernelPackages.nvidiaPackages.latest;
-      powerManagement.enable = false;
-      open = true;
+    # Disable power management quirks unless you know you need them
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+
+    # Use the open kernel module (good for 5000-series cards)
+    open = true;
+
+    # Installs nvidia-settings and friends
+    nvidiaSettings = true;
+
+    # Explicitly use the latest driver
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
   };
 
-
-
-
+  # This line goes **outside** hardware, not inside it
+  services.xserver.videoDrivers = [ "nvidia" ];
+  
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = lib.genAttrs [
