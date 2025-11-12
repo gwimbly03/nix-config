@@ -43,6 +43,7 @@
       "--in-process-gpu"
       "--enable-native-gpu-memory-buffers"
       "--use-system-theme"
+      #"--disable-gpu"
     ];
   };
 }
