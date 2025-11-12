@@ -28,6 +28,7 @@
     groups = {
       i2c = {};
       wireshark = {};
+      docker = {};
     };
 
     users = {
@@ -37,12 +38,11 @@
         shell = pkgs.fish;
         extraGroups = [
           "wheel" "networkmanager" "audio" "video" "input"
-          "plugdev" "bluetooth" "i2c" "wireshark" "libvirtd"
+          "plugdev" "bluetooth" "i2c" "wireshark" "libvirtd" "docker"
         ];
       };
     };
   };
-
 
   security = {
     sudo.enable = false;
@@ -172,6 +172,25 @@
     open = true;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.latest;
+    };
+  };
+  
+    virtualisation = {
+    docker = {
+      enable = true;
+      enableOnBoot = true;
+      daemon.settings = {
+        data-root = "/var/lib/docker";
+      };
+    };
+
+    libvirtd = {
+      enable = true;
+      qemu = {
+        package = pkgs.qemu_kvm;          
+        swtpm.enable = true;      
+        ovmf.enable = true;       
+      };
     };
   };
 
