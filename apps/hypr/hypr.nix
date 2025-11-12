@@ -1,22 +1,17 @@
-{ config, pkgs, lib, inputs, ... }:
-
-let
-  inherit (pkgs.stdenv.hostPlatform) system;
-in
+{ pkgs, lib, ... }:
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    #package = inputs.hyprland.packages.${system}.hyprland;
-    #portalPackage = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
-
+    package = pkgs.hyprland;
     systemd.variables = [ "--all" ];
 
-    settings = lib.mkMerge [
-      (import ./settings.nix)
-      (import ./binds.nix)
-      (import ./animations.nix)
-      (import ./rules.nix)
-    ];
+    settings = import ./settings.nix
+               // import ./binds.nix
+               // import ./animations.nix
+               // import ./rules.nix
+               // {
+                 decoration.shadow.color = lib.mkForce "rgba(0, 0, 0, 0.25)";
+               };
   };
 }
 

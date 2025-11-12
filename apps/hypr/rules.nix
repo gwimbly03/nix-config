@@ -1,5 +1,4 @@
 {
-  wayland.windowManager.hyprland.settings = {
     workspace = [
       "1, monitor:DP-4"
       "2, monitor:DP-4"
@@ -33,6 +32,5 @@
       "opacity 0.8 0.8, class:^(obsidian)$"
       "opacity 0.9 0.9, class:^(brave-browser)$"
     ];
-  };
 }
 
