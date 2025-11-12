@@ -4,11 +4,9 @@
   programs.nixcord = {
     enable = true;
 
-    # enable desktop client (vesktop)
-    vesktop.enable = false;
-
-    # disable browser-discord (redundant but fine)
+    # Optional: enable either Discord or Vesktop (not both)
     discord.enable = true;
+    vesktop.enable = false;
 
     config = {
       useQuickCss = true;
@@ -18,21 +16,40 @@
 
     extraConfig = {
       plugins = {
+        alwaysAnimate.enable = true;
+        readAllNotifications.enable = true;
+        fixYoutubeEmbeds.enable = true;
+
         hideAttachments = {
           enable = true;
         };
 
         ignoreActivities = {
           enable = true;
-          ignorePlaying = true;
+          ignorePlaying = false;
           ignoreWatching = true;
-          ignoredActivities = [
-            "Playing"
-            "Watching"
-            "Competing"
-          ];
+          ignoredActivities = [];
         };
-      };
+
+        fakeNitro = {
+          enable = true;
+          settings = {
+            enableEmojiBypass = true;
+            enableStickerBypass = true;
+            enableRoleIconBypass = true;
+          };
+        };
+
+        betterFolders = {
+          enable = true;
+          settings = {
+            closeAllFolders = true;
+            sidebar = true;
+            folderColor = true;
+          };
+        };
+
+      };      
     };
   };
 }
