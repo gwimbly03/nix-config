@@ -6,7 +6,6 @@
     viAlias = true;
     vimAlias = true;
 
-    # Basic options
     opts = {
       updatetime = 100; # Faster completion
       number = true;
@@ -17,15 +16,24 @@
       smartindent = true;
       autoindent = true;
       wrap = false;
-      swapfile = false;
-      termguicolors = true;
-      undofile = true;
+      #termguicolors = true;
       ignorecase = true;
       incsearch = true;
       smartcase = true;
+      confirm = true;
+      clipboard = "unnamedplus";
+      cursorline = true;
+      list = true;
+      signcolumn = "yes";
+
+      completeopt = "menu,menuone,noselect";
+      wildmode = "longest:full,full"; # Configures command-line completion (:e <TAB>): longest:full,full → First completes the longest common string, then shows all matches.
+      
+      swapfile = false;
+      undofile = true;
+      undolevels = 10000;
     };
 
-    # Plugins
     plugins = {
       lualine.enable = true;
       web-devicons.enable = true;
@@ -70,7 +78,6 @@
         };
       };
 
-      # LSP plugin and servers
       lsp = {
         enable = true;
         servers = {
@@ -83,7 +90,7 @@
             settings = {
               python = {
                 analysis = {
-                  typeCheckingMode = "basic"; # "strict" for even more diagnostics
+                  typeCheckingMode = "basic"; 
                   autoSearchPaths = true;
                   useLibraryCodeForTypes = true;
                   diagnosticMode = "workspace";
@@ -173,7 +180,6 @@
       maplocalleader = " ";
     };
 
-    # Key mappings
     keymaps = [
       {
         key = "<leader>ff";

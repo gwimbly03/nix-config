@@ -233,7 +233,7 @@
   environment = {
     shellAliases.sudo = "doas";
     systemPackages = with pkgs; [
-      bluez tlp lm_sensors openssl nh winboat freerdp
+      bluez tlp lm_sensors openssl nh winboat freerdp pciutils
     ];
     variables = {
       WLR_NO_HARDWARE_CURSORS = "1";
