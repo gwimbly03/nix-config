@@ -15,6 +15,7 @@
     file-roller
     adw-gtk3
     feishin
+    telegram-desktop
 
     # TUI
     btop
@@ -56,6 +57,7 @@
     zoxide
     fd
     microfetch
+    pulsemixer
 
     # Networking & containers
     docker
