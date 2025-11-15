@@ -30,7 +30,6 @@
     nixfmt-rfc-style
     nixpkgs-fmt
     black
-    uv
 
     # Utilities
     jq

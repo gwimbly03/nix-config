@@ -79,7 +79,11 @@ in
     nixvim = {
       extraPackages = with pkgs; [ wl-clipboard ];
       opts.clipboard = [ "unnamedplus" ];
-    };  
+    }; 
+
+    direnv = {
+      enable = true;
+    };
   };
 }
 
