@@ -61,7 +61,7 @@
       key_press_enables_dpms = true;
       enable_swallow = true;
       vfr = true;
-      vrr = true;
+      vrr = false;
     };
 
 }

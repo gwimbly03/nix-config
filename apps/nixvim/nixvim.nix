@@ -164,17 +164,6 @@
         };
       };
 
-      plugins.markdown_preview = {
-        enable = true;
-        settings = {
-          theme = "dark";
-        };
-      };
-
-      plugins.render_markdown = {
-        enable = true;
-      };
-
       neoscroll = {
         enable = true;
         settings = {

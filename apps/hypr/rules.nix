@@ -29,7 +29,7 @@
       "opacity 0.80 0.80, class:^(feishin)$"
       "opacity 0.80 0.80, class:^(discord)$"
       "opacity 0.8 0.8, class:^(obsidian)$"
-      "opacity 0.9 0.9, class:^(brave-browser)$"
+      "opacity 0.95 0.95, class:^(brave-browser)$"
     ];
 }
 
