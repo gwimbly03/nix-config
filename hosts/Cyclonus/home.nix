@@ -67,7 +67,7 @@ in
 
     dankMaterialShell = {
       enable = true;
-      enableSystemd = true;
+      systemd.enable = true;
       quickshell.package = inputs.quickshell.packages.x86_64-linux.quickshell;
     };
 
@@ -84,7 +84,12 @@ in
     nixvim = {
       extraPackages = with pkgs; [ wl-clipboard ];
       opts.clipboard = [ "unnamedplus" ];
-    };  
+    }; 
+
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
   };
 }
 

@@ -14,6 +14,10 @@
 
   nixpkgs = {
     config.allowUnfree = true;
+    permittedInsecurePackages = [
+      "electron-36.9.5" # feishin uses this
+    ];
+
     overlays = [
       (final: prev: {
         nur = import inputs.nur { nurpkgs = prev; pkgs = prev; };
