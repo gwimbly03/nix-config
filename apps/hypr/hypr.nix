@@ -4,7 +4,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;           
-    portalPackage = pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
     systemd.variables = ["--all"];
     settings = (import ./settings.nix)
       // (import ./binds.nix)
@@ -19,6 +19,11 @@
           "wpctl set-volume 65 15.0"
         ];
       };
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   home.sessionVariables = {
@@ -37,7 +42,7 @@
     pkgs.playerctl
     pkgs.aquamarine
     pkgs.hyprsysteminfo
-    
+    pkgs.egl-wayland
   ];
 }
 

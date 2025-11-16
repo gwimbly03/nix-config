@@ -1,9 +1,6 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     mesa
-    xdg-desktop-portal-gnome
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-wlr
     tlp
     acpi
     lm_sensors
@@ -14,8 +11,9 @@
 
     file-roller
     adw-gtk3
-    feishin
     telegram-desktop
+    supersonic
+    feishin
 
     # TUI
     btop
@@ -28,7 +26,6 @@
     gcc
     gh
     nixfmt-rfc-style
-    nixpkgs-fmt
     black
 
     # Utilities
@@ -64,13 +61,6 @@
     docker-compose
     wireshark
     nmap
-
-    # Quickshell
-    qt6Packages.qt5compat
-    libsForQt5.qt5.qtgraphicaleffects
-    kdePackages.qtbase
-    kdePackages.qtdeclarative
-
   ];
 }
 

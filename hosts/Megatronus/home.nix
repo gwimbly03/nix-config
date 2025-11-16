@@ -62,7 +62,7 @@ in
 
     dankMaterialShell = {
       enable = true;
-      enableSystemd = true;
+      systemd.enable = true;
       quickshell.package = inputs.quickshell.packages.x86_64-linux.quickshell;
     };
 

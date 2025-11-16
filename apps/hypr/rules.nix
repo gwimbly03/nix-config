@@ -19,9 +19,12 @@
       "workspace 6 silent, class:^(discord)$"
       "workspace 9, class:^(mpv)$"
 
-      "float, class:^(nautilus)$"
-      "size 875 550, class:^(nautilus)$"
+      "float, class:^(org\.gnome\.Nautilus)$"
+      "size 875 550, class:^(org\.gnome\.Nautilus)$"
       "float, class:^(mpv)$"
+      
+      "rounding 12, class:^(org\.gnome\.)"
+      "noborder, class:^(org\.gnome\.)"
 
       # opacity rules
       # "opacity 0.6 0.6, class:^(Alacritty)$"
