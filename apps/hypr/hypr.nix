@@ -4,7 +4,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;           
-    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk;
     systemd.variables = ["--all"];
     settings = (import ./settings.nix)
       // (import ./binds.nix)

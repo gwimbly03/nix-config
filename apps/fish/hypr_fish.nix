@@ -31,9 +31,6 @@
 
 
       fastfetch
-      
-      direnv hook fish | source
-
     '';
 
     shellAliases = {
