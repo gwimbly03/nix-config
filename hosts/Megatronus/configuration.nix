@@ -228,15 +228,6 @@
         extraArgs = "--keep-since 4d --keep 3";
       };
     };
-    dankMaterialShell.greeter = {
-      enable = true;
-      compositor.name = "hyprland";  # Or "hyprland" or "sway"
-      configHome = "/home/gwimbly";
-      logs = {
-        save = true; 
-        path = "/tmp/dms-greeter.log";
-      };
-    };
   };
 
   nix.settings = {
@@ -247,7 +238,7 @@
   environment = {
     shellAliases.sudo = "doas";
     systemPackages = with pkgs; [
-      bluez tlp lm_sensors openssl nh winboat freerdp pciutils libva-utils vdpauinfo egl-wayland mesa vulkan-tools  
+      bluez tlp lm_sensors openssl nh pciutils libva-utils vdpauinfo egl-wayland mesa vulkan-tools  
 
     ];
     variables = {
