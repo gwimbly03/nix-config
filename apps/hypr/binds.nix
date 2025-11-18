@@ -27,7 +27,7 @@
         "CTRL_SHIFT, RETURN, exec, kitty"
         "CTRL_SHIFT, ESCAPE, exec, alacritty -e btop"
 
-        "SUPER, B, exec, brave --disable-gpu"
+        "SUPER, B, exec, brave --ozone-platform=wayland"
 
         "SUPER, left, movefocus, l"
         "SUPER, right, movefocus, r"

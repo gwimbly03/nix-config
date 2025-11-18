@@ -3,8 +3,6 @@
 with pkgs;
 
 [
-  wget
-  git
   nodePackages.prettier
   xwayland
   ffmpeg

@@ -163,7 +163,8 @@
     enable = true;
     enable32Bit = true;
     extraPackages = with pkgs; [
-      config.boot.kernelPackages.nvidiaPackages.latest
+      config.boot.kernelPackages.nvidiaPackages.latest 
+      nvidia-vaapi-driver
     ];
   };
 
@@ -227,6 +228,15 @@
         extraArgs = "--keep-since 4d --keep 3";
       };
     };
+    dankMaterialShell.greeter = {
+      enable = true;
+      compositor.name = "hyprland";  # Or "hyprland" or "sway"
+      configHome = "/home/gwimbly";
+      logs = {
+        save = true; 
+        path = "/tmp/dms-greeter.log";
+      };
+    };
   };
 
   nix.settings = {
@@ -237,9 +247,11 @@
   environment = {
     shellAliases.sudo = "doas";
     systemPackages = with pkgs; [
-      bluez tlp lm_sensors openssl nh winboat freerdp pciutils libxcrypt
+      bluez tlp lm_sensors openssl nh winboat freerdp pciutils libva-utils vdpauinfo egl-wayland mesa vulkan-tools  
+
     ];
     variables = {
+      NVD_BACKEND = "direct";
       WLR_NO_HARDWARE_CURSORS = "1";
     };
   };

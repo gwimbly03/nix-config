@@ -35,13 +35,13 @@
     ];
 
     commandLineArgs = [
-      "--enable-features=VaapiVideoDecoder"
+      "--enable-features=AcceleratedVideoEncoder,VaapiOnNvidiaGPUs,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE"
+      "--enable-features=VaapiIgnoreDriverChecks,VaapiVideoDecoder,PlatformHEVCDecoderSupport"
+      "--enable-features=UseMultiPlaneFormatForHardwareVideo"
+      "--ignore-gpu-blocklist"
       "--ozone-platform=wayland"
       "--enable-wayland-ime"
-      "--gtk-version=4"
       "--force-dark-mode=0" # optional
-      "--in-process-gpu"
-      "--enable-native-gpu-memory-buffers"
       "--use-system-theme"
       #"--disable-gpu"
     ];
