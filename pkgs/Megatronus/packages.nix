@@ -8,6 +8,9 @@
 
     # Gaming
     openrgb-with-all-plugins
+    wineWowPackages.stable
+    wineWowPackages.waylandFull
+    winetricks
 
     file-roller
     adw-gtk3
