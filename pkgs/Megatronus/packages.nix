@@ -8,6 +8,11 @@
 
     # Gaming
     openrgb-with-all-plugins
+    wineWowPackages.staging
+    wineWowPackages.waylandFull
+    winetricks
+    freetype
+    fontconfig
 
     file-roller
     adw-gtk3

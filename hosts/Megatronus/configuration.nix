@@ -135,7 +135,7 @@
       enable = true;
       settings = {
         PermitRootLogin = "no";
-        PasswordAuthentication = false;
+        PasswordAuthentication = true;
       };
     };
   };
@@ -146,6 +146,7 @@
       enable = false;
       userControlled.enable = false;
     };
+    firewall.enable = false; #until i finish this project
     networkmanager = {
       enable = true;
       wifi = {
@@ -163,7 +164,8 @@
     enable = true;
     enable32Bit = true;
     extraPackages = with pkgs; [
-      config.boot.kernelPackages.nvidiaPackages.latest
+      config.boot.kernelPackages.nvidiaPackages.latest 
+      nvidia-vaapi-driver
     ];
   };
 
@@ -237,9 +239,11 @@
   environment = {
     shellAliases.sudo = "doas";
     systemPackages = with pkgs; [
-      bluez tlp lm_sensors openssl nh winboat freerdp pciutils libxcrypt
+      bluez tlp lm_sensors openssl nh pciutils libva-utils vdpauinfo egl-wayland mesa vulkan-tools  
+
     ];
     variables = {
+      NVD_BACKEND = "direct";
       WLR_NO_HARDWARE_CURSORS = "1";
     };
   };
