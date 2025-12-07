@@ -42,7 +42,8 @@
     pkgs.hyprshot
     pkgs.playerctl
     pkgs.hyprpwcenter
-    pkgs.hyprlang 
+    pkgs.hyprlang
+    pkgs.hyprmon
     #pkgs.hyprqt6engine
     pkgs.hyprpicker 
     pkgs.hyprgraphics
