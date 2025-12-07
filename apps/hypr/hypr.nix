@@ -17,6 +17,7 @@
           "steam"
           "feishin"
           "wpctl set-volume 65 15.0"
+          "hyprdim"
         ];
       };
   };
