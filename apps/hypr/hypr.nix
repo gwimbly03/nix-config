@@ -40,6 +40,13 @@
     # ... other packages
     pkgs.hyprshot
     pkgs.playerctl
+    pkgs.hyprpwcenter
+    pkgs.hyprlang 
+    pkgs.hyprqt6engine
+    pkgs.hyprpicker 
+    pkgs.hyprgraphics
+    pkgs.hyprwayland-scanner
+    pkgs.hyprland-guiutils
     pkgs.aquamarine
     pkgs.hyprsysteminfo
     pkgs.egl-wayland
