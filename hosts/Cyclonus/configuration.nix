@@ -114,7 +114,7 @@
       enable = true;
       settings = {
         PermitRootLogin = "no";
-        PasswordAuthentication = false;
+        PasswordAuthentication = true;
       };
     };
   };
@@ -125,6 +125,7 @@
       enable = false;
       userControlled.enable = false;
     };
+    firewall.enable = false;
     networkmanager = {
       enable = true;
       wifi = {
