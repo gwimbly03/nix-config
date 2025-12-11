@@ -30,6 +30,7 @@ in
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
+
     ../../env/stylix/stylix.nix
     ../../apps/fish/hypr_fish.nix
     ../../apps/hypr/hypr.nix
