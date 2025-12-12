@@ -3,7 +3,6 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    inputs.dankMaterialShell.nixosModules.greeter
     ../../env/env.nix
     ../../pkgs/packages.nix
     ../../apps/steam.nix

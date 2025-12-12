@@ -4,7 +4,6 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    inputs.dankMaterialShell.nixosModules.greeter
     ../../env/env.nix
     ../../pkgs/Megatronus/packages.nix
     ../../apps/steam.nix
@@ -164,7 +163,7 @@
     enable = true;
     enable32Bit = true;
     extraPackages = with pkgs; [
-      config.boot.kernelPackages.nvidiaPackages.latest 
+      config.boot.kernelPackages.nvidiaPackages.beta 
       nvidia-vaapi-driver
     ];
   };
@@ -177,7 +176,7 @@
 
     open = true;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
     };
   };
   
