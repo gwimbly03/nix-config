@@ -8,7 +8,7 @@
 
     # Gaming
     openrgb-with-all-plugins
-    wineWowPackages.staging
+    wineWowPackages.stagingFull
     wineWowPackages.waylandFull
     winetricks
     freetype
