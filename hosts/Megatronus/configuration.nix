@@ -83,6 +83,9 @@
     nixos-icons
     bibata-cursors
     candy-icons
+    freetype
+    fontconfig
+    corefonts
   ];
   
   boot = {

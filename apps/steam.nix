@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, system, ... }:
 
 {
   programs.steam = {
@@ -14,8 +14,8 @@
 
   programs.gamescope.enable = true;
   programs.gamemode.enable = true;
-  programs.steam.protontricks.enable = true;
 
+  programs.steam.protontricks.enable = true;
 
   environment.sessionVariables = {
     SDL_VIDEODRIVER = "wayland";
@@ -29,6 +29,14 @@
     pkgs.lutris
     pkgs.protonup-qt
     pkgs.nexusmods-app
+    pkgs.wineWowPackages.stagingFull
+    pkgs.wineWowPackages.waylandFull
+    pkgs.winetricks
+
+    # nix-gaming
+    inputs.nix-gaming.packages.${system}.viper
+    inputs.nix-gaming.packages.${system}.northstar-proton
+
   ];
 
 

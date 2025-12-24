@@ -6,6 +6,7 @@
     nixvim.url = "github:nix-community/nixvim";
     home-manager.url = "github:nix-community/home-manager";
     nur.url = "github:nix-community/NUR";
+    nix-gaming.url = "github:fufexan/nix-gaming";
 
     stylix = {
       url = "github:danth/stylix";
@@ -40,7 +41,6 @@
 
     nix-citizen.url = "github:LovingMelody/nix-citizen";
     # Optional - updates underlying without waiting for nix-citizen to update
-    nix-gaming.url = "github:fufexan/nix-gaming";
     nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
   };
 
@@ -66,7 +66,8 @@ outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, niri, dankMaterial
           modules = [
             ./hosts/Megatronus/configuration.nix
             inputs.stylix.nixosModules.stylix
-            inputs.home-manager.nixosModules.default 
+            inputs.home-manager.nixosModules.default
+            inputs.nix-gaming.nixosModules.default
           ];
       };
     };

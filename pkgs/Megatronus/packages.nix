@@ -8,11 +8,7 @@
 
     # Gaming
     openrgb-with-all-plugins
-    wineWowPackages.stagingFull
-    wineWowPackages.waylandFull
-    winetricks
-    freetype
-    fontconfig
+    bottles
 
     file-roller
     adw-gtk3
@@ -27,7 +23,6 @@
     nwg-look
 
     # Development
-    rustup
     gcc
     gh
     nixfmt-rfc-style
