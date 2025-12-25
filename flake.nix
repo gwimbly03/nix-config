@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     nixvim.url = "github:nix-community/nixvim";
     home-manager.url = "github:nix-community/home-manager";
     nur.url = "github:nix-community/NUR";
@@ -13,15 +14,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    dgop = {
-      url = "github:AvengeMedia/dgop";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    dankMaterialShell = {
+    dms = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.dgop.follows = "dgop";
     };
 
     quickshell = {
@@ -44,7 +39,7 @@
     nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
   };
 
-outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, niri, dankMaterialShell, nixcord, ... }@inputs:
+outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixvim, nur, stylix, niri, dms, nixcord, ... }@inputs:
   let
     systems = [ "x86_64-linux" ];
   in

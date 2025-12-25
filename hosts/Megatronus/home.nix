@@ -2,9 +2,11 @@
 
 let
   inherit (pkgs.stdenv.hostPlatform) system;
-
-  # Import your custom packages
   allPackages = import ../../pkgs/Megatronus/hm_packages.nix { inherit pkgs; };
+  stablePkgs = import inputs.nixpkgs-stable {
+    inherit system;
+    config.allowUnfree = true;
+  };
 in
 {
   home = {
@@ -12,8 +14,8 @@ in
     homeDirectory = "/home/gwimbly";
     stateVersion = "25.11";
 
-    # Home Manager packages
-    packages = allPackages;
+    packages = allPackages
+    ++ [ stablePkgs.protontricks ];
 
     sessionVariables = {
       EDITOR = "nvim";
@@ -26,7 +28,7 @@ in
 
   imports = [
     inputs.stylix.homeModules.stylix
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    inputs.dms.homeModules.dankMaterialShell.default
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
@@ -34,6 +36,7 @@ in
     ../../env/stylix/stylix.nix
     ../../apps/fish/hypr_fish.nix
     ../../apps/hypr/hypr.nix
+    ../../apps/dms/dms-shell.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
@@ -47,10 +50,6 @@ in
     ../../apps/starship/starship.nix
   ];
 
-  #xdg.portal = {
-  #  enable = true;
-  #  extraPortals = [ pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];
-  #};
 
 
   services.cliphist = {
@@ -60,15 +59,6 @@ in
 
   programs = {
     home-manager.enable = true;
-
-    dankMaterialShell = {
-      enable = true;
-      systemd = {
-        enable = true;             # Systemd service for auto-start
-        restartIfChanged = true;   # Auto-restart dms.service when dankMaterialShell changes
-      };
-      quickshell.package = inputs.quickshell.packages.x86_64-linux.quickshell;
-    };
 
     zoxide = {
       enable = true;

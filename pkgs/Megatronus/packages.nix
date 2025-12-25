@@ -1,9 +1,6 @@
 { pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
-    mesa
-    tlp
     acpi
-    lm_sensors
     power-profiles-daemon
 
     # Gaming

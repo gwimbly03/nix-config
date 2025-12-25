@@ -15,7 +15,7 @@
   programs.gamescope.enable = true;
   programs.gamemode.enable = true;
 
-  programs.steam.protontricks.enable = true;
+  #programs.steam.protontricks.enable = true;
 
   environment.sessionVariables = {
     SDL_VIDEODRIVER = "wayland";

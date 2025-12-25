@@ -16,9 +16,9 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    permittedInsecurePackages = [
-      "electron-36.9.5" # feishin uses this
-    ];
+    #permittedInsecurePackages = [
+    #  "electron-36.9.5" # feishin uses this
+    #];
 
     overlays = [
       (final: prev: {
@@ -148,7 +148,6 @@
       enable = false;
       userControlled.enable = false;
     };
-    firewall.enable = false; #until i finish this project
     networkmanager = {
       enable = true;
       wifi = {
@@ -241,12 +240,13 @@
   environment = {
     shellAliases.sudo = "doas";
     systemPackages = with pkgs; [
-      bluez tlp lm_sensors openssl nh pciutils libva-utils vdpauinfo egl-wayland mesa vulkan-tools  
+      bluez tlp lm_sensors openssl nh pciutils libva-utils vdpauinfo mesa vulkan-tools  
 
     ];
     variables = {
       NVD_BACKEND = "direct";
       WLR_NO_HARDWARE_CURSORS = "1";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     };
   };
 
