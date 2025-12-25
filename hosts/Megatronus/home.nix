@@ -28,7 +28,7 @@ in
 
   imports = [
     inputs.stylix.homeModules.stylix
-    inputs.dms.homeModules.dankMaterialShell.default
+    inputs.dms.homeModules.dank-material-shell
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
