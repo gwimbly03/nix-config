@@ -34,9 +34,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-citizen.url = "github:LovingMelody/nix-citizen";
-    # Optional - updates underlying without waiting for nix-citizen to update
-    nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
   };
 
 outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixvim, nur, stylix, niri, dms, nixcord, ... }@inputs:
