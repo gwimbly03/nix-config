@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
     mesa
     tlp
@@ -9,6 +9,9 @@
     # Gaming
     openrgb-with-all-plugins
     bottles
+    # nix-gaming
+    inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.viper
+    inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.northstar-proton
 
     file-roller
     adw-gtk3

@@ -67,7 +67,6 @@ outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, niri, dankMaterial
             ./hosts/Megatronus/configuration.nix
             inputs.stylix.nixosModules.stylix
             inputs.home-manager.nixosModules.default
-            inputs.nix-gaming.nixosModules.default
           ];
       };
     };

@@ -1,4 +1,4 @@
-{ pkgs, inputs, system, ... }:
+{ pkgs, ... }:
 
 {
   programs.steam = {
@@ -33,9 +33,6 @@
     pkgs.wineWowPackages.waylandFull
     pkgs.winetricks
 
-    # nix-gaming
-    inputs.nix-gaming.packages.${system}.viper
-    inputs.nix-gaming.packages.${system}.northstar-proton
 
   ];
 
