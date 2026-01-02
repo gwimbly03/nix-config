@@ -3,6 +3,6 @@
 {
   programs.kitty = {
     enable = true;
-  }
+  };
 }
 

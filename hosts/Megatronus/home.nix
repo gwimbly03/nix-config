@@ -40,6 +40,7 @@ in
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
+    ../../apps/kitty.nix
     ../../apps/git.nix
     ../../apps/fastfetch/fastfetch.nix
     ../../apps/ghostty.nix
