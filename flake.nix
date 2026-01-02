@@ -8,7 +8,10 @@
     home-manager.url = "github:nix-community/home-manager";
     nur.url = "github:nix-community/NUR";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-citizen.url = "github:LovingMelody/nix-citizen";
 
+    # Optional - updates underlying without waiting for nix-citizen to update
+    nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";

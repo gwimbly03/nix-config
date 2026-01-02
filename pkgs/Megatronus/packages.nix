@@ -6,9 +6,8 @@
     # Gaming
     openrgb-with-all-plugins
     bottles
-    # nix-gaming
-    inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.viper
-    inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.northstar-proton
+    # nix-citzen
+    inputs.nix-citizen.packages.${system}.rsi-launcher
 
     file-roller
     adw-gtk3
