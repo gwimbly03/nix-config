@@ -14,25 +14,24 @@
     ];
 
     windowrule = [
-      "workspace 9 silent, class:^(steam)$"
-      "workspace 7 silent, class:^(feishin)$"
-      "workspace 6 silent, class:^(discord)$"
-      "workspace 9, class:^(mpv)$"
+      "workspace 9 match:class steam"
+      "workspace 7 match:class feishin"
+      "workspace 6 match:class discord"
+      "workspace 9, match:class mpv"
 
-      "float, class:^(org\.gnome\.Nautilus)$"
-      "size 875 550, class:^(org\.gnome\.Nautilus)$"
-      "float, class:^(mpv)$"
+      "match:float 1, match:class org\.gnome\.Nautilus"
+      "size 875 550, match:class org\.gnome\.Nautilus"
+      "match:float 1, match:class mpv"
       
-      "rounding 12, class:^(org\.gnome\.)"
-      "noborder, class:^(org\.gnome\.)"
+      "rounding 12, match:class org\.gnome\."
+      "border_size 0, match:class org\.gnome\."
 
-      # opacity rules
-      # "opacity 0.6 0.6, class:^(Alacritty)$"
-      "opacity 0.8 0.7, class:^(kitty)$"
-      "opacity 0.80 0.80, class:^(feishin)$"
-      "opacity 0.80 0.80, class:^(discord)$"
-      "opacity 0.8 0.8, class:^(obsidian)$"
-      "opacity 0.95 0.95, class:^(brave-browser)$"
+      "opacity 0.8 0.7, match:class kitty"
+      "opacity 0.80 0.80, match:class feishin"
+      "opacity 0.80 0.80, match:class discord"
+      "opacity 0.95 0.95, match:class brave-browser"
+      "opacity 0.98 override 0.5 override 0.8 override, match:class brave-browser"
+      "opacity 1.0 override 0.5 override 0.8 override, match:class alacritty" 
     ];
 }
 
