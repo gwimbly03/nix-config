@@ -16,10 +16,6 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    #permittedInsecurePackages = [
-    #  "electron-36.9.5" # feishin uses this
-    #];
-
     overlays = [
       (final: prev: {
         nur = import inputs.nur { nurpkgs = prev; pkgs = prev; };
@@ -143,16 +139,13 @@
   };
 
   networking = {
-    hostName = "Megatronus";
-    wireless = {
-      enable = false;
-      userControlled.enable = false;
-    };
-    networkmanager = {
-      enable = true;
-      wifi = {
-        backend = "wpa_supplicant";
-        powersave = false;
+  hostName = "Megatronus";
+
+  networkmanager = {
+    enable = true;
+    wifi = {
+      backend = "wpa_supplicant";
+      powersave = false;
       };
     };
   };
