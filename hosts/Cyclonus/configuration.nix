@@ -5,7 +5,7 @@
     inputs.home-manager.nixosModules.default
     ../../env/env.nix
     ../../pkgs/packages.nix
-    ../../apps/steam.nix
+    #../../apps/steam.nix
     "${self}/apps/nautilus.nix"
   ];
 
@@ -13,10 +13,6 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    permittedInsecurePackages = [
-      "electron-36.9.5" # feishin uses this
-    ];
-
     overlays = [
       (final: prev: {
         nur = import inputs.nur { nurpkgs = prev; pkgs = prev; };
@@ -119,17 +115,13 @@
   };
 
   networking = {
-    hostName = "Cyclonus";
-    wireless = {
-      enable = false;
-      userControlled.enable = false;
-    };
-    firewall.enable = false;
-    networkmanager = {
-      enable = true;
-      wifi = {
-        backend = "wpa_supplicant";
-        powersave = false;
+  hostName = "Megatronus";
+
+  networkmanager = {
+    enable = true;
+    wifi = {
+      backend = "wpa_supplicant";
+      powersave = false;
       };
     };
   };
