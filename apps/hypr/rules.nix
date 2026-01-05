@@ -30,7 +30,7 @@
       "opacity 0.80 0.80, match:class feishin"
       "opacity 0.80 0.80, match:class discord"
       "opacity 0.95 0.95, match:class brave-browser"
-      "opacity 0.98 override 0.5 override 0.8 override, match:class brave-browser"
+      #"opacity 0.98 override 0.5 override 0.8 override, match:class brave-browser"
       "opacity 1.0 override 0.5 override 0.8 override, match:class alacritty" 
     ];
 }

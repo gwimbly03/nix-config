@@ -3,7 +3,6 @@
 let
   inherit (pkgs.stdenv.hostPlatform) system;
 
-  # Import your custom packages
   allPackages = import ../../pkgs/hm_packages.nix { inherit pkgs; };
 in
 {
@@ -12,7 +11,6 @@ in
     homeDirectory = "/home/gwimbly";
     stateVersion = "25.11";
 
-    # Home Manager packages
     packages = allPackages;
 
     sessionVariables = {
@@ -25,17 +23,14 @@ in
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    # Inputs
     inputs.niri.homeModules.niri
     inputs.stylix.homeModules.stylix
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
+    inputs.dms.homeModules.dank-material-shell
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
-    # Local modules
     ../../env/stylix/stylix.nix
-    #../../apps/steam.nix
+    ../../apps/dms/dms-shell.nix
     ../../apps/fish/fish.nix
     ../../apps/fastfetch/fastfetch.nix
     ../../apps/niri/niri.nix
@@ -64,12 +59,6 @@ in
 
   programs = {
     home-manager.enable = true;
-
-    dankMaterialShell = {
-      enable = true;
-      systemd.enable = true;
-      quickshell.package = inputs.quickshell.packages.x86_64-linux.quickshell;
-    };
 
     zoxide = {
       enable = true;
