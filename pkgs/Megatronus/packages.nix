@@ -16,7 +16,7 @@
     feishin
 
     # TUI
-    btop
+    htop 
 
     # Desktop
     nwg-look
