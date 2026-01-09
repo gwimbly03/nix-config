@@ -23,17 +23,17 @@ in
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    inputs.niri.homeModules.niri
     inputs.stylix.homeModules.stylix
     inputs.dms.homeModules.dank-material-shell
+
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
     ../../env/stylix/stylix.nix
-    ../../apps/dms/dms-shell.nix
+    ../../apps/dms/dms-shell-niri.nix
     ../../apps/fish/fish.nix
     ../../apps/fastfetch/fastfetch.nix
-    ../../apps/niri/niri.nix
+    ../../apps/hypr/hypr.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix

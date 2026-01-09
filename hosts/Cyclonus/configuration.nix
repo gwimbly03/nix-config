@@ -115,7 +115,7 @@
   };
 
   networking = {
-  hostName = "Megatronus";
+  hostName = "Cyclonus";
 
   networkmanager = {
     enable = true;

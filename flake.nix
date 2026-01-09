@@ -33,11 +33,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixcord = {
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,7 +40,7 @@
 
   };
 
-outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixvim, nur, stylix, niri, dms, nixcord, ... }@inputs:
+outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixvim, nur, stylix, dms, nixcord, ... }@inputs:
   let
     systems = [ "x86_64-linux" ];
   in
