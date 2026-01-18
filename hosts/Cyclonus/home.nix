@@ -2,8 +2,7 @@
 
 let
   inherit (pkgs.stdenv.hostPlatform) system;
-
-  allPackages = import ../../pkgs/hm_packages.nix { inherit pkgs; };
+  allPackages = import ../../pkgs/Cyclonus/hm_packages.nix { inherit pkgs; };
 in
 {
   home = {
@@ -23,17 +22,16 @@ in
   nixpkgs.config.allowUnfree = true;
 
   imports = [
+    inputs.niri.homeModules.niri
     inputs.stylix.homeModules.stylix
     inputs.dms.homeModules.dank-material-shell
-
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
     ../../env/stylix/stylix.nix
-    ../../apps/dms/dms-shell-niri.nix
+    ../../apps/dms/dms-shell.nix
     ../../apps/fish/fish.nix
     ../../apps/fastfetch/fastfetch.nix
-    ../../apps/hypr/hypr.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix

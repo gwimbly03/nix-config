@@ -14,9 +14,9 @@
         decoration.shadow.color = lib.mkForce "rgba(0, 0, 0, 0.25)";
         exec-once = [
           "discord"
-          "steam"
+   #       "steam"
           "feishin"
-          "wpctl set-volume 65 15.0"
+    #      "wpctl set-volume 65 15.0"
         ];
       };
   };
@@ -27,9 +27,9 @@
   };
 
   home.sessionVariables = {
-    LIBVA_DRIVER_NAME = "nvidia";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    NVD_BACKEND = "direct";
+#    LIBVA_DRIVER_NAME = "nvidia";
+ #   __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+  #  NVD_BACKEND = "direct";
     QT_QPA_PLATFORM = "wayland";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     QT_QPA_PLATFORMTHEME_QT6 = "qt6ct";

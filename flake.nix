@@ -2,30 +2,38 @@
   description = "NixOS config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
-    nixvim.url = "github:nix-community/nixvim";
-    home-manager.url = "github:nix-community/home-manager";
-    nur.url = "github:nix-community/NUR";
-    nix-gaming.url = "github:fufexan/nix-gaming";
-    nix-citizen.url = "github:LovingMelody/nix-citizen";
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+    }; 
 
-    # Optional - updates underlying without waiting for nix-citizen to update
-    nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
+    nixpkgs-stable = {
+      url = "github:nixos/nixpkgs/nixos-25.05";
+    };
+
+    nixvim = { 
+      url = "github:nix-community/nixvim";
+    }; 
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+    };
+
+    nur = {
+      url = "github:nix-community/NUR";
+    };
+
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+    };
+
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #dgop = {
-    #  url = "github:AvengeMedia/dgop";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-
     dms = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
-      #inputs.dgop.follows = "dgop";
     };
 
     quickshell = {
@@ -37,13 +45,15 @@
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    
+    nix-citizen = {
+      url = "github:LovingMelody/nix-citizen";
+      inputs.nixpkgs.follows = "nix-gaming";
+    };
   };
 
-outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixvim, nur, stylix, dms, nixcord, ... }@inputs:
-  let
-    systems = [ "x86_64-linux" ];
-  in
+
+outputs = { self, nixpkgs, nixpkgs-stable, home-manager, niri, nixvim, nur, stylix, dms, nixcord, ... }@inputs:
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {

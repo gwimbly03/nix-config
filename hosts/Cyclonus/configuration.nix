@@ -3,9 +3,8 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    ../../env/env.nix
-    ../../pkgs/packages.nix
-    #../../apps/steam.nix
+    #../../env/env.nix
+    ../../pkgs/Cyclonus/packages.nix
     "${self}/apps/nautilus.nix"
   ];
 
@@ -129,6 +128,8 @@
   hardware = {
     enableRedistributableFirmware = true;
     bluetooth.enable = true;
+    graphics.enable = true;
+    graphics.enable32Bit = true;
   };
 
   i18n = {

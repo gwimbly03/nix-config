@@ -9,7 +9,7 @@
     lm_sensors
     power-profiles-daemon
     networkmanagerapplet
-
+    niri
     # Gaming
     steam
 
@@ -17,7 +17,7 @@
     feishin
 
     # TUI
-    btop
+    htop
 
     # Desktop
     nwg-look
@@ -26,7 +26,7 @@
     rustup
     gcc
     gh
-    nixfmt-rfc-style
+    nixfmt
     nixpkgs-fmt
     black
 
