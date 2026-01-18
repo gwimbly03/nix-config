@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, system, ... }: {
   environment.systemPackages = with pkgs; [
     acpi
     power-profiles-daemon

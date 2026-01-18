@@ -53,11 +53,14 @@
   };
 
 
-outputs = { self, nixpkgs, nixpkgs-stable, home-manager, niri, nixvim, nur, stylix, dms, nixcord, ... }@inputs:
+outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixvim, nur, stylix, dms, nixcord, ... }@inputs:
+  let 
+      system = "x86_64-linux";
+  in 
   {
-    nixosConfigurations = {
+      nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
         specialArgs = { inherit self inputs; };
         modules = [
           ./hosts/Cyclonus/configuration.nix
@@ -67,7 +70,7 @@ outputs = { self, nixpkgs, nixpkgs-stable, home-manager, niri, nixvim, nur, styl
       };
 
       Megatronus = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          inherit system;
           specialArgs = { inherit self inputs; };
           modules = [
             ./hosts/Megatronus/configuration.nix
