@@ -5,8 +5,9 @@
     enable = true;
     autoEnable = true;
     enableReleaseChecks = false;
-    
+
     polarity = "dark";
+
     # Transparency
     opacity.terminal = 0.8;
 
@@ -46,12 +47,13 @@
       size = 14;
     };
 
-    iconTheme = {
+    # Icons (UPDATED)
+    icons = {
       enable = true;
-      package = pkgs.candy-icons; # Replace with actual package if different
+      package = pkgs.candy-icons;
       light = "candy-icons";
       dark = "candy-icons";
-    };  
+    };
   };
 }
 
