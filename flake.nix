@@ -6,10 +6,6 @@
       url = "github:nixos/nixpkgs/nixos-unstable";
     }; 
 
-    nixpkgs-stable = {
-      url = "github:nixos/nixpkgs/nixos-25.05";
-    };
-
     nixvim = { 
       url = "github:nix-community/nixvim";
     }; 
@@ -24,6 +20,7 @@
 
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     stylix = {
@@ -42,7 +39,7 @@
     };
 
     nixcord = {
-      url = "github:kaylorben/nixcord";
+      url = "github:FlameFlag/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -53,7 +50,7 @@
   };
 
 
-outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixvim, nur, stylix, dms, nixcord, ... }@inputs:
+outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, dms, nixcord, ... }@inputs:
   let 
       system = "x86_64-linux";
   in 
@@ -65,7 +62,7 @@ outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixvim, nur, stylix, dm
         modules = [
           ./hosts/Cyclonus/configuration.nix
           inputs.stylix.nixosModules.stylix
-          inputs.home-manager.nixosModules.default
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
 

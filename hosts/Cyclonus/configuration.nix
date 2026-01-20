@@ -2,7 +2,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.default
+    inputs.home-manager.nixosModules.home-manager
     #../../env/env.nix
     ../../pkgs/Cyclonus/packages.nix
     "${self}/apps/nautilus.nix"

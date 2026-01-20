@@ -22,7 +22,6 @@ in
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    inputs.niri.homeModules.niri
     inputs.stylix.homeModules.stylix
     inputs.dms.homeModules.dank-material-shell
     inputs.nixvim.homeModules.nixvim
