@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 let
-  inherit (pkgs.stdenv.hostPlatform) system;
+  #inherit (pkgs.stdenv.hostPlatform) system;
   allPackages = import ../../pkgs/Cyclonus/hm_packages.nix { inherit pkgs; };
 in
 {

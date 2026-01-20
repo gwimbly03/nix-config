@@ -72,7 +72,7 @@ outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, dms, nixcord, ... 
           modules = [
             ./hosts/Megatronus/configuration.nix
             inputs.stylix.nixosModules.stylix
-            inputs.home-manager.nixosModules.default
+            inputs.home-manager.nixosModules.home-manager
           ];
       };
     };

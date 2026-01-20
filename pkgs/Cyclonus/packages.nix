@@ -10,8 +10,6 @@
     power-profiles-daemon
     networkmanagerapplet
     niri
-    # Gaming
-    steam
 
     adw-gtk3
     feishin
@@ -23,11 +21,9 @@
     nwg-look
 
     # Development
-    rustup
     gcc
     gh
     nixfmt
-    nixpkgs-fmt
     black
 
     # Utilities
@@ -46,8 +42,6 @@
     mpv
     cava
     brightnessctl
-    lazygit
-    superfile
     fzf
     git
     wget

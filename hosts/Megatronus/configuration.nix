@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.default
+    inputs.home-manager.nixosModules.home-manager
     ../../env/env.nix
     ../../pkgs/Megatronus/packages.nix
     ../../apps/steam.nix

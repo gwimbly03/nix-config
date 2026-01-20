@@ -24,7 +24,7 @@
     # Development
     gcc
     gh
-    nixfmt-rfc-style
+    nixfmt
     black
 
     # Utilities
