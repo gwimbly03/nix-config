@@ -3,10 +3,6 @@
 let
   inherit (pkgs.stdenv.hostPlatform) system;
   allPackages = import ../../pkgs/Megatronus/hm_packages.nix { inherit pkgs; };
-  stablePkgs = import inputs.nixpkgs-stable {
-    inherit system;
-    config.allowUnfree = true;
-  };
 in
 {
   home = {
@@ -14,8 +10,7 @@ in
     homeDirectory = "/home/gwimbly";
     stateVersion = "25.11";
 
-    packages = allPackages
-    ++ [ stablePkgs.protontricks ];
+    packages = allPackages;
 
     sessionVariables = {
       EDITOR = "nvim";
@@ -37,7 +32,7 @@ in
     ../../apps/fish/hypr_fish.nix
     ../../apps/hypr/hypr.nix
     ../../apps/dms/dms-shell.nix
-    ../../apps/nixcord.nix
+    #../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
     ../../apps/kitty.nix

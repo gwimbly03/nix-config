@@ -1,11 +1,11 @@
-{ config, pkgs, ... }:
-
 {
   programs.nixcord = {
     enable = true;
 
-    # Optional: enable either Discord or Vesktop (not both)
-    discord.enable = true;
+    discord = {
+      vencord.enable = true;
+    };
+
     vesktop.enable = false;
 
     config = {
@@ -20,9 +20,7 @@
         readAllNotifications.enable = true;
         fixYoutubeEmbeds.enable = true;
 
-        hideAttachments = {
-          enable = true;
-        };
+        hideAttachments.enable = true;
 
         ignoreActivities = {
           enable = true;
@@ -48,8 +46,7 @@
             folderColor = true;
           };
         };
-
-      };      
+      };
     };
   };
 }

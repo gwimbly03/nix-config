@@ -28,11 +28,9 @@
     pkgs.steam-tui
     pkgs.lutris
     pkgs.protonup-qt
-    pkgs.nexusmods-app
     pkgs.wineWowPackages.stagingFull
     pkgs.wineWowPackages.waylandFull
     pkgs.winetricks
-
 
   ];
 

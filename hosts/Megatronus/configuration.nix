@@ -14,11 +14,15 @@
   # Timezone
   time.timeZone = "America/Vancouver";
 
-  nixpkgs.config = {
-    allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+
     overlays = [
       (final: prev: {
-        nur = import inputs.nur { nurpkgs = prev; pkgs = prev; };
+        nur = import inputs.nur {
+          nurpkgs = prev;
+          pkgs = prev;
+        };
       })
     ];
   };

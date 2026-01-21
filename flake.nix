@@ -12,6 +12,7 @@
 
     home-manager = {
       url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nur = {
@@ -50,15 +51,15 @@
   };
 
 
-outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, dms, nixcord, ... }@inputs:
+outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, dms, nixcord, nix-citizen, ... }@inputs:
   let 
       system = "x86_64-linux";
   in 
   {
-      nixosConfigurations = {
+    nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit self inputs; };
+        specialArgs = { inherit self inputs system; };
         modules = [
           ./hosts/Cyclonus/configuration.nix
           inputs.stylix.nixosModules.stylix
@@ -68,7 +69,7 @@ outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, dms, nixcord, ... 
 
       Megatronus = nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit self inputs; };
+          specialArgs = { inherit self inputs system; };
           modules = [
             ./hosts/Megatronus/configuration.nix
             inputs.stylix.nixosModules.stylix

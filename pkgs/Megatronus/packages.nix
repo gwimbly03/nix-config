@@ -1,13 +1,12 @@
-{ pkgs, inputs, system, ... }: {
+{ pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
     acpi
     power-profiles-daemon
 
     # Gaming
     openrgb-with-all-plugins
-    bottles
     # nix-citzen
-    inputs.nix-citizen.packages.${system}.rsi-launcher
+    #inputs.nix-citizen.packages.${system}.rsi-launcher
 
     file-roller
     adw-gtk3
