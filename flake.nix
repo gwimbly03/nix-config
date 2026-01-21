@@ -51,13 +51,9 @@
 
 
 outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, dms, nixcord, ... }@inputs:
-  let 
-      hostSystem = nixpkgs.stdenv.hostPlatform.system;
-  in 
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {
-        inherit hostSystem;
         specialArgs = { inherit self inputs; };
         modules = [
           ./hosts/Cyclonus/configuration.nix
@@ -67,7 +63,6 @@ outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, dms, nixcord, ... 
       };
 
       Megatronus = nixpkgs.lib.nixosSystem {
-          inherit hostSystem;
           specialArgs = { inherit self inputs; };
           modules = [
             ./hosts/Megatronus/configuration.nix
