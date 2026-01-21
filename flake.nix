@@ -21,7 +21,6 @@
 
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     stylix = {
@@ -46,20 +45,20 @@
     
     nix-citizen = {
       url = "github:LovingMelody/nix-citizen";
-      inputs.nixpkgs.follows = "nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
 
-outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, dms, nixcord, nix-citizen, ... }@inputs:
+outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, dms, nixcord, ... }@inputs:
   let 
-      system = "x86_64-linux";
+      hostSystem = nixpkgs.stdenv.hostPlatform.system;
   in 
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit self inputs system; };
+        inherit hostSystem;
+        specialArgs = { inherit self inputs; };
         modules = [
           ./hosts/Cyclonus/configuration.nix
           inputs.stylix.nixosModules.stylix
@@ -68,8 +67,8 @@ outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, dms, nixcord, nix-
       };
 
       Megatronus = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = { inherit self inputs system; };
+          inherit hostSystem;
+          specialArgs = { inherit self inputs; };
           modules = [
             ./hosts/Megatronus/configuration.nix
             inputs.stylix.nixosModules.stylix

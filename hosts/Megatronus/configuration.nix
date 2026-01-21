@@ -4,10 +4,12 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+    inputs.nix-citizen.nixosModules.default
     ../../env/env.nix
     ../../pkgs/Megatronus/packages.nix
     ../../apps/steam.nix
     ../../apps/lact.nix
+    ../../apps/nix-citizen.nix
     "${self}/apps/nautilus.nix"
   ];
 
