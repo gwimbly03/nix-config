@@ -14,9 +14,9 @@
         decoration.shadow.color = lib.mkForce "rgba(0, 0, 0, 0.25)";
         exec-once = [
           "discord"
-   #       "steam"
+          "steam"
           "feishin"
-    #      "wpctl set-volume 65 15.0"
+          "wpctl set-volume 65 15.0"
         ];
       };
   };

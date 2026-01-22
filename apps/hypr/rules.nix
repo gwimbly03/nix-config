@@ -1,22 +1,22 @@
 {
     workspace = [
-      "1, monitor:eDP-1"
-     # "2, monitor:DP-4"
-     # "3, monitor:DP-4"
-     # "4, monitor:DP-4"
-     # "5, monitor:DP-4"
+      "1, monitor:DP-4"
+      "2, monitor:DP-4"
+      "3, monitor:DP-4"
+      "4, monitor:DP-4"
+      "5, monitor:DP-4"
 
-      #"6, monitor:DP-5"
-      #"7, monitor:DP-5"
-      #"8, monitor:DP-5"
-      #"9, monitor:DP-5"
-      #"10, monitor:DP-5"
+      "6, monitor:DP-5"
+      "7, monitor:DP-5"
+      "8, monitor:DP-5"
+      "9, monitor:DP-5"
+      "10, monitor:DP-5"
     ];
 
     windowrule = [
-      "workspace 9 match:class steam"
-      "workspace 7 match:class feishin"
-      "workspace 6 match:class discord"
+      "workspace 9, match:class steam"
+      "workspace 7, match:class feishin"
+      "workspace 6, match:class discord"
       "workspace 9, match:class mpv"
 
       "match:float 1, match:class org\.gnome\.Nautilus"
