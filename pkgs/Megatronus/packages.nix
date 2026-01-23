@@ -11,7 +11,6 @@
     telegram-desktop
     supersonic
     feishin
-    discord
     # TUI
     htop 
 
