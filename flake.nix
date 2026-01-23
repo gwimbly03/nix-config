@@ -19,6 +19,11 @@
       url = "github:nix-community/NUR";
     };
 
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
     };
@@ -50,7 +55,7 @@
   };
 
 
-outputs = { self, nixpkgs, home-manager, nixvim, nur, stylix, dms, nixcord, ... }@inputs:
+outputs = { self, nixpkgs, home-manager, nixvim, nur, niri, stylix, dms, nixcord, ... }@inputs:
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {

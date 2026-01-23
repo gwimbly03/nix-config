@@ -9,7 +9,6 @@
     lm_sensors
     power-profiles-daemon
     networkmanagerapplet
-    niri
 
     adw-gtk3
     feishin

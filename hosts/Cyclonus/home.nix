@@ -24,6 +24,8 @@ in
   imports = [
     inputs.stylix.homeModules.stylix
     inputs.dms.homeModules.dank-material-shell
+    #inputs.dms.homeModules.niri
+    inputs.niri.homeModules.niri
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
@@ -31,6 +33,7 @@ in
     ../../apps/dms/dms-shell.nix
     ../../apps/fish/fish.nix
     ../../apps/fastfetch/fastfetch.nix
+    ../../apps/niri/niri.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
