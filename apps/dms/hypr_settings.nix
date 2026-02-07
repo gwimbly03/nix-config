@@ -13,34 +13,7 @@
   controlCenterTileColorMode = "primary";
   buttonColorMode = "primary";
   cornerRadius = 12;
-  niriLayoutGapsOverride = "unknown character to parse: -";
-  ",
-  " = null;
-  ayoutRadiusOverride = "unknown character to parse: -";
-  ",
-  " = null;
-  ayoutBorderSize = "unknown character to parse: -";
-  ",
-  " = "unknown character to parse: h";
-  prlandLayoutGapsOverride = "unknown character to parse: -";
-  ",
-  " = "unknown character to parse: h";
-  prlandLayoutRadiusOverride = "unknown character to parse: -";
-  ",
-  " = "unknown character to parse: h";
-  prlandLayoutBorderSize = "unknown character to parse: -";
-  ",
-  " = "unknown character to parse: m";
-  ngoLayoutGapsOverride = "unknown character to parse: -";
-  ",
-  " = "unknown character to parse: m";
-  ngoLayoutRadiusOverride = "unknown character to parse: -";
-  ",
-  " = "unknown character to parse: m";
-  ngoLayoutBorderSize = "unknown character to parse: -";
-  ",
-  " = "unknown character to parse: u";
-  e24HourClock = true;
+  use24HourClock = false;
   showSeconds = false;
   padHours12Hour = false;
   useFahrenheit = false;
@@ -255,10 +228,7 @@
   notepadFontFamily = "";
   notepadFontSize = 14;
   notepadShowLineNumbers = false;
-  notepadTransparencyOverride = "unknown character to parse: -";
-  ",
-  " = null;
-  adLastCustomTransparency = 0.7;
+  notepadLastCustomTransparency = 0.7;
   soundsEnabled = true;
   useSystemSoundTheme = false;
   soundNewNotification = true;
@@ -378,7 +348,7 @@
   osdPowerProfileEnabled = false;
   osdAudioOutputEnabled = true;
   powerActionConfirm = true;
-  powerActionHoldDuration = 0.5;
+  powerActionHoldDuration = 5;
   powerMenuActions = [
     "reboot"
     "logout"
@@ -433,6 +403,14 @@
         "weather"
       ];
       rightWidgets = [
+        {
+          id = "systemTray";
+          enabled = true;
+        }
+        {
+          id = "appsDock";
+          enabled = true;
+        }
         {
           id = "nixMonitor";
           enabled = true;
@@ -536,33 +514,13 @@
   desktopClockStyle = "analog";
   desktopClockTransparency = 0.8;
   desktopClockColorMode = "primary";
-  desktopClockCustomColor = {
-    r = 1;
-    g = 1;
-    b = 1;
-    a = 1;
-    hsvHue = "unknown character to parse: -";
-    ",
-    " = "unknown character to parse: h";
-    vSaturation = 0;
-    hsvValue = 1;
-    hslHue = "unknown character to parse: -";
-    ",
-    " = "unknown character to parse: h";
-    lSaturation = 0;
-    hslLightness = 1;
-    valid = true;
-  };
+  desktopClockCustomColor =  "#ffffff";
   desktopClockShowDate = true;
   desktopClockShowAnalogNumbers = false;
   desktopClockShowAnalogSeconds = true;
-  desktopClockX = "unknown character to parse: -";
-  ",
-  " = "unknown character to parse: d";
-  sktopClockY = "unknown character to parse: -";
-  ",
-  " = "unknown character to parse: d";
-  sktopClockWidth = 280;
+  desktopClockX = -1;
+  desktopClockY = -1;
+  desktopClockWidth = 280;
   desktopClockHeight = 180;
   desktopClockDisplayPreferences = [
     "all"
@@ -571,23 +529,7 @@
   systemMonitorShowHeader = true;
   systemMonitorTransparency = 0.8;
   systemMonitorColorMode = "primary";
-  systemMonitorCustomColor = {
-    r = 1;
-    g = 1;
-    b = 1;
-    a = 1;
-    hsvHue = "unknown character to parse: -";
-    ",
-    " = "unknown character to parse: h";
-    vSaturation = 0;
-    hsvValue = 1;
-    hslHue = "unknown character to parse: -";
-    ",
-    " = "unknown character to parse: h";
-    lSaturation = 0;
-    hslLightness = 1;
-    valid = true;
-  };
+  systemMonitorCustomColor =  "#ffffff";
   systemMonitorShowCpu = true;
   systemMonitorShowCpuGraph = true;
   systemMonitorShowCpuTemp = true;
@@ -603,13 +545,7 @@
   systemMonitorTopProcessSortBy = "cpu";
   systemMonitorGraphInterval = 60;
   systemMonitorLayoutMode = "auto";
-  systemMonitorX = "unknown character to parse: -";
-  ",
-  " = "unknown character to parse: s";
-  stemMonitorY = "unknown character to parse: -";
-  ",
-  " = "unknown character to parse: s";
-  stemMonitorWidth = 320;
+  systemMonitorWidth = 320;
   systemMonitorHeight = 480;
   systemMonitorDisplayPreferences = [
     "all"

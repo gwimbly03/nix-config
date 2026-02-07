@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   programs.dank-material-shell = {
     enable = true;
@@ -8,8 +9,15 @@
     };
 
     managePluginSettings = true;
-    settings = (import ./hypr_settings.nix);
- 
+    settings = lib.mkForce (
+      (import ./hypr_settings.nix) // {
+        wallpaperCyclingEnabled = true;
+        wallpaperCyclingMode = "interval";
+        wallpaperCyclingInterval = 43200;
+        #wallpaperCyclingTime = "06:00";
+        monitorCyclingSettings = {};
+      }
+    );
     # Core features
     enableSystemMonitoring = true;   # System monitoring widgets (dgop)
     enableVPN = true;                # VPN management widget
