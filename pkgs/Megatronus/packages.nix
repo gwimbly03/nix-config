@@ -12,7 +12,8 @@
     supersonic
     feishin
     # TUI
-    htop 
+    htop
+    valent
 
     # Desktop
     nwg-look

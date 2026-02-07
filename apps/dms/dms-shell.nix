@@ -8,7 +8,8 @@
     };
 
     managePluginSettings = true;
-    
+    settings = (import ./hypr_settings.nix);
+ 
     # Core features
     enableSystemMonitoring = true;   # System monitoring widgets (dgop)
     enableVPN = true;                # VPN management widget
