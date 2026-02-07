@@ -64,6 +64,9 @@
 
     # Niri
     xwayland-satellite
+    wl-mirror
+    valent
+
   ];
 }
 

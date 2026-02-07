@@ -24,13 +24,13 @@ in
   imports = [
     inputs.stylix.homeModules.stylix
     inputs.dms.homeModules.dank-material-shell
-    #inputs.dms.homeModules.niri
+    inputs.dms-plugin-registry.modules.default
     inputs.niri.homeModules.niri
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
     ../../env/stylix/stylix.nix
-    ../../apps/dms/dms-shell.nix
+    ../../apps/dms/dms-shell-niri.nix
     ../../apps/fish/fish.nix
     ../../apps/fastfetch/fastfetch.nix
     ../../apps/niri/niri.nix

@@ -38,8 +38,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    quickshell = {
-      url = "github:quickshell-mirror/quickshell";
+    dms-plugin-registry = {
+      url = "github:AvengeMedia/dms-plugin-registry";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -55,7 +55,7 @@
   };
 
 
-outputs = { self, nixpkgs, home-manager, nixvim, nur, niri, stylix, dms, nixcord, ... }@inputs:
+outputs = { self, nixpkgs, home-manager, nixvim, nur, niri, stylix, dms, dms-plugin-registry, nixcord, ... }@inputs:
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {
