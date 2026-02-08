@@ -77,10 +77,6 @@ in
       nix-direnv.enable = true;
     };
 
-    kdeconnect = {
-      enable = true;
-      package = pkgs.valent;
-    };
   };
 }
 

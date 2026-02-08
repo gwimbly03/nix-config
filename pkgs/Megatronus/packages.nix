@@ -13,6 +13,7 @@
     feishin
     # TUI
     htop
+    valent
 
     # Desktop
     nwg-look
