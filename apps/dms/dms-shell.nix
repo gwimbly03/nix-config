@@ -1,43 +1,36 @@
 { lib, ... }:
+let
+  dmsSettings =
+    builtins.fromJSON (builtins.readFile ./hypr_settings.json);
+in
 {
   programs.dank-material-shell = {
     enable = true;
 
     systemd = {
-      enable = true;           # Systemd service for auto-start
-      restartIfChanged = true; # Auto-restart dms.service when dankMaterialShell changes
+      enable = true;           
+      restartIfChanged = true;
     };
 
     managePluginSettings = true;
-    settings = lib.mkForce (
-      (import ./hypr_settings.nix) // {
-        wallpaperCyclingEnabled = true;
-        wallpaperCyclingMode = "interval";
-        wallpaperCyclingInterval = 43200;
-        #wallpaperCyclingTime = "06:00";
-        monitorCyclingSettings = {};
-      }
-    );
-    # Core features
-    enableSystemMonitoring = true;   # System monitoring widgets (dgop)
-    enableVPN = true;                # VPN management widget
-    enableDynamicTheming = true;     # Wallpaper-based theming (matugen)
-    enableAudioWavelength = true;    # Audio visualizer (cava)
-    enableCalendarEvents = true;     # Calendar integration (khal)
+    settings = lib.mkForce dmsSettings;
+
+    enableSystemMonitoring = true;   
+    enableVPN = true;                
+    enableDynamicTheming = true;     
+    enableAudioWavelength = true;   
+    enableCalendarEvents = true;     
     
     plugins = {
-      # Simply enable plugins by their ID (from the registry)
       dockerManager.enable = true;
       dankKDEConnect.enable = true;
       dankLauncherKeys.enable = true;
       tailscale.enable = true;
       nixMonitor.enable = true;
       
-      # Add plugin-specific settings
       mediaPlayer = {
         enable = true;
 
-        # You can only define settings here if using the home-manager module
         settings = {
           preferredSource = "feishin";
         };
