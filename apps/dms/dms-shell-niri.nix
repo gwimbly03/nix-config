@@ -1,3 +1,4 @@
+{ lib, ... }:
 let
   dmsSettings =
     builtins.fromJSON (builtins.readFile ./niri_settings.json);
@@ -11,7 +12,7 @@ programs.dank-material-shell = {
       restartIfChanged = true; # Auto-restart dms.service when dankMaterialShell changes
     };
 
-  settings = dmsSettings;
+  settings = lib.mkForce dmsSettings;
   managePluginSettings = true;
 
   enableSystemMonitoring = true;     # System monitoring widgets (dgop)
