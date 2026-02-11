@@ -16,7 +16,8 @@
         "SUPER SHIFT, N, exec, dms ipc call night toggle"
 
         "SUPER, PRINT, exec, hyprshot -m output"
-        "SUPER_SHIFT, PRINT, exec, hyprshot -m region --clipboard-only"
+        "SUPER_SHIFT, PRINT, exec, quickshell -c HyprQuickFrame -n"
+        "SUPER CTRL SHIFT, S, exec, HYPRQUICKFRAME_EDITOR=1 quickshell -c HyprQuickFrame -n"
 
         "SUPER, Q, killactive"
         "SUPER, F, fullscreen"

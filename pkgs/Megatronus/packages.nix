@@ -23,6 +23,7 @@
     gh
     nixfmt
     black
+    satty
 
     # Utilities
     jq
