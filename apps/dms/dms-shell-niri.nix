@@ -8,19 +8,19 @@ programs.dank-material-shell = {
   enable = true;
 
   systemd = {
-      enable = true;           # Systemd service for auto-start
-      restartIfChanged = true; # Auto-restart dms.service when dankMaterialShell changes
+      enable = true;          
+      restartIfChanged = true; 
     };
 
   settings = lib.mkForce dmsSettings;
   managePluginSettings = true;
 
-  enableSystemMonitoring = true;     # System monitoring widgets (dgop)
-  enableVPN = true;                  # VPN management widget
-  enableDynamicTheming = true;       # Wallpaper-based theming (matugen)
-  enableAudioWavelength = true;      # Audio visualizer (cava)
-  enableCalendarEvents = true;       # Calendar integration (khal)
-  enableClipboardPaste = true;       # Pasting items from the clipboard (wtype)
+  enableSystemMonitoring = true;     
+  enableVPN = true;                 
+  enableDynamicTheming = true;     
+  enableAudioWavelength = true;    
+  enableCalendarEvents = true;    
+  enableClipboardPaste = true;   
 
   plugins = {
       dankBatteryAlerts.enable = true;
@@ -28,9 +28,31 @@ programs.dank-material-shell = {
       dankKDEConnect.enable = true;
       dankLauncherKeys.enable = true;
       tailscale.enable = true;
-      nixMonitor.enable = true;
       displayMirror.enable = true;
       dmsLenovoBatterySettings.enable = true;
+
+      nixMonitor = {
+        enable = true;
+        
+        settings = {
+            rebuildCommand = [ 
+              "bash" "-c" 
+              "nh os switch . -H Cyclonus 2>&1"
+            ];
+
+            gcCommand = [ 
+              "bash" "-c" 
+              "nh clean all 2>&1" 
+            ];
+
+            nixpkgsChannel = "nixos-unstable";
+
+
+            updateInterval = 600;
+
+        };
+      };
+
       
       mediaPlayer = {
         enable = true;

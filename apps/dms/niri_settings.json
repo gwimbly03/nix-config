@@ -22,7 +22,7 @@
   "mangoLayoutGapsOverride": -1,
   "mangoLayoutRadiusOverride": -1,
   "mangoLayoutBorderSize": -1,
-  "use24HourClock": true,
+  "use24HourClock": false,
   "showSeconds": false,
   "padHours12Hour": false,
   "useFahrenheit": false,
@@ -73,43 +73,43 @@
   "privacyShowScreenShareIcon": false,
   "controlCenterWidgets": [
     {
+      "enabled": true,
       "id": "volumeSlider",
-      "enabled": true,
       "width": 50
     },
     {
+      "enabled": true,
       "id": "brightnessSlider",
-      "enabled": true,
       "width": 50
     },
     {
+      "enabled": true,
       "id": "wifi",
-      "enabled": true,
       "width": 50
     },
     {
+      "enabled": true,
       "id": "bluetooth",
-      "enabled": true,
       "width": 50
     },
     {
+      "enabled": true,
       "id": "audioOutput",
-      "enabled": true,
       "width": 50
     },
     {
+      "enabled": true,
       "id": "audioInput",
-      "enabled": true,
       "width": 50
     },
     {
+      "enabled": true,
       "id": "nightMode",
-      "enabled": true,
       "width": 50
     },
     {
-      "id": "darkMode",
       "enabled": true,
+      "id": "darkMode",
       "width": 50
     }
   ],
@@ -207,20 +207,20 @@
   "networkPreference": "auto",
   "iconTheme": "System Default",
   "cursorSettings": {
-    "theme": "System Default",
-    "size": 24,
-    "niri": {
-      "hideWhenTyping": false,
-      "hideAfterInactiveMs": 0
+    "dwl": {
+      "cursorHideTimeout": 0
     },
     "hyprland": {
       "hideOnKeyPress": false,
       "hideOnTouch": false,
       "inactiveTimeout": 0
     },
-    "dwl": {
-      "cursorHideTimeout": 0
-    }
+    "niri": {
+      "hideAfterInactiveMs": 0,
+      "hideWhenTyping": false
+    },
+    "size": 24,
+    "theme": "System Default"
   },
   "launcherLogoMode": "os",
   "launcherLogoCustomPath": "",
@@ -244,14 +244,14 @@
   "soundNewNotification": true,
   "soundVolumeChanged": true,
   "soundPluggedIn": true,
-  "acMonitorTimeout": 0,
-  "acLockTimeout": 0,
-  "acSuspendTimeout": 0,
+  "acMonitorTimeout": 600,
+  "acLockTimeout": 300,
+  "acSuspendTimeout": 1800,
   "acSuspendBehavior": 0,
   "acProfileName": "",
-  "batteryMonitorTimeout": 0,
-  "batteryLockTimeout": 0,
-  "batterySuspendTimeout": 0,
+  "batteryMonitorTimeout": 600,
+  "batteryLockTimeout": 300,
+  "batterySuspendTimeout": 1800,
   "batterySuspendBehavior": 0,
   "batteryProfileName": "",
   "batteryChargeLimit": 100,
@@ -347,7 +347,7 @@
   "notificationHistorySaveNormal": true,
   "notificationHistorySaveCritical": true,
   "osdAlwaysShowValue": true,
-  "osdPosition": 6,
+  "osdPosition": 1,
   "osdVolumeEnabled": true,
   "osdMediaVolumeEnabled": true,
   "osdMediaPlaybackEnabled": true,
@@ -358,16 +358,15 @@
   "osdPowerProfileEnabled": false,
   "osdAudioOutputEnabled": true,
   "powerActionConfirm": true,
-  "powerActionHoldDuration": 0.5,
+  "powerActionHoldDuration": 2,
   "powerMenuActions": [
     "reboot",
     "logout",
     "poweroff",
-    "lock",
     "suspend",
     "restart"
   ],
-  "powerMenuDefaultAction": "logout",
+  "powerMenuDefaultAction": "poweroff",
   "powerMenuGridLayout": false,
   "customPowerActionLock": "",
   "customPowerActionLogout": "",
@@ -391,33 +390,49 @@
   "displaySnapToEdge": true,
   "barConfigs": [
     {
-      "id": "default",
-      "name": "Main Bar",
-      "enabled": true,
-      "position": 0,
-      "screenPreferences": [
-        "all"
-      ],
-      "showOnLastDisplay": true,
-      "leftWidgets": [
-        "launcherButton",
-        "workspaceSwitcher",
-        {
-          "id": "music",
-          "enabled": true
-        }
-      ],
+      "autoHide": false,
+      "autoHideDelay": 250,
+      "borderColor": "surfaceText",
+      "borderEnabled": false,
+      "borderOpacity": 1,
+      "borderThickness": 1,
+      "bottomGap": 0,
       "centerWidgets": [
         "clock",
         "weather"
       ],
+      "enabled": true,
+      "fontScale": 1,
+      "gothCornerRadiusOverride": false,
+      "gothCornerRadiusValue": 12,
+      "gothCornersEnabled": true,
+      "id": "default",
+      "innerPadding": 4,
+      "leftWidgets": [
+        "launcherButton",
+        "workspaceSwitcher",
+        {
+          "enabled": true,
+          "id": "music"
+        },
+        {
+          "id": "nixMonitor",
+          "enabled": true
+        }
+      ],
+      "name": "Main Bar",
+      "noBackground": false,
+      "openOnOverview": false,
+      "popupGapsAuto": true,
+      "popupGapsManual": 4,
+      "position": 0,
       "rightWidgets": [
         {
           "id": "tailscale",
           "enabled": true
         },
         {
-          "id": "notificationButton",
+          "id": "dankKDEConnect",
           "enabled": true
         },
         {
@@ -441,31 +456,19 @@
           "showScreenSharingIcon": true
         }
       ],
-      "spacing": 4,
-      "innerPadding": 4,
-      "bottomGap": 0,
-      "transparency": 0.54,
-      "widgetTransparency": 0.7,
-      "squareCorners": false,
-      "noBackground": false,
-      "gothCornersEnabled": true,
-      "gothCornerRadiusOverride": false,
-      "gothCornerRadiusValue": 12,
-      "borderEnabled": false,
-      "borderColor": "surfaceText",
-      "borderOpacity": 1,
-      "borderThickness": 1,
-      "fontScale": 1,
-      "autoHide": false,
-      "autoHideDelay": 250,
-      "openOnOverview": false,
-      "visible": true,
-      "popupGapsAuto": true,
-      "popupGapsManual": 4,
-      "shadowIntensity": 15,
+      "screenPreferences": [
+        "all"
+      ],
       "shadowColorMode": "surface",
+      "shadowIntensity": 15,
       "shadowOpacity": 60,
-      "widgetOutlineEnabled": false
+      "showOnLastDisplay": true,
+      "spacing": 4,
+      "squareCorners": false,
+      "transparency": 0.54,
+      "visible": true,
+      "widgetOutlineEnabled": false,
+      "widgetTransparency": 0.7
     }
   ],
   "desktopClockEnabled": false,
@@ -539,10 +542,6 @@
   "desktopWidgetGridSettings": {},
   "desktopWidgetInstances": [
     {
-      "id": "dw_1770411924685_bjamcrx12",
-      "widgetType": "mediaPlayer",
-      "name": "Media Player",
-      "enabled": false,
       "config": {
         "displayPreferences": [
           "all"
@@ -550,14 +549,18 @@
         "showOnOverlay": false,
         "showOnOverview": false
       },
+      "enabled": false,
+      "id": "dw_1770411924685_bjamcrx12",
+      "name": "Media Player",
       "positions": {
         "eDP-1": {
-          "width": 503.89453125,
           "height": 228.87890625,
+          "width": 503.89453125,
           "x": 800,
           "y": 500
         }
-      }
+      },
+      "widgetType": "mediaPlayer"
     }
   ],
   "desktopWidgetGroups": [],
