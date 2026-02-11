@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
     acpi
     power-profiles-daemon
@@ -51,6 +51,9 @@
     fd
     microfetch
     pulsemixer
+    inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.mo2installer
+    inputs.HyprQuickFrame.packages.${pkgs.stdenv.hostPlatform.system}.default
+    picard
 
     # Networking & containers
     docker

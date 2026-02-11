@@ -52,10 +52,15 @@
       url = "github:LovingMelody/nix-citizen";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    HyprQuickFrame = {
+      url = "github:Ronin-CK/HyprQuickFrame";
+      inputs.nixpkgs.follows = "nixpkgs"
+    };
   };
 
 
-outputs = { self, nixpkgs, home-manager, nixvim, nur, niri, stylix, dms, dms-plugin-registry, nixcord, ... }@inputs:
+outputs = { self, nixpkgs, home-manager, nixvim, nur, niri, stylix, dms, dms-plugin-registry, nixcord, HyprQuickFrame, ... }@inputs:
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {
