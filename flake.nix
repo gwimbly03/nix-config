@@ -55,7 +55,7 @@
 
     HyprQuickFrame = {
       url = "github:Ronin-CK/HyprQuickFrame";
-      inputs.nixpkgs.follows = "nixpkgs"
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
