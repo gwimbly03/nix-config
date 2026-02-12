@@ -61,6 +61,8 @@
     docker-compose
     wireshark
     nmap
+    tcpdump
+    libpcap
   ];
 }
 

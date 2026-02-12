@@ -146,6 +146,7 @@
 
   networking = {
   hostName = "Megatronus";
+  firewall.enable = false;
 
   networkmanager = {
     enable = true;
