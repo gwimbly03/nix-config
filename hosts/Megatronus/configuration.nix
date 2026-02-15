@@ -191,7 +191,7 @@
       rootless = {
         enable = true;
         setSocketVariable = true;
-      }
+      };
     };
 
     libvirtd = {
