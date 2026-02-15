@@ -181,14 +181,17 @@
     package = config.boot.kernelPackages.nvidiaPackages.beta;
     };
   };
+
+    hardware.nvidia-container-toolkit.enable = true;
   
     virtualisation = {
     docker = {
       enable = true;
       enableOnBoot = true;
-      daemon.settings = {
-        data-root = "/var/lib/docker";
-      };
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      }
     };
 
     libvirtd = {
