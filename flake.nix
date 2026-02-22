@@ -18,7 +18,12 @@
     nur = {
       url = "github:nix-community/NUR";
     };
-
+    
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -60,7 +65,7 @@
   };
 
 
-outputs = { self, nixpkgs, home-manager, nixvim, nur, niri, stylix, dms, dms-plugin-registry, nixcord, HyprQuickFrame, ... }@inputs:
+outputs = { self, nixpkgs, home-manager, nixvim, nur, hyprland, niri, stylix, dms, dms-plugin-registry, nixcord, HyprQuickFrame, ... }@inputs:
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {
