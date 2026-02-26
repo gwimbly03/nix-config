@@ -118,10 +118,21 @@
       pulse.enable = true;
       wireplumber.enable = true;
     };
-
+    
+    
     power-profiles-daemon.enable = true;
     upower.enable = true;
-    printing.enable = true;
+    printing = { 
+      enable = true;
+      drivers = [ pkgs.brlaser ];
+    };
+
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
+
     gvfs.enable = true;
     tumbler.enable = true;
     tailscale = {
