@@ -31,6 +31,7 @@
     pkgs.wineWowPackages.stagingFull
     pkgs.wineWowPackages.waylandFull
     pkgs.winetricks
+    pkgs.deadlock-mod-manager
 
   ];
 
