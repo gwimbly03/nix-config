@@ -254,13 +254,13 @@
   environment = {
     shellAliases.sudo = "doas";
     systemPackages = with pkgs; [
-      bluez tlp lm_sensors openssl nh pciutils libva-utils vdpauinfo mesa vulkan-tools  
-
+      bluez tlp lm_sensors openssl nh pciutils libva-utils vdpauinfo mesa vulkan-tools glib-networking
     ];
     variables = {
       NVD_BACKEND = "direct";
       WLR_NO_HARDWARE_CURSORS = "1";
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      GSK_RENDERER = "gl";
     };
   };
 

@@ -28,8 +28,8 @@
     pkgs.steam-tui
     pkgs.lutris
     pkgs.protonup-qt
-    pkgs.wineWowPackages.stagingFull
-    pkgs.wineWowPackages.waylandFull
+    pkgs.wineWow64Packages.stagingFull
+    pkgs.wineWow64Packages.waylandFull
     pkgs.winetricks
     pkgs.deadlock-mod-manager
 
