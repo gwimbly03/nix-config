@@ -260,7 +260,7 @@
       NVD_BACKEND = "direct";
       WLR_NO_HARDWARE_CURSORS = "1";
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-      GSK_RENDERER = "gl";
+      GSK_RENDERER = "ngl";
     };
   };
 
