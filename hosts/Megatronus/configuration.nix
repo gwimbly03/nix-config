@@ -43,7 +43,7 @@
         shell = pkgs.fish;
         extraGroups = [
           "wheel" "networkmanager" "audio" "video" "input"
-          "plugdev" "bluetooth" "i2c" "wireshark" "libvirtd" "docker"
+          "plugdev" "bluetooth" "i2c" "wireshark" "libvirtd" "docker" "openrazer"
         ];
       };
     };
@@ -254,7 +254,7 @@
   environment = {
     shellAliases.sudo = "doas";
     systemPackages = with pkgs; [
-      bluez tlp lm_sensors openssl nh pciutils libva-utils vdpauinfo mesa vulkan-tools glib-networking
+      bluez tlp lm_sensors openssl nh pciutils libva-utils vdpauinfo mesa vulkan-tools glib-networking openrazer-daemon polychromatic
     ];
     variables = {
       NVD_BACKEND = "direct";
