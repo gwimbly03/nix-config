@@ -24,7 +24,6 @@
     nixfmt
     black
     satty
-    ollama-cuda
 
     # Utilities
     jq
