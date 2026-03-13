@@ -43,7 +43,7 @@
         shell = pkgs.fish;
         extraGroups = [
           "wheel" "networkmanager" "audio" "video" "input"
-          "plugdev" "bluetooth" "i2c" "wireshark" "libvirtd" "docker" "openrazer"
+          "plugdev" "bluetooth" "i2c" "wireshark" "libvirtd" "docker" "openrazer" "kvm" 
         ];
       };
     };
@@ -214,7 +214,7 @@
     };
     spiceUSBRedirection.enable = true;
   };
- 
+
   services.spice-vdagentd.enable = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -254,7 +254,8 @@
   environment = {
     shellAliases.sudo = "doas";
     systemPackages = with pkgs; [
-      bluez tlp lm_sensors openssl nh pciutils libva-utils vdpauinfo mesa vulkan-tools glib-networking openrazer-daemon polychromatic
+      bluez tlp lm_sensors openssl nh pciutils libva-utils vdpauinfo mesa vulkan-tools glib-networking openrazer-daemon
+ polychromatic android-tools
     ];
     variables = {
       NVD_BACKEND = "direct";
