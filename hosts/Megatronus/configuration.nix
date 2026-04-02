@@ -102,7 +102,7 @@
         efiSupport = true;
         device = "nodev";
         # efiInstallAsRemovable = true; # uncomment if firmware ignores variables
-        useOSProber = true;
+        boot.loader.grub.useOSProber = true;
       };
     };
 
@@ -177,7 +177,7 @@
     enable = true;
     enable32Bit = true;
     extraPackages = with pkgs; [
-      config.boot.kernelPackages.nvidiaPackages.beta
+      config.boot.kernelPackages.nvidiaPackages.beta 
       nvidia-vaapi-driver
     ];
   };
