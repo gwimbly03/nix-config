@@ -18,8 +18,6 @@
 
   nixpkgs = {
     config.allowUnfree = true;
-    config.allowBroken = true;
-
 
     overlays = [
       (final: prev: {

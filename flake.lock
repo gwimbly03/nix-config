@@ -1221,11 +1221,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1777402539,
-        "narHash": "sha256-rqHsbLR8VMQsLFoQXQ7X+i6g8Ja5cKIaJma3JB9oBzI=",
+        "lastModified": 1777403493,
+        "narHash": "sha256-VNA05lmxzq+prn8ji4VcTm9F3RT+ZicOWMCHtLCD8vI=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "bfb0f1a6fdc156a541bb9b306db9fb9051a5f2e2",
+        "rev": "08017ffa1f96010f3fc843d6f3d012645ff4314b",
         "type": "github"
       },
       "original": {

@@ -63,6 +63,7 @@
     nmap
     tcpdump
     libpcap
+    dnsutils
   ];
 }
 

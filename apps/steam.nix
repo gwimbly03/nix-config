@@ -26,12 +26,12 @@
     pkgs.steam-run
     pkgs.steamcmd
     pkgs.steam-tui
-    pkgs.lutris
+    #pkgs.lutris
     pkgs.protonup-qt
     pkgs.wineWow64Packages.stagingFull
     pkgs.wineWow64Packages.waylandFull
     pkgs.winetricks
-    pkgs.deadlock-mod-manager
+    #pkgs.deadlock-mod-manager
 
   ];
 
