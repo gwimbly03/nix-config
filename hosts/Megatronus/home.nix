@@ -8,7 +8,7 @@ in
   home = {
     username = "gwimbly";
     homeDirectory = "/home/gwimbly";
-    stateVersion = "25.11";
+    stateVersion = "26.05";
 
     packages = allPackages;
 
