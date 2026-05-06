@@ -19,7 +19,9 @@ in
     enableVPN = true;                
     enableDynamicTheming = true;     
     enableAudioWavelength = true;   
-    enableCalendarEvents = true;     
+    enableCalendarEvents = true;  
+    enableClipboardPaste = true;       
+
     
     plugins = {
       dockerManager.enable = true;
