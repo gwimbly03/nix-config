@@ -83,13 +83,13 @@
           };
       };
 
-      presence = {
-        enable = true;
-        settings = {
-          enable_line_number = true;
-          auto_update = true;
-        };
-      };
+      #presence = {
+      #  enable = true;
+      #  settings = {
+      #    enable_line_number = true;
+      #    auto_update = true;
+      #  };
+      #};
 
       lsp = {
         enable = true;

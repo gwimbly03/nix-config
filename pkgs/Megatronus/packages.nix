@@ -55,6 +55,8 @@
     inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.mo2installer
     inputs.HyprQuickFrame.packages.${pkgs.stdenv.hostPlatform.system}.default
     picard
+    fladder
+
 
     # Networking & containers
     docker
