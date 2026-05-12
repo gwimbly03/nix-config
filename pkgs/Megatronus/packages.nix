@@ -56,6 +56,7 @@
     inputs.HyprQuickFrame.packages.${pkgs.stdenv.hostPlatform.system}.default
     picard
     fladder
+    discord
 
 
     # Networking & containers

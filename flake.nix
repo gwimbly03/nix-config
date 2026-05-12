@@ -48,10 +48,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixcord = {
-      url = "github:FlameFlag/nixcord";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #nixcord = {
+    #  url = "github:FlameFlag/nixcord";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     
     nix-citizen = {
       url = "github:LovingMelody/nix-citizen";
@@ -65,7 +65,7 @@
   };
 
 
-outputs = { self, nixpkgs, home-manager, nixvim, nur, hyprland, niri, stylix, dms, dms-plugin-registry, nixcord, HyprQuickFrame, ... }@inputs:
+outputs = { self, nixpkgs, home-manager, nixvim, nur, hyprland, niri, stylix, dms, dms-plugin-registry, HyprQuickFrame, ... }@inputs:
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {
