@@ -1,19 +1,27 @@
 local terminal    = "alacritty"
 local fileManager = "nautilus"
-local menu        = "dms ipc call spotlight toggle"
+-- local menu        = "dms ipc call spotlight toggle"
+local home = os.getenv("HOME")
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
+-- Autostart applications
+hl.on("hyprland.start", function()
+  hl.exec_cmd("discord")
+  hl.exec_cmd("steam")
+  hl.exec_cmd("feishin")
+  hl.exec_cmd("wpctl set-volume 65 15.0")
+end)
+
 hl.config({
     general = {
-        gaps_in  = 5,
-        gaps_out = 8,
-
+        gaps_in     = 5,
+        gaps_out    = 8,
         border_size = 0,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
+            active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
             inactive_border = "rgba(595959aa)",
         },
 
@@ -38,7 +46,7 @@ hl.config({
             enabled      = true,
             range        = 10,
             render_power = 2,
-            color        = 0xee1a1a1a, -- "rgba(0, 0, 0, 0.25)"
+            color        = "0xee1a1a1a", -- Fixed: Hex token wrapped in quotes as a string
         },
 
         blur = {
@@ -52,34 +60,24 @@ hl.config({
     animations = {
         enabled = true,
     },
-})
-
-hl.config({
+    
+    -- Fixed: Moved from non-existent 'scrolling' category to layout configs
     dwindle = {
-        preserve_split = true, -- You probably want this
+        preserve_split = true,
+        fullscreen_on_one_column = true, 
     },
-})
 
-hl.config({
-    scrolling = {
-        fullscreen_on_one_column = true,
-    },
-})
-
-hl.config({
     misc = {
         force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
     },
-})
 
-hl.config({
     input = {
-        kb_layout  = "us",
-        kb_variant = "",
-        kb_model   = "",
-        kb_options = "",
-        kb_rules   = "",
+        kb_layout    = "us",
+        kb_variant   = "",
+        kb_model     = "",
+        kb_options   = "",
+        kb_rules     = "",
         follow_mouse = 1,
         numlock_by_default = true,
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
