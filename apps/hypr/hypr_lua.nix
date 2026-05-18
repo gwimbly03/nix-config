@@ -14,8 +14,6 @@
   };
 
   xdg.configFile."hypr/hyprland.lua".text = ''
-    -- Allow Lua to find modules in ~/.config/hypr
-    package.path = os.getenv("HOME") .. "/.config/hypr/?.lua;" .. package.path
 
     require("binds")
     require("animations")

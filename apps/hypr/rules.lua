@@ -25,10 +25,9 @@ hl.window_rule({ name = "feishin-workspace",  match = { class = "feishin" },    
 hl.window_rule({ name = "discord-workspace",  match = { class = "discord" },         workspace = "6" })
 hl.window_rule({ name = "mpv-workspace",      match = { class = "mpv" },             workspace = "10" })
 
--- Floating & sizing rules
 hl.window_rule({
     name = "nautilus-float",
-    match = { class = "org%.gnome%.Nautilus" }, -- Note: escaped '.' with '%' for Lua regex patterns
+    match = { class = "org\\.gnome\\.Nautilus" }, 
     float = true,
     size = { 875, 550 },
     rounding = 12,
@@ -39,12 +38,11 @@ hl.window_rule({ name = "mpv-float", match = { class = "mpv" }, float = true })
 
 hl.window_rule({
     name = "gnome-rounding",
-    match = { class = "org%.gnome%..*" },       -- Fixed: Lua string pattern escaping
+    match = { class = "org\\.gnome\\." },       
     rounding = 12,
     border_size = 0,
 })
 
--- Opacity Rules (Fixed to use valid Lua table parameters instead of old string formatting)
 hl.window_rule({
     name = "kitty-opacity",
     match = { class = "kitty" },
@@ -83,5 +81,12 @@ hl.workspace_rule({ workspace = "9", monitor = "DP-5" })
 hl.workspace_rule({ workspace = "10", monitor = "DP-5" })
 
 
+-- Hyprland-run windowrule
+hl.window_rule({
+    name  = "move-hyprland-run",
+    match = { class = "hyprland-run" },
 
+    move  = "20 monitor_h-120",
+    float = true,
+})
 
