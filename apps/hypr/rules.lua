@@ -48,31 +48,26 @@ hl.window_rule({
 hl.window_rule({
     name = "kitty-opacity",
     match = { class = "kitty" },
-    opacity = { active = 0.8, inactive = 0.7 }
 })
 
 hl.window_rule({
     name = "feishin-opacity",
     match = { class = "feishin" },
-    opacity = { active = 0.80, inactive = 0.80 }
 })
 
 hl.window_rule({
     name = "discord-opacity",
     match = { class = "discord" },
-    opacity = { active = 0.80, inactive = 0.80 }
 })
 
 hl.window_rule({
     name = "brave-opacity",
     match = { class = "brave-browser" },
-    opacity = { active = 0.95, inactive = 0.95 }
 })
 
 hl.window_rule({
     name = "alacritty-opacity",
     match = { class = "alacritty" },
-    opacity = { active = 1.0, inactive = 0.5, override = true } -- Fixed: Explicit override syntax
 })
 
 -- Workspace Monitor Rules
