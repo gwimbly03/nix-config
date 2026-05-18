@@ -16,8 +16,9 @@ hl.config({
             },
             inactive_border = "rgba(595959aa)",
         },
-    },
-
+    }
+})
+hl.config({
     decoration = {
         rounding = 14,
         rounding_power = 2,
@@ -37,9 +38,12 @@ hl.config({
             size = 5,
             passes = 3,
             vibrancy = 0.1696,
+            popups = true
         },
-    },
+    }
+})
 
+hl.config({
     animations = {
         enabled = true,
     },
@@ -69,6 +73,10 @@ hl.config({
         touchpad = {
             natural_scroll = false,
         },
+    },
+
+    debug = {
+      suppress_errors = true
     },
 })
 

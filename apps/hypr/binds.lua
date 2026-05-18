@@ -50,8 +50,8 @@ hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("dms ipc call notepad toggle"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("dms ipc call notifications toggle"))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("dms ipc call dankdash wallpaper"))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("dms ipc call hypr toggleOverview"))
-hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("dms screenshot -d ~/Pictures/screenshots"))
-hl.bind(mainMod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("dms screenshot full -d ~/Pictures/screenshots"))
+hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("dms screenshot -d ~/Pictures/Screenshots"))
+hl.bind(mainMod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("dms screenshot full -d ~/Pictures/Screenshots"))
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("dms ipc call lock lock"))
 
 -- Multimedia keys
