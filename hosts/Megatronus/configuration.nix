@@ -176,7 +176,7 @@
     enable = true;
     enable32Bit = true;
     extraPackages = with pkgs; [
-      config.boot.kernelPackages.nvidiaPackages.beta
+      config.boot.kernelPackages.nvidiaPackages.latest
       nvidia-vaapi-driver
     ];
   };
@@ -189,7 +189,7 @@
 
     open = true;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
   };
 
