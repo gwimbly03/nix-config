@@ -101,6 +101,7 @@
         enable = true;
         efiSupport = true;
         device = "nodev";
+        useOSProber = true;
         # efiInstallAsRemovable = true; # uncomment if firmware ignores variables
       };
     };
