@@ -55,6 +55,9 @@
     inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.mo2installer
     inputs.HyprQuickFrame.packages.${pkgs.stdenv.hostPlatform.system}.default
     picard
+    fladder
+    discord
+
 
     # Networking & containers
     docker
@@ -63,6 +66,7 @@
     nmap
     tcpdump
     libpcap
+    dnsutils
   ];
 }
 

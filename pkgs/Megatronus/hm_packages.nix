@@ -5,6 +5,6 @@ with pkgs;
 [
   ffmpeg
   typst
-  linux-wallpaperengine
+  rusty-path-of-building
 ]
 

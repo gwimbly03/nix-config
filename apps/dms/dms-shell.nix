@@ -19,15 +19,17 @@ in
     enableVPN = true;                
     enableDynamicTheming = true;     
     enableAudioWavelength = true;   
-    enableCalendarEvents = true;     
+    enableCalendarEvents = true;  
+    enableClipboardPaste = true;       
+
     
     plugins = {
       dockerManager.enable = true;
       dankKDEConnect.enable = true;
       dankLauncherKeys.enable = true;
+      dankAudioVisualizer.enable = true;
       tailscale.enable = true;
-      nixMonitor.enable = true;
-      
+      wallpaperCarousel.enable = true;
       mediaPlayer = {
         enable = true;
 

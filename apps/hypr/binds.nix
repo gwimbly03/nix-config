@@ -66,9 +66,9 @@
     bindl = [
       ", XF86AudioMute, exec, dms ipc call audio mute"
       ", XF86AudioMicMute, exec, dms ipc call audio micmute"
-      ", XF86AudioPrev, exec, playerctl previous"
-      ", XF86AudioPlay, exec, playerctl play-pause"
-      ", XF86AudioNext, exec, playerctl next"
+      ", XF86AudioPrev, exec, dms ipc call previous"
+      ", XF86AudioPlay, exec, dms ipc call mpris playPause"
+      ", XF86AudioNext, exec, dms ipc call mpris next"
       ", XF86MonBrightnessUp, exec, dms ipc call brightness increment 5 \"\""
       ", XF86MonBrightnessDown, exec, dms ipc call brightness decrement 5 \"\""
     ];

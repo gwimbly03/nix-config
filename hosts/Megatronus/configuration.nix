@@ -101,6 +101,7 @@
         enable = true;
         efiSupport = true;
         device = "nodev";
+        useOSProber = true;
         # efiInstallAsRemovable = true; # uncomment if firmware ignores variables
       };
     };
@@ -128,7 +129,7 @@
     };
 
     avahi = {
-      enable = true;
+      enable = false;
       nssmdns4 = true;
       openFirewall = true;
     };
@@ -176,7 +177,7 @@
     enable = true;
     enable32Bit = true;
     extraPackages = with pkgs; [
-      config.boot.kernelPackages.nvidiaPackages.beta 
+      config.boot.kernelPackages.nvidiaPackages.latest
       nvidia-vaapi-driver
     ];
   };
@@ -189,13 +190,11 @@
 
     open = true;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
   };
 
-    hardware.nvidia-container-toolkit.enable = true;
-  
-    virtualisation = {
+  virtualisation = {
     docker = {
       enable = true;
       enableOnBoot = true;
@@ -216,8 +215,8 @@
   };
 
   services.spice-vdagentd.enable = true;
-
   services.xserver.videoDrivers = [ "nvidia" ];
+  services.printing.browsed.enable = true;
   
   i18n = {
     defaultLocale = "en_US.UTF-8";
@@ -266,6 +265,6 @@
   };
 
   services.udev.packages = [ pkgs.rwedid ];
-  system.stateVersion = "25.11"; 
+  system.stateVersion = "26.05"; 
 
 }
