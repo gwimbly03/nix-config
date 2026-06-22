@@ -26,14 +26,14 @@ in
     inputs.dms.homeModules.dank-material-shell
     inputs.dms-plugin-registry.homeModules.default
     inputs.nixvim.homeModules.nixvim
-    #inputs.nixcord.homeModules.nixcord
+    inputs.nixcord.homeModules.nixcord
 
 
     ../../env/stylix/stylix.nix
     ../../apps/fish/hypr_fish.nix
     ../../apps/hypr/hypr_lua.nix
     ../../apps/dms/dms-shell.nix
-    #../../apps/nixcord.nix
+    ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
     ../../apps/kitty.nix
