@@ -143,6 +143,26 @@
         "type": "github"
       }
     },
+    "dsearch": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782736090,
+        "narHash": "sha256-TnoKATODjWk4e1w3VhRYLWGMdXMJzDyvQF8mtD6WRGA=",
+        "owner": "AvengeMedia",
+        "repo": "danksearch",
+        "rev": "1269b4688cc94cbd271e1cbbf19a6e7caa2293de",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "danksearch",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -1185,6 +1205,7 @@
       "inputs": {
         "dms": "dms",
         "dms-plugin-registry": "dms-plugin-registry",
+        "dsearch": "dsearch",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "niri": "niri",
