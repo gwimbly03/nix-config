@@ -52,7 +52,6 @@
     fd
     microfetch
     pulsemixer
-    inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.mo2installer
     picard
     fladder
 
