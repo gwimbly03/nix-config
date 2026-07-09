@@ -10,6 +10,8 @@ in
     homeDirectory = "/home/gwimbly";
     stateVersion = "26.05";
 
+    pointerCursor.enable = true;
+
     packages = allPackages;
 
     sessionVariables = {
