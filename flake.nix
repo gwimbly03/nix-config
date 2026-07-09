@@ -48,6 +48,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    dsearch = {
+      url = "github:AvengeMedia/danksearch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixcord = {
       url = "github:FlameFlag/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -60,7 +65,7 @@
 };
 
 
-outputs = { self, nixpkgs, home-manager, nixvim, nur, hyprland, nixcord, niri, stylix, dms, dms-plugin-registry, ... }@inputs:
+outputs = { self, nixpkgs, home-manager, nixvim, nur, hyprland, nixcord, niri, stylix, dms, dms-plugin-registry, dsearch, ... }@inputs:
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {

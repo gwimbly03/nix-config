@@ -4,6 +4,20 @@ hl.env("QT_QPA_PLATFORM", "wayland")
 hl.env("QT_QPA_PLATFORMTHEME", "gtk3")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 
+hl.monitor({
+  output = "DP-4",
+  mode = "2560x1440@165",
+  position = "0x0",
+  scale = 1,
+})
+
+hl.monitor({
+  output = "DP-5",
+  mode = "1920x1080@144",
+  --position = "0x1920",
+  scale = 1,
+})
+
 hl.config({
     general = {
         gaps_in = 5,
