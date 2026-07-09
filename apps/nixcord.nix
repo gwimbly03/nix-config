@@ -20,7 +20,7 @@
         readAllNotifications.enable = true;
         fixYoutubeEmbeds.enable = true;
 
-        hideAttachments.enable = true;
+        hideMedia.enable = true;
 
         ignoreActivities = {
           enable = true;
