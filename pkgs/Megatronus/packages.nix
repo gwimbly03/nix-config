@@ -54,6 +54,7 @@
     pulsemixer
     picard
     fladder
+    brave-origin
 
 
     # Networking & containers

@@ -1,5 +1,5 @@
 {
-  programs.brave-origin = {
+  programs.brave = {
     enable = true;
     #package = pkgs.brave-origin;
 

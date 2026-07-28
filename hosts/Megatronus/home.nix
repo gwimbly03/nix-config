@@ -43,7 +43,7 @@ in
     ../../apps/fastfetch/fastfetch.nix
     ../../apps/ghostty.nix
     ../../apps/obs.nix
-    ../../apps/brave.nix
+    #../../apps/brave.nix
     ../../apps/btop.nix
     ../../apps/superfile.nix
     ../../apps/starship/starship.nix
