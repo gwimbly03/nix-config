@@ -1,47 +1,49 @@
-{ pkgs, ... }: {
-  programs.chromium = {
+{
+  programs.brave-origin = {
     enable = true;
-    package = pkgs.brave;
+    #package = pkgs.brave-origin;
 
     extensions = [
       {
-        id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; # uBlock Origin
+        id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; # ublock origin
         updateUrl = "https://clients2.google.com/service/update2/crx";
       }
       {
-        id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; # Dark Reader
+        id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; # dark reader
         updateUrl = "https://clients2.google.com/service/update2/crx";
       }
       {
-        id = "mnjggcdmjocbbbhaepdhchncahnbgone"; # SponsorBlock
+        id = "mnjggcdmjocbbbhaepdhchncahnbgone"; # sponsorblock
         updateUrl = "https://clients2.google.com/service/update2/crx";
       }
       {
-        id = "gebbhagfogifgggkldgodflihgfeippi"; # Return YouTube Dislike
+        id = "gebbhagfogifgggkldgodflihgfeippi"; # return youtube dislike
         updateUrl = "https://clients2.google.com/service/update2/crx";
       }
       {
-        id = "hipekcciheckooncpjeljhnekcoolahp"; # Tabliss
+        id = "hipekcciheckooncpjeljhnekcoolahp"; # tabliss
         updateUrl = "https://clients2.google.com/service/update2/crx";
       }
       {
-        id = "nngceckbapebfimnlniiiahkandclblb"; # Bitwarden
+        id = "nngceckbapebfimnlniiiahkandclblb"; # bitwarden
         updateUrl = "https://clients2.google.com/service/update2/crx";
       }
       {
-        id = "jghecgabfgfdldnmbfkhmffcabddioke"; # Volume Master
+        id = "jghecgabfgfdldnmbfkhmffcabddioke"; # volume master
         updateUrl = "https://clients2.google.com/service/update2/crx";
       }
     ];
 
     commandLineArgs = [
-      "--enable-features=AcceleratedVideoEncoder,VaapiOnNvidiaGPUs,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE"
-      "--enable-features=VaapiIgnoreDriverChecks,VaapiVideoDecoder,PlatformHEVCDecoderSupport"
-      "--enable-features=UseMultiPlaneFormatForHardwareVideo"
+      "--enable-features=acceleratedvideoencoder,vaapionnvidiagpus,vaapiignoredriverchecks,vulkan,defaultanglevulkan,vulkanfromangle"
+      "--enable-features=vaapiignoredriverchecks,vaapivideodecoder,platformhevcdecodersupport"
+      "--enable-features=usemultiplaneformatforhardwarevideo"
       "--ignore-gpu-blocklist"
       "--ozone-platform=wayland"
       "--enable-wayland-ime"
       "--force-dark-mode=0" # optional
+      "--in-process-gpu"
+      "--enable-native-gpu-memory-buffers"
       "--use-system-theme"
       #"--disable-gpu"
     ];
