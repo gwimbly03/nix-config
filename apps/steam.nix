@@ -24,8 +24,8 @@
 
   environment.systemPackages = [
     pkgs.steam-run
-    pkgs.steamcmd
-    pkgs.steam-tui
+    #pkgs.steamcmd
+    #pkgs.steam-tui
     #pkgs.lutris
     pkgs.protonup-qt
     pkgs.wineWow64Packages.stagingFull
