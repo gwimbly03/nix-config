@@ -13,7 +13,7 @@ hl.bind("CTRL + SHIFT + RETURN", hl.dsp.exec_cmd(tterminal))
 hl.bind(mod .. " + B", hl.dsp.exec_cmd(browser))
 
 hl.bind(mod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mod .. " + F", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mod .. " + F", hl.dsp.window.float({ action = "fullscreen" }))
 hl.bind(mod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mod .. " + SHIFT + P", hl.dsp.window.pseudo())
 hl.bind(mod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
