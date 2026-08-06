@@ -24,6 +24,7 @@
     nixfmt
     black
     satty
+    glaze
 
     # Utilities
     jq
