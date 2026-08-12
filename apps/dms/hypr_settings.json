@@ -32,7 +32,7 @@
   "firstDayOfWeek": -1,
   "showWeekNumber": false,
   "calendarBackend": "dankcal",
-  "use24HourClock": false,
+  "clockFormat": "12h",
   "showSeconds": false,
   "padHours12Hour": false,
   "useFahrenheit": false,
@@ -60,6 +60,7 @@
   "blurEnabled": true,
   "blurForegroundLayers": true,
   "blurLayerOutlineOpacity": 0.12,
+  "blurBorderEnabled": true,
   "blurBorderColor": "secondary",
   "blurBorderCustomColor": "#ffffff",
   "blurBorderOpacity": 0.35,
@@ -200,6 +201,7 @@
   "scrollTitleEnabled": true,
   "mediaAdaptiveWidthEnabled": true,
   "audioVisualizerEnabled": true,
+  "mediaUseAlbumArtAccent": false,
   "audioScrollMode": "volume",
   "audioWheelScrollAmount": 5,
   "audioDeviceScrollVolumeEnabled": true,
@@ -264,12 +266,10 @@
   "greeterEnableFprint": false,
   "greeterEnableU2f": false,
   "greeterWallpaperPath": "",
-  "greeterUse24HourClock": true,
-  "greeterShowSeconds": false,
-  "greeterPadHours12Hour": false,
   "greeterLockDateFormat": "",
   "greeterFontFamily": "",
   "greeterWallpaperFillMode": "",
+  "greeterPamExternallyManaged": false,
   "greeterSyncPending": false,
   "greeterSyncBaseline": {},
   "mediaSize": 1,
@@ -287,6 +287,7 @@
   "spotlightSectionViewModes": {},
   "appDrawerSectionViewModes": {},
   "niriOverviewOverlayEnabled": true,
+  "niriOverviewLauncherStyle": "full",
   "dankLauncherV2Size": "medium",
   "dankLauncherV2ShowSourceBadges": true,
   "dankLauncherV2BorderEnabled": false,
@@ -304,24 +305,24 @@
   "weatherEnabled": true,
   "dashTabs": [
     {
-      "id": "overview",
-      "enabled": true
+      "enabled": true,
+      "id": "overview"
     },
     {
-      "id": "media",
-      "enabled": true
+      "enabled": true,
+      "id": "media"
     },
     {
-      "id": "wallpaper",
-      "enabled": true
+      "enabled": true,
+      "id": "wallpaper"
     },
     {
-      "id": "weather",
-      "enabled": true
+      "enabled": true,
+      "id": "weather"
     },
     {
-      "id": "settings",
-      "enabled": true
+      "enabled": true,
+      "id": "settings"
     }
   ],
   "networkPreference": "auto",
@@ -407,11 +408,6 @@
   "fadeToDpmsEnabled": true,
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
-  "brightnessDevicePins": {},
-  "wifiNetworkPins": {},
-  "bluetoothDevicePins": {},
-  "audioInputDevicePins": {},
-  "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -489,6 +485,7 @@
   "notificationOverlayEnabled": true,
   "notificationPopupShadowEnabled": true,
   "notificationPopupPrivacyMode": false,
+  "notificationForegroundLayers": true,
   "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
   "lockScreenShowSystemIcons": true,
@@ -503,6 +500,11 @@
   "maxFprintTries": 15,
   "enableU2f": false,
   "u2fMode": "or",
+  "lockPamPath": "",
+  "lockPamInlineFprint": false,
+  "lockPamInlineU2f": false,
+  "lockPamExternallyManaged": false,
+  "lockU2fPamPath": "",
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 2,
   "lockScreenVideoEnabled": false,
@@ -564,6 +566,7 @@
   "updaterIntervalSeconds": 1800,
   "updaterIncludeFlatpak": true,
   "updaterAllowAUR": true,
+  "updaterIgnoredPackages": [],
   "displayNameMode": "system",
   "screenPreferences": {
     "notifications": [
@@ -609,6 +612,7 @@
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 12,
       "gothCornersEnabled": true,
+      "hoverPopouts": true,
       "id": "default",
       "innerPadding": 4,
       "leftWidgets": [
@@ -651,11 +655,10 @@
       "spacing": 4,
       "squareCorners": false,
       "transparency": 0.55,
+      "useOverlayLayer": false,
       "visible": true,
-      "widgetTransparency": 0.7,
       "widgetOutlineEnabled": false,
-      "useOverlayLayer": true,
-      "hoverPopouts": true
+      "widgetTransparency": 0.7
     },
     {
       "autoHide": false,
@@ -794,73 +797,73 @@
   "desktopWidgetGridSettings": {},
   "desktopWidgetInstances": [
     {
-      "id": "dw_1783567929646_wbz7qxqov",
-      "widgetType": "mediaPlayer",
-      "name": "Media Player",
-      "enabled": false,
       "config": {
         "displayPreferences": [
           "all"
         ]
       },
+      "enabled": false,
+      "id": "dw_1783567929646_wbz7qxqov",
+      "name": "Media Player",
       "positions": {
         "DP-4": {
-          "width": 320,
           "height": 200,
+          "width": 320,
           "x": 1120,
           "y": 620
         },
         "DP-5": {
-          "width": 320,
           "height": 200,
+          "width": 320,
           "x": 800,
           "y": 440
         }
-      }
+      },
+      "widgetType": "mediaPlayer"
     },
     {
-      "id": "dw_1783567940205_odc4huf3l",
-      "widgetType": "dankAudioVisualizer",
-      "name": "Dank Audio Visualizer",
-      "enabled": true,
       "config": {
+        "clickThrough": false,
         "displayPreferences": [
           "all"
         ],
         "showOnOverlay": false,
-        "clickThrough": false,
         "syncPositionAcrossScreens": true,
         "visualizationMode": "waveRings"
       },
+      "enabled": true,
+      "id": "dw_1783567940205_odc4huf3l",
+      "name": "Dank Audio Visualizer",
       "positions": {
         "DP-4": {
-          "width": 200,
           "height": 200,
+          "width": 200,
           "x": 1207.39453125,
           "y": 619.421875
         },
         "DP-5": {
-          "width": 200,
           "height": 200,
+          "width": 200,
           "x": 860,
           "y": 440
         },
         "_synced": {
-          "x": 0.41694793701171873,
-          "y": 0.33067220052083335,
+          "height": 327.91796875,
           "width": 415.125,
-          "height": 327.91796875
+          "x": 0.41694793701171873,
+          "y": 0.33067220052083335
         }
-      }
+      },
+      "widgetType": "dankAudioVisualizer"
     }
   ],
   "desktopWidgetGroups": [],
   "builtInPluginSettings": {
-    "dms_settings_search": {
-      "trigger": "?"
-    },
     "dms_clipboard_search": {
       "trigger": "cb"
+    },
+    "dms_settings_search": {
+      "trigger": "?"
     }
   },
   "clipboardClickToPaste": false,
@@ -893,5 +896,5 @@
   "barInsetPaddingShared": -1,
   "barInsetPaddingSyncAll": false,
   "frameBarInsetPadding": -1,
-  "configVersion": 12
+  "configVersion": 13
 }
