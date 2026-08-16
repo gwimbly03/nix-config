@@ -2,7 +2,7 @@ local terminal    = "alacritty"
 local tterminal   = "kitty"
 local fileManager = "nautilus"
 local menu        = "hyprlauncher"
-local browser     = "brave --ozone-platform=wayland"
+local browser     = "brave-origin" --"brave --ozone-platform=wayland"
 
 local mod = "SUPER"
 

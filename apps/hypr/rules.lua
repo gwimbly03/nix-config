@@ -23,30 +23,30 @@ hl.window_rule({
 hl.window_rule({ match = { class = "^(org.quickshell)$" }, floating = true })
 
 -- Workspace assignments
-hl.window_rule({ name = "steam-workspace",    match = { class = "steam" },           workspace = "9" })
+hl.window_rule({ name = "steam-workspace",    match = { class = "steam" },           workspace = "9 silent" })
 hl.window_rule({ name = "feishin-workspace",  match = { class = "feishin" },         workspace = "7" })
 hl.window_rule({ name = "discord-workspace",  match = { class = "discord" },         workspace = "6" })
 hl.window_rule({ name = "mpv-workspace",      match = { class = "mpv" },             workspace = "10" })
 
---hl.window_rule({
---    name = "nautilus-float",
---    match = { class = "org\\.gnome\\.Nautilus" }, 
---    float = true,
---    size = { 875, 550 },
---    rounding = 12,
---   border_size = 0,
---})
+hl.window_rule({
+    name = "nautilus-float",
+    match = { class = "org\\.gnome\\.Nautilus" }, 
+    float = true,
+    size = { 875, 550 },
+    rounding = 12,
+   border_size = 0,
+})
 
 hl.window_rule({ match = { class = "^(org\\.gnome\\.Nautilus)$" }, floating = true })
 
 hl.window_rule({ name = "mpv-float", match = { class = "mpv" }, float = true })
 
-hl.window_rule({
-    name = "gnome-rounding",
-    match = { class = "org\\.gnome\\." },       
-    rounding = 12,
-    border_size = 0,
-})
+--hl.window_rule({
+--    name = "gnome-rounding",
+--    match = { class = "org\\.gnome\\." },       
+--    rounding = 12,
+--    border_size = 0,
+--})
 
 hl.window_rule({
     name = "kitty-opacity",
