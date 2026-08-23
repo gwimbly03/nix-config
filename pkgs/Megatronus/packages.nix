@@ -66,6 +66,9 @@
     tcpdump
     libpcap
     dnsutils
+
+
+    claude-code
   ];
 }
 
