@@ -25,6 +25,7 @@
     black
     satty
     glaze
+    nodejs
 
     # Utilities
     jq
