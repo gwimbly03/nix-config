@@ -14,6 +14,7 @@
     # TUI
     htop
     valent
+    keyguard
 
     # Desktop
     nwg-look
