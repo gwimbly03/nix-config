@@ -70,6 +70,7 @@
 
 
     claude-code
+    vscode-fhs
   ];
 }
 
