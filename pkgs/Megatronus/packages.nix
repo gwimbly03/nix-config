@@ -14,7 +14,6 @@
     # TUI
     htop
     valent
-    keyguard
 
     # Desktop
     nwg-look
@@ -26,7 +25,6 @@
     black
     satty
     glaze
-    nodejs
 
     # Utilities
     jq
@@ -56,7 +54,6 @@
     microfetch
     pulsemixer
     picard
-    fladder
     brave-origin
 
 
@@ -69,8 +66,7 @@
     libpcap
     dnsutils
 
-
-    claude-code
+    #claude-code
     vscode-fhs
   ];
 }
