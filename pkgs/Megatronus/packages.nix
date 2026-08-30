@@ -53,6 +53,7 @@
     fd
     microfetch
     pulsemixer
+    pavucontrol
     picard
     brave-origin
 
