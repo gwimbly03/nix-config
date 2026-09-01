@@ -31,7 +31,7 @@ in
     inputs.nixcord.homeModules.nixcord
 
     ../../env/stylix/stylix.nix
-    ../../apps/dms/dms-shell-niri.nix
+    #../../apps/dms/dms-shell-niri.nix
     ../../apps/fish/fish.nix
     ../../apps/fastfetch/fastfetch.nix
     ../../apps/niri/niri.nix
