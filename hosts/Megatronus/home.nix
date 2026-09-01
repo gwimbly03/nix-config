@@ -36,7 +36,7 @@ in
     ../../apps/fish/hypr_fish.nix
     ../../modules/desktop/hypr/hypr_lua.nix
     ../../apps/dms/dms-shell.nix
-    ../../modules/desktop/serpantinum/serpantinum.nix
+    #../../modules/desktop/serpantinum/serpantinum.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
