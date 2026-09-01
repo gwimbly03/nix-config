@@ -67,6 +67,8 @@
     wl-mirror
     valent
 
+    codex
+
   ];
 }
 
