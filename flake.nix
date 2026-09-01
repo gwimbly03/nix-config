@@ -53,6 +53,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    serpantinum = {
+      url = "github:ilyamiro/serpantinum";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixcord = {
       url = "github:FlameFlag/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -65,7 +70,7 @@
 };
 
 
-outputs = { self, nixpkgs, home-manager, nixvim, nur, hyprland, nixcord, niri, stylix, dms, dms-plugin-registry, dsearch, ... }@inputs:
+outputs = { self, nixpkgs, home-manager, nixvim, nur, hyprland, nixcord, niri, stylix, dms, dms-plugin-registry, dsearch, serpantinum, ... }@inputs:
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {
