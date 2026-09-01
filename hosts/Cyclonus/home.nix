@@ -25,6 +25,7 @@ in
     inputs.stylix.homeModules.stylix
     inputs.dms.homeModules.dank-material-shell
     inputs.dms-plugin-registry.homeModules.default
+    inputs.serpantinum.homeManagerModules.default
     inputs.niri.homeModules.niri
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
@@ -34,6 +35,7 @@ in
     ../../apps/fish/fish.nix
     ../../apps/fastfetch/fastfetch.nix
     ../../apps/niri/niri.nix
+    ../../modules/desktop/serpantinum/serpantinum.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix

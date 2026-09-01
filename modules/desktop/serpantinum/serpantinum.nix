@@ -1,16 +1,12 @@
 { serpantinum, ... }:
 
 {
-  imports = [
-    serpantinum.homeManagerModules.default
-  ];
-
   programs.serpantinum = {
     enable = true;
     systemd.enable = true;
 
     settings = {
-      wallpaperDir = "/home/username/Pictures/Wallpapers";
+      wallpaperDir = "/home/gwimbly/.nix-config/assets/wallpapers/";
 
       general = {
         language = "en";
