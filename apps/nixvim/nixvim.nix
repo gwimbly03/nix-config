@@ -3,6 +3,7 @@
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
+    nixpkgs.config.allowUnfree = true;
     viAlias = true;
     vimAlias = true;
 
