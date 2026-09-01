@@ -187,6 +187,17 @@
       };
     };
 
+    codex = {
+      enable = true;
+      settings = {
+        border = "rounded";
+        keymaps = {
+        toggle = "<leader>ac";
+            };
+        model = "gpt-5-codex";
+        };
+    };
+
     globals = {
       mapleader = " ";
       maplocalleader = " ";

@@ -67,8 +67,7 @@
     libpcap
     dnsutils
 
-    #claude-code
-    vscode-fhs
+    codex
   ];
 }
 
