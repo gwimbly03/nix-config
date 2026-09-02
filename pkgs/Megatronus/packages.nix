@@ -54,6 +54,7 @@
     microfetch
     pulsemixer
     pavucontrol
+    easyeffects
     picard
     brave-origin
 

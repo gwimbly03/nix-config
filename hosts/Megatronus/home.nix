@@ -27,14 +27,16 @@ in
     inputs.stylix.homeModules.stylix
     inputs.dms.homeModules.dank-material-shell
     inputs.dms-plugin-registry.homeModules.default
+    inputs.serpantinum.homeManagerModules.default
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
 
     ../../env/stylix/stylix.nix
     ../../apps/fish/hypr_fish.nix
-    ../../apps/hypr/hypr_lua.nix
+    ../../modules/desktop/hypr/hypr_lua.nix
     ../../apps/dms/dms-shell.nix
+    #../../modules/desktop/serpantinum/serpantinum.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
