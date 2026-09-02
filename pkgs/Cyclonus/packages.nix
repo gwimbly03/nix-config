@@ -61,6 +61,7 @@
     docker-compose
     wireshark
     nmap
+    arandr
 
     # Niri
     xwayland-satellite
