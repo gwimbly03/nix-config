@@ -24,15 +24,12 @@ programs.dank-material-shell = {
 
   plugins = {
       dankBatteryAlerts.enable = true;
-      dockerManager.enable = true;
       dankKDEConnect.enable = true;
       dankLauncherKeys.enable = true;
       tailscale.enable = true;
       displayMirror.enable = true;
       dmsLenovoBatterySettings.enable = true;
 
-      nixMonitor = {
-        enable = true;
         
         settings = {
             rebuildCommand = [ 
