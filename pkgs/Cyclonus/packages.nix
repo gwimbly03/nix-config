@@ -12,6 +12,7 @@
 
     adw-gtk3
     feishin
+    brave-origin
 
     # TUI
     htop
