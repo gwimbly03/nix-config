@@ -4,60 +4,38 @@ let
     builtins.fromJSON (builtins.readFile ./niri_settings.json);
 in
 {
-programs.dank-material-shell = {
-  enable = true;
+  programs.dank-material-shell = {
+    enable = true;
 
-  systemd = {
-      enable = true;          
-      restartIfChanged = true; 
-    };
-
-  settings = lib.mkForce dmsSettings;
-  managePluginSettings = true;
-
-  enableSystemMonitoring = true;     
-  enableVPN = true;                 
-  enableDynamicTheming = true;     
-  enableAudioWavelength = true;    
-  enableCalendarEvents = true;    
-  enableClipboardPaste = true;   
-
-  plugins = {
-      dankBatteryAlerts.enable = true;
-      dankKDEConnect.enable = true;
-      dankLauncherKeys.enable = true;
-      tailscale.enable = true;
-      displayMirror.enable = true;
-      dmsLenovoBatterySettings.enable = true;
-
-        
-        settings = {
-            rebuildCommand = [ 
-              "bash" "-c" 
-              "nh os switch . -H Cyclonus 2>&1"
-            ];
-
-            gcCommand = [ 
-              "bash" "-c" 
-              "nh clean all 2>&1" 
-            ];
-
-            nixpkgsChannel = "nixos-unstable";
-
-
-            updateInterval = 600;
-
-        };
+    systemd = {
+        enable = true;          
+        restartIfChanged = true; 
       };
 
-      
-      mediaPlayer = {
-        enable = true;
+    managePluginSettings = true;
+    settings = lib.mkForce dmsSettings;
+    
+    enableSystemMonitoring = true;     
+    enableVPN = true;                 
+    enableDynamicTheming = true;     
+    enableAudioWavelength = true;    
+    enableCalendarEvents = true;    
+    enableClipboardPaste = true;   
 
-        settings = {
-          preferredSource = "feishin";
-        };
-      };
-    };
+    plugins = {
+        dankBatteryAlerts.enable = true;
+        dankKDEConnect.enable = true;
+        dankLauncherKeys.enable = true;
+        tailscale.enable = true;
+        displayMirror.enable = true;
+        dmsLenovoBatterySettings.enable = true;
+        mediaPlayer = {
+          enable = true;
+
+          settings = {
+            preferredSource = "feishin";
+          };
+       };
+     };
   };
 }
