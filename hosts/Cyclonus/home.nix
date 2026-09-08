@@ -42,7 +42,7 @@ in
     ../../apps/git.nix
     ../../apps/ghostty.nix
     ../../apps/obs.nix
-    ../../apps/brave.nix
+    #../../apps/brave.nix
     ../../apps/lazygit.nix
     ../../apps/btop.nix
     ../../apps/superfile.nix
