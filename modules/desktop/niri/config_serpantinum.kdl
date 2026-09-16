@@ -1,0 +1,283 @@
+input {
+    focus-follows-mouse
+
+    touchpad {
+        tap
+    }
+    
+    keyboard {
+      xkb{
+
+      }
+      repeat-delay 300
+      repeat-rate 50
+    }
+
+    mouse {
+    }
+
+    trackpoint {
+    }
+}
+
+ output "eDP-1" {
+      mode "1920x1080@120.030"
+      scale 1.0
+
+      transform "normal"
+
+    }
+
+layer-rule {
+    // This is for swaybg; change for other wallpaper tools.
+    // Find the right namespace by running niri msg layers.
+    match namespace="quickshell"
+    place-within-backdrop true
+    }
+
+
+layout {
+    // Set gaps around windows in logical pixels.
+    gaps 8
+    background-color "transparent"
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+
+    }
+
+    
+
+    default-column-width { proportion 0.5; }
+    focus-ring {
+      off  
+      width 4
+    }
+
+    // You can also add a border. It's similar to the focus ring, but always visible.
+    border {
+        off
+        urgent-color "#9b0000"
+    }
+
+    shadow {
+        // Uncomment the next line to enable shadows.
+        on
+
+        // By default, the shadow draws only around its window, and not behind it.
+        // Uncomment this setting to make the shadow draw behind its window.
+        //
+        // Note that niri has no way of knowing about the CSD window corner
+        // radius. It has to assume that windows have square corners, leading to
+        // shadow artifacts inside the CSD rounded corners. This setting fixes
+        // those artifacts.
+        //
+        // However, instead you may want to set prefer-no-csd and/or
+        // geometry-corner-radius. Then, niri will know the corner radius and
+        // draw the shadow correctly, without having to draw it behind the
+        // window. These will also remove client-side shadows if the window
+        // draws any.
+        //
+        // draw-behind-window true
+
+        // You can change how shadows look. The values below are in logical
+        // pixels and match the CSS box-shadow properties.
+
+        // Softness controls the shadow blur radius.
+        softness 30
+
+        // Spread expands the shadow.
+        spread 5
+
+        // Offset moves the shadow relative to the window.
+        offset x=0 y=5
+
+        // You can also change the shadow color and opacity.
+        color "#0007"
+    }
+  }
+
+prefer-no-csd
+
+overview {
+    //backdrop-color "#0E0825"
+    workspace-shadow {
+        off
+    }
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+// Screenshot path
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+animations {
+    // Uncomment to turn off all animations.
+    // off
+
+    // Slow down all animations by this factor. Values below 1 speed them up instead.
+    // slowdown 3.0
+}
+
+
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Open the Firefox picture-in-picture player as floating by default.
+window-rule {
+    match app-id="brave"
+    open-maximized true
+    
+}
+
+window-rule {
+    match app-id="discord"
+    open-maximized true
+    open-on-workspace "chat"
+    opacity 0.90
+}
+
+window-rule {
+    match app-id="feishin"
+    open-maximized true
+    open-on-workspace "music"
+}
+
+
+
+
+
+// Example: block out two password managers from screen capture.
+// (This example rule is commented out with a "/-" in front.)
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    //match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    open-maximized true
+    block-out-from "screen-capture"
+
+}
+
+// Example: enable rounded corners for all windows.
+// (This example rule is commented out with a "/-" in front.)
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+
+// Required for clipboard history integration
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+
+// Recommended (must install polkit-mate before hand) for elevation prompts
+//spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
+// This may be a different path on different distributions, the above is for the arch linux mate-polkit package
+
+// Starts DankShell
+//spawn-at-startup "dms" "run"
+
+// If using niri newer than 271534e115e5915231c99df287bbfe396185924d (~aug 17 2025)
+// you can add this to disable built in config load errors since dank shell provides this
+config-notification {
+    disable-failed
+}
+
+
+// Dank keybinds
+// 1. These should not be in conflict with any pre-existing keybindings
+// 2. You need to merge them with your existing config if you want to use these
+// 3. You can change the keys to whatever you want, if you prefer something different
+// 4. For the increment/decrement ones you can change the steps to whatever you like too
+binds {
+
+   Mod+Shift+Slash { show-hotkey-overlay; }
+
+   Ctrl+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+   Ctrl+Shift+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+   Mod+B hotkey-overlay-title="Open Browser: brave" { spawn "brave"; }
+   Mod+E hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
+ 
+  
+   //Mod+O repeat=false { toggle-overview; }
+   Mod+Backspace { toggle-overview; }
+
+
+   Mod+Q { close-window; }
+
+    XF86MonBrightnessDown { spawn "serpantinum" "brightness" "lower"; }
+    XF86MonBrightnessUp { spawn "serpantinum" "brightness" "raise"; }
+
+    Print { spawn "serpantinum" "screenshot"; }
+    Shift+Print { spawn "serpantinum" "screenshot" "--edit"; }
+    Super+Print { spawn "serpantinum" "screenshot" "--full"; }
+    Super+Shift+Print { spawn "serpantinum" "screenshot" "--full" "--edit"; }
+
+    XF86PowerOff { spawn "serpantinum" "lock"; }
+    Mod+L { spawn "serpantinum" "lock"; }
+
+    Mod+Space { spawn "playerctl" "play-pause"; }
+    XF86AudioPause { spawn "playerctl" "play-pause"; }
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
+    XF86AudioNext { spawn "playerctl" "next"; }
+    XF86AudioMicMute { spawn "serpantinum" "volume" "mic-toggle"; }
+    XF86AudioMute { spawn "serpantinum" "volume" "mute-toggle"; }
+    XF86AudioLowerVolume { spawn "serpantinum" "volume" "lower"; }
+    XF86AudioRaiseVolume { spawn "serpantinum" "volume" "raise"; }
+
+    Mod+R { spawn "serpantinum" "reload"; }
+    Mod+C { spawn "serpantinum" "msg" "toggle" "clipboard"; }
+    Alt+Space { spawn "serpantinum" "msg" "toggle" "launcher"; }
+    Mod+M { spawn "serpantinum" "msg" "toggle" "music"; }
+    Mod+B { spawn "serpantinum" "msg" "toggle" "system"; }
+    Mod+W { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
+    Mod+S { spawn "serpantinum" "msg" "toggle" "calendar"; }
+    Mod+N { spawn "serpantinum" "msg" "toggle" "network"; }
+    Mod+V { spawn "serpantinum" "msg" "toggle" "volume"; }
+    Mod+H { spawn "serpantinum" "msg" "toggle" "guide"; }
+    Mod+A { spawn "serpantinum" "msg" "toggle" "autohide"; }
+
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-or-workspace-up; }
+    Mod+Down { focus-window-or-workspace-down; }
+
+    Mod+Ctrl+Left { move-column-left; }
+    Mod+Ctrl+Right { move-column-right; }
+    Mod+Ctrl+Up { move-column-to-workspace-up; }
+    Mod+Ctrl+Down { move-column-to-workspace-down; }
+
+    Mod+Shift+Left { set-column-width "-5%"; }
+    Mod+Shift+Right { set-column-width "+5%"; }
+    Mod+Shift+Up { set-window-height "-5%"; }
+    Mod+Shift+Down { set-window-height "+5%"; }
+
+    Mod+1 { spawn "serpantinum" "msg" "workspace" "1"; }
+    Mod+2 { spawn "serpantinum" "msg" "workspace" "2"; }
+    Mod+3 { spawn "serpantinum" "msg" "workspace" "3"; }
+    Mod+4 { spawn "serpantinum" "msg" "workspace" "4"; }
+    Mod+5 { spawn "serpantinum" "msg" "workspace" "5"; }
+    Mod+6 { spawn "serpantinum" "msg" "workspace" "6"; }
+    Mod+7 { spawn "serpantinum" "msg" "workspace" "7"; }
+    Mod+8 { spawn "serpantinum" "msg" "workspace" "8"; }
+    Mod+9 { spawn "serpantinum" "msg" "workspace" "9"; }
+    Mod+0 { spawn "serpantinum" "msg" "workspace" "10"; }
+
+    Mod+Shift+1 { spawn "serpantinum" "msg" "workspace" "1" "move"; }
+    Mod+Shift+2 { spawn "serpantinum" "msg" "workspace" "2" "move"; }
+    Mod+Shift+3 { spawn "serpantinum" "msg" "workspace" "3" "move"; }
+    Mod+Shift+4 { spawn "serpantinum" "msg" "workspace" "4" "move"; }
+    Mod+Shift+5 { spawn "serpantinum" "msg" "workspace" "5" "move"; }
+    Mod+Shift+6 { spawn "serpantinum" "msg" "workspace" "6" "move"; }
+    Mod+Shift+7 { spawn "serpantinum" "msg" "workspace" "7" "move"; }
+    Mod+Shift+8 { spawn "serpantinum" "msg" "workspace" "8" "move"; }
+    Mod+Shift+9 { spawn "serpantinum" "msg" "workspace" "9" "move"; }
+    Mod+Shift+0 { spawn "serpantinum" "msg" "workspace" "10" "move"; }
+}
