@@ -34,7 +34,7 @@ in
     ../../apps/dms/dms-shell-niri.nix
     ../../apps/fish/fish.nix
     ../../apps/fastfetch/fastfetch.nix
-    ../../apps/niri/niri.nix
+    ../../modules/desktop/niri/niri.nix
     ../../modules/desktop/serpantinum/serpantinum.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
