@@ -34,15 +34,15 @@ in
     ../../apps/dms/dms-shell-niri.nix
     ../../apps/fish/fish.nix
     ../../apps/fastfetch/fastfetch.nix
-    ../../apps/niri/niri.nix
-    #../../modules/desktop/serpantinum/serpantinum.nix
+    ../../modules/desktop/niri/niri.nix
+    ../../modules/desktop/serpantinum/serpantinum.nix
     ../../apps/nixcord.nix
     ../../apps/nixvim/nixvim.nix
     ../../apps/alacritty.nix
     ../../apps/git.nix
     ../../apps/ghostty.nix
     ../../apps/obs.nix
-    ../../apps/brave.nix
+    #../../apps/brave.nix
     ../../apps/lazygit.nix
     ../../apps/btop.nix
     ../../apps/superfile.nix

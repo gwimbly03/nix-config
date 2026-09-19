@@ -59,7 +59,7 @@ programs.dank-material-shell = {
 
         settings = {
           preferredSource = "feishin";
-        };
+        }
       };
     };
   };
