@@ -19,6 +19,7 @@
 
     # Desktop
     nwg-look
+    easyeffects
 
     # Development
     gcc

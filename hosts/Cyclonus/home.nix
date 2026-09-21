@@ -31,22 +31,22 @@ in
     inputs.nixcord.homeModules.nixcord
 
     ../../env/stylix/stylix.nix
-    ../../apps/dms/dms-shell-niri.nix
-    ../../apps/fish/fish.nix
-    ../../apps/fastfetch/fastfetch.nix
+    ../../modules/desktop/dms/dms-shell-niri.nix
+    ../../modules/utils/fish/fish.nix
+    ../../modules/utils/fastfetch/fastfetch.nix
     ../../modules/desktop/niri/niri.nix
-    ../../modules/desktop/serpantinum/serpantinum.nix
-    ../../apps/nixcord.nix
-    ../../apps/nixvim/nixvim.nix
-    ../../apps/alacritty.nix
-    ../../apps/git.nix
-    ../../apps/ghostty.nix
-    ../../apps/obs.nix
-    #../../apps/brave.nix
-    ../../apps/lazygit.nix
-    ../../apps/btop.nix
-    ../../apps/superfile.nix
-    ../../apps/starship/starship.nix
+    #../../modules/desktop/serpantinum/serpantinum.nix
+    ../../modules/apps/nixcord.nix
+    ../../modules/nixvim/nixvim.nix
+    ../../modules/utils/alacritty.nix
+    ../../modules/utils/git.nix
+    ../../modules/utils/ghostty.nix
+    ./../modules/apps/obs.nix
+    ../../modules/apps/brave.nix
+    ../../modules/utils/starship/starship.nix
+    ../../modules/utils/superfile.nix
+    ../../modules/utils/btop.nix
+    ../../modules/steam/steam.nix
   ];
 
   xdg.portal = {
