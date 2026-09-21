@@ -41,7 +41,7 @@ in
     ../../modules/utils/alacritty.nix
     ../../modules/utils/git.nix
     ../../modules/utils/ghostty.nix
-    ./../modules/apps/obs.nix
+    ../../modules/apps/obs.nix
     ../../modules/apps/brave.nix
     ../../modules/utils/starship/starship.nix
     ../../modules/utils/superfile.nix
