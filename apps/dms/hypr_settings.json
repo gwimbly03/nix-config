@@ -34,6 +34,7 @@
   "launcherStyle": "spotlight",
   "spotlightBarShowModeChips": true,
   "useAutoLocation": true,
+  "networkPreference": "wifi",
   "cursorSettings": {
     "dwl": {
       "cursorHideTimeout": 0
@@ -94,6 +95,7 @@
   },
   "barConfigs": [
     {
+      "attachToScreenEdge": false,
       "autoHide": false,
       "autoHideDelay": 250,
       "borderColor": "surfaceText",
@@ -110,7 +112,7 @@
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 12,
       "gothCornersEnabled": true,
-      "hoverPopouts": true,
+      "hoverPopouts": false,
       "id": "default",
       "innerPadding": 4,
       "leftWidgets": [
@@ -156,10 +158,10 @@
       "useOverlayLayer": false,
       "visible": true,
       "widgetOutlineEnabled": false,
-      "widgetTransparency": 0.7,
-      "attachToScreenEdge": false
+      "widgetTransparency": 0.7
     },
     {
+      "attachToScreenEdge": false,
       "autoHide": false,
       "autoHideDelay": 250,
       "borderColor": "surfaceText",
@@ -222,8 +224,7 @@
       "widgetOutlineEnabled": false,
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 1,
-      "widgetTransparency": 0.7,
-      "attachToScreenEdge": false
+      "widgetTransparency": 0.7
     }
   ],
   "desktopClockCustomColor": {
