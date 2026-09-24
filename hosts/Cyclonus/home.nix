@@ -46,7 +46,6 @@ in
     ../../modules/utils/starship/starship.nix
     ../../modules/utils/superfile.nix
     ../../modules/utils/btop.nix
-    ../../modules/steam/steam.nix
   ];
 
   xdg.portal = {

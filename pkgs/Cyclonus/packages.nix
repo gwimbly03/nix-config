@@ -64,6 +64,7 @@
     wireshark
     nmap
     arandr
+    terraform
 
     # Niri
     xwayland-satellite
