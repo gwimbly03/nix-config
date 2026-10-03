@@ -175,6 +175,7 @@ window-rule {
 
 // Required for clipboard history integration
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+spawn-at-startup "systemctl" "--user" "enable" "--now" "easyeffects"
 
 // Recommended (must install polkit-mate before hand) for elevation prompts
 //spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
@@ -204,7 +205,8 @@ binds {
    Mod+B hotkey-overlay-title="Open Browser: brave" { spawn "brave"; }
    Mod+E hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
  
-  
+   Mod+F { maximize-column; }
+   Mod+Shift+F { fullscreen-window; }
    //Mod+O repeat=false { toggle-overview; }
    Mod+Backspace { toggle-overview; }
 
@@ -236,7 +238,7 @@ binds {
     Mod+C { spawn "serpantinum" "msg" "toggle" "clipboard"; }
     Alt+Space { spawn "serpantinum" "msg" "toggle" "launcher"; }
     Mod+M { spawn "serpantinum" "msg" "toggle" "music"; }
-    Mod+B { spawn "serpantinum" "msg" "toggle" "system"; }
+    Mod+Shift+B { spawn "serpantinum" "msg" "toggle" "system"; }
     Mod+W { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
     Mod+S { spawn "serpantinum" "msg" "toggle" "calendar"; }
     Mod+N { spawn "serpantinum" "msg" "toggle" "network"; }

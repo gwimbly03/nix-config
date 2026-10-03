@@ -19,6 +19,7 @@
 
     # Desktop
     nwg-look
+    easyeffects
 
     # Development
     gcc
@@ -63,6 +64,7 @@
     wireshark
     nmap
     arandr
+    terraform
 
     # Niri
     xwayland-satellite
