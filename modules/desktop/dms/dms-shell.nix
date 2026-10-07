@@ -28,9 +28,19 @@ in
       dankKDEConnect.enable = true;
       dankLauncherKeys.enable = true;
       dankAudioVisualizer.enable = true;
-      #tailscale.enable = true;
+      dankscale.enable = true;
       netStatus.enable = true;
       wallpaperCarousel.enable = true;
+      bongoCat.enable = true;
+      bitwarden.enable = true;
+      discordVoice.enable = true;
+      audioFx.enable = true;
+      dmsThemeSync.enable = true;
+      depthscape.enable = true;
+      linuxWallpaperEngine.enable = true;
+      audioPortSwitcher.enable = true;
+      nixPackageRunner.enable = true;
+
       mediaPlayer = {
         enable = true;
 
