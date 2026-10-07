@@ -14,6 +14,7 @@
     # TUI
     htop
     valent
+    bitwarden-cli
 
     # Desktop
     nwg-look
