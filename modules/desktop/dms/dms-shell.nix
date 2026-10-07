@@ -28,7 +28,8 @@ in
       dankKDEConnect.enable = true;
       dankLauncherKeys.enable = true;
       dankAudioVisualizer.enable = true;
-      tailscale.enable = true;
+      #tailscale.enable = true;
+      netStatus.enable = true;
       wallpaperCarousel.enable = true;
       mediaPlayer = {
         enable = true;
