@@ -15,6 +15,7 @@
     htop
     valent
     bitwarden-cli
+    linux-wallpaperengine
 
     # Desktop
     nwg-look
