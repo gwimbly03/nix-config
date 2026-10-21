@@ -158,12 +158,12 @@
 
   networking = {
   hostName = "Megatronus";
-  firewall.enable = false;
+  firewall.enable = true;
 
   networkmanager = {
     enable = true;
     wifi = {
-      backend = "wpa_supplicant";
+      backend = "iwd";
       powersave = false;
       };
     };
