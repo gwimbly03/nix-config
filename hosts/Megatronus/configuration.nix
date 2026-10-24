@@ -7,10 +7,10 @@
     inputs.nix-citizen.nixosModules.default
     ../../env/env.nix
     ../../pkgs/Megatronus/packages.nix
-    ../../apps/steam.nix
-    ../../apps/lact.nix
-    ../../apps/nix-citizen.nix
-    "${self}/apps/nautilus.nix"
+    ../../modules/steam/steam.nix
+    ../../modules/utils/lact.nix
+    ../../modules/steam/nix-citizen.nix
+    ../../modules/utils/nautilus.nix
   ];
 
   # Timezone
@@ -109,6 +109,9 @@
     kernelPackages = pkgs.linuxPackages_zen;
     kernelModules = [ "i2c-dev" "kvm-amd" ];
     initrd.availableKernelModules = [ "i2c-dev" "kvm-amd"];
+    extraModulePackages = with config.boot.kernelPackages; [
+      v4l2loopback
+    ];
   };
 
   services = {
