@@ -43,8 +43,7 @@ in
     ../../modules/utils/kitty.nix
     ../../modules/utils/git.nix
     ../../modules/utils/fastfetch/fastfetch.nix
-    #../../modules/apps/obs.nix
-    #../../apps/brave.nix
+    ../../modules/apps/obs.nix
     ../../modules/utils/superfile.nix
     ../../modules/utils/starship/starship.nix
   ];
