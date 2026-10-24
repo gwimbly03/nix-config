@@ -107,11 +107,14 @@
     };
 
     kernelPackages = pkgs.linuxPackages_zen;
-    kernelModules = [ "i2c-dev" "kvm-amd" ];
-    initrd.availableKernelModules = [ "i2c-dev" "kvm-amd"];
     extraModulePackages = with config.boot.kernelPackages; [
       v4l2loopback
     ];
+    kernelModules = [ "i2c-dev" "kvm-amd" "v4l2loopback"];
+    initrd.availableKernelModules = [ "i2c-dev" "kvm-amd"];
+    extraModprobeConfig = ''
+      options v4l2loopback devices=1 video_nr=10 card_label="OBS Virtual Camera" exclusive_caps=1
+    '';
   };
 
   services = {
