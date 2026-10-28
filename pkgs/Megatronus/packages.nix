@@ -58,6 +58,8 @@
     pavucontrol
     easyeffects
     picard
+    spek
+    flac
     brave-origin
 
 
