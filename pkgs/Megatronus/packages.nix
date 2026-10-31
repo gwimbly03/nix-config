@@ -58,7 +58,7 @@
     spek
     flac
     brave-origin
-    pactl
+    pavucontrol
 
 
     # Networking & containers

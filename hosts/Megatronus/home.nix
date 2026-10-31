@@ -1,8 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{  pkgs, inputs, lib, ... }:
 
 let
   inherit (pkgs.stdenv.hostPlatform) system;
   allPackages = import ../../pkgs/Megatronus/hm_packages.nix { inherit pkgs; };
+  importModules = import ../../lib/imports.nix { inherit lib; };
 in
 {
   home = {
@@ -36,7 +37,7 @@ in
     ../../modules/utils/fish/hypr_fish.nix
     ../../modules/desktop/hypr/hypr_lua.nix
     ../../modules/desktop/dms/dms-shell.nix
-    ../../modules/desktop/serpantinum/serpantinum.nix
+    #../../modules/desktop/serpantinum/serpantinum.nix
     ../../modules/apps/nixcord.nix
     ../../modules/nixvim/nixvim.nix
     ../../modules/utils/alacritty.nix
@@ -46,6 +47,7 @@ in
     ../../modules/apps/obs.nix
     ../../modules/utils/superfile.nix
     ../../modules/utils/starship/starship.nix
+
   ];
 
 
