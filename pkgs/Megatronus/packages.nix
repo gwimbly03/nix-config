@@ -38,6 +38,7 @@
     unzip
     p7zip
     mpv
+    ffmpeg
     cava
     fzf
     git
