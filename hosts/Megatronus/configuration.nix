@@ -11,6 +11,7 @@
     ../../modules/utils/lact.nix
     ../../modules/steam/nix-citizen.nix
     ../../modules/utils/nautilus.nix
+    ../../modules/utils/openrgb/openrgb.nix
   ];
 
   # Timezone
