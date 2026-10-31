@@ -58,6 +58,7 @@
     spek
     flac
     brave-origin
+    pactl
 
 
     # Networking & containers
