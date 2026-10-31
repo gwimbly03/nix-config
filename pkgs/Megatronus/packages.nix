@@ -4,8 +4,6 @@
     power-profiles-daemon
 
     # Gaming
-    openrgb-with-all-plugins
-
     file-roller
     adw-gtk3
     telegram-desktop
@@ -14,8 +12,6 @@
     # TUI
     htop
     valent
-    bitwarden-cli
-    linux-wallpaperengine
 
     # Desktop
     nwg-look
@@ -72,7 +68,6 @@
     libpcap
     dnsutils
 
-    codex
   ];
 }
 
