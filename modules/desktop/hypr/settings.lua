@@ -4,8 +4,11 @@ hl.env("QT_QPA_PLATFORM", "wayland")
 hl.env("QT_QPA_PLATFORMTHEME", "gtk3")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 
+local benq = "desc BenQ EX3210R"
+local lg = "desc Electronics 27GL650F"
+
 hl.monitor({
-  output = "DP-4",
+  output = "benq",
   mode = "2560x1440@165",
   position = "0x0",
   scale = 1,
@@ -13,7 +16,7 @@ hl.monitor({
 })
 
 hl.monitor({
-  output = "DP-5",
+  output = "lg",
   mode = "1920x1080@144",
   position = "2560x0",
   scale = 1,
@@ -27,6 +30,7 @@ hl.config({
         border_size = 0,
         layout = "dwindle",
         allow_tearing = false,
+        resize_on_border = true,
         col = {
             active_border = {
                 colors = { "rgba(33ccffee)", "rgba(00ff99ee)" },
@@ -51,10 +55,22 @@ hl.config({
             size = 5,
             passes = 3,
             vibrancy = 0.1696,
+            variant = "frost",
+            new_optimizations = true,
+            popups = true,
+        },
+        wobble = {
+            enabled = true,
+            stiffness = 100,
+            damping = 45,
+            mass = 2,
+            intensity = 0.6,
+            mesh = 21,
         },
     },
     animations = {
         enabled = true,
+        workspace_wraparound = true,
     },
 })
 
