@@ -269,10 +269,5 @@ If you are installing NixOS fresh and want to use this repo directly:
 
 ---
 
-### Enjoy your reproducible NixOS setup! 🎉
-
-If you have any questions or run into issues, feel free to open an issue on the GitHub repository or drop a message.
-
---- 
 
 *Last updated: 2026-08-23*
