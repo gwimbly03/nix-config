@@ -70,8 +70,6 @@
     libpcap
     dnsutils
 
-    amethyst-mod-manager
-
   ];
 }
 
