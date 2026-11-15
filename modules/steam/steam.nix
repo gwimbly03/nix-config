@@ -31,6 +31,7 @@
     pkgs.wineWow64Packages.stagingFull
     pkgs.wineWow64Packages.waylandFull
     pkgs.winetricks
+    pkgs.amethyst-mod-manager
     #pkgs.deadlock-mod-manager
 
   ];
