@@ -5,7 +5,7 @@
     #inputs.home-manager.nixosModules.home-manager
     #../../env/env.nix
     ../../pkgs/Cyclonus/packages.nix
-    "../../modules/utils/nautilus.nix"
+    ../../modules/utils/nautilus.nix
   ];
 
   time.timeZone = "America/Vancouver";
