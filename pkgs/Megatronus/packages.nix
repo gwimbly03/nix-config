@@ -23,6 +23,7 @@
     black
     satty
     glaze
+    playerctl
 
     # Utilities
     jq
