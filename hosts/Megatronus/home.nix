@@ -48,6 +48,7 @@ in
     ../../modules/utils/superfile.nix
     ../../modules/utils/starship/starship.nix
     ../../modules/utils/lsd.nix
+    ../../modules/utils/zoxide.nix
 
   ];
 
@@ -60,11 +61,6 @@ in
 
   programs = {
     home-manager.enable = true;
-
-    zoxide = {
-      enable = true;
-      enableFishIntegration = true;
-    };
 
     fzf = {
       enable = true;
