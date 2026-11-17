@@ -4,7 +4,6 @@
 
     interactiveShellInit = ''
       set fish_greeting
-
       # History repeat functions
       function __history_repeat_last
         if test (commandline -t) = "!"
@@ -27,6 +26,7 @@
       # Bind keys
       bind ! __history_repeat_last
       bind '$' __history_repeat_args
+
 
       fastfetch
     '';

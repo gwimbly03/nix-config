@@ -34,6 +34,7 @@ in
 
 
     ../../env/stylix/stylix.nix
+    ../../modules/utils/zoxide.nix
     ../../modules/utils/fish/hypr_fish.nix
     ../../modules/desktop/hypr/hypr_lua.nix
     #../../modules/desktop/dms/dms-shell.nix
@@ -48,7 +49,6 @@ in
     ../../modules/utils/superfile.nix
     ../../modules/utils/starship/starship.nix
     ../../modules/utils/lsd.nix
-    ../../modules/utils/zoxide.nix
 
   ];
 
