@@ -26,8 +26,8 @@ in
 
   imports = [
     inputs.stylix.homeModules.stylix
-    inputs.dms.homeModules.dank-material-shell
-    inputs.dms-plugin-registry.homeModules.default
+    #inputs.dms.homeModules.dank-material-shell
+    #inputs.dms-plugin-registry.homeModules.default
     inputs.serpantinum.homeManagerModules.default
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
@@ -36,7 +36,7 @@ in
     ../../env/stylix/stylix.nix
     ../../modules/utils/fish/hypr_fish.nix
     ../../modules/desktop/hypr/hypr_lua.nix
-    ../../modules/desktop/dms/dms-shell.nix
+    #../../modules/desktop/dms/dms-shell.nix
     ../../modules/desktop/serpantinum/serpantinum.nix
     ../../modules/apps/nixcord.nix
     ../../modules/nixvim/nixvim.nix

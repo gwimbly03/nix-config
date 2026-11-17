@@ -53,7 +53,6 @@
     microfetch
     pulsemixer
     pavucontrol
-    easyeffects
     picard
     spek
     flac
