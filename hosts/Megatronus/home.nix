@@ -47,6 +47,7 @@ in
     ../../modules/apps/obs.nix
     ../../modules/utils/superfile.nix
     ../../modules/utils/starship/starship.nix
+    ../../modules/utils/lsd.nix
 
   ];
 
