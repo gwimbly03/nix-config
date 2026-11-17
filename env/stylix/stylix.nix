@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   stylix = {
@@ -7,9 +7,6 @@
     enableReleaseChecks = false;
 
     polarity = "dark";
-
-    # Transparency
-    opacity.terminal = 0.8;
 
     # Theming targets
     targets = {
