@@ -35,6 +35,7 @@ in
 
     ../../env/stylix/stylix.nix
     ../../modules/utils/zoxide.nix
+    ../../modules/utils/fzf.nix
     ../../modules/utils/fish/hypr_fish.nix
     ../../modules/desktop/hypr/hypr_lua.nix
     #../../modules/desktop/dms/dms-shell.nix
@@ -61,11 +62,6 @@ in
 
   programs = {
     home-manager.enable = true;
-
-    fzf = {
-      enable = true;
-      enableFishIntegration = true;
-    };
 
     nixvim = {
       extraPackages = with pkgs; [ wl-clipboard ];
