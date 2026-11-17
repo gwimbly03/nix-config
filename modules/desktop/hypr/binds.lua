@@ -51,40 +51,27 @@ end
 
 -- SERPANTINUM KEYBINDS
 hl.bind("ALT + SPACE", hl.dsp.exec_cmd("serpantinum msg toggle launcher"))
-
 hl.bind(mod .. " + V", hl.dsp.exec_cmd("serpantinum msg toggle clipboard"))
-
 hl.bind(mod .. " + M", hl.dsp.exec_cmd("serpantinum msg toggle music"))
-
 hl.bind(mod .. " + comma", hl.dsp.exec_cmd("serpantinum msg toggle settings"))
-
 hl.bind(mod .. " + X", hl.dsp.exec_cmd("serpantinum msg toggle system"))
-
 hl.bind(mod .. " + W", hl.dsp.exec_cmd("serpantinum msg toggle wallpaper"))
-
--- Additional Serpantinum modules
-hl.bind(mod .. " + C", hl.dsp.exec_cmd("serpantinum msg toggle calendar"))
-
-hl.bind(mod .. " + O", hl.dsp.exec_cmd("serpantinum msg toggle network"))
-
+hl.bind(mod .. " + K", hl.dsp.exec_cmd("serpantinum msg toggle wallpaper"))
+hl.bind(mod .. " + C", hl.dsp.exec_cmd("serpantinum settings keybinds"))
+hl.bind(mod .. " + N", hl.dsp.exec_cmd("serpantinum msg toggle network"))
 hl.bind(mod .. " + U", hl.dsp.exec_cmd("serpantinum msg toggle volume"))
-
--- Lock screen
 hl.bind(mod .. " + ALT + L", hl.dsp.exec_cmd("serpantinum lock"))
-
--- Screenshots
-hl.bind(mod .. " + PRINT", hl.dsp.exec_cmd("serpantinum screenshot"))
-
-hl.bind(mod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("serpantinum screenshot --full"))
+hl.bind(mod .. " + PRINT", hl.dsp.exec_cmd("serpantinum screenshot --edit"))
+hl.bind(mod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("serpantinum screenshot --full --edit"))
 
 -- SERPANTINUM MULTIMEDIA KEYS
 hl.bind("XF86AudioRaiseVolume",
-    hl.dsp.exec_cmd("serpantinum volume raise"),
+    hl.dsp.exec_cmd("serpantinum volume raise +2"),
     { locked = true, repeating = true }
 )
 
 hl.bind("XF86AudioLowerVolume",
-    hl.dsp.exec_cmd("serpantinum volume lower"),
+    hl.dsp.exec_cmd("serpantinum volume lower -2"),
     { locked = true, repeating = true }
 )
 
@@ -92,6 +79,10 @@ hl.bind("XF86AudioMute",
     hl.dsp.exec_cmd("serpantinum volume mute-toggle"),
     { locked = true }
 )
+
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"))
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"))
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"))
 
 -- DMS KEYBINDS 
 -- hl.bind("ALT + SPACE", hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
