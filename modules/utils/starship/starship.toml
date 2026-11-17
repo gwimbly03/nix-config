@@ -49,8 +49,7 @@ vimcmd_replace_symbol = "[❮](bold purple)"
 vimcmd_visual_symbol = "[❮](bold yellow)"
 
 [git_branch]
-symbol = " "
-format = "[$symbol$branch]($style) "
+format = '[󰊢 $state( $progress_current/$progress_total)]($style) '
 style = "bright-black"
 
 [git_state]

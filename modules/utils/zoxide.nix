@@ -5,7 +5,8 @@
     enableFishIntegration = true;
 
     options = [
-      "--cmd cd"
+      "--cmd"
+      "cd"
     ];
   };
 }
