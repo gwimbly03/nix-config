@@ -1,0 +1,460 @@
+{
+  "name": "megatronmus",
+  "created": 1794887015123,
+  "palette": {
+    "base": "#0d0e13",
+    "mantle": "#1a1b21",
+    "crust": "#121318",
+    "surface0": "#1e1f25",
+    "surface1": "#292a2f",
+    "surface2": "#34343a",
+    "overlay0": "#e3e1e9",
+    "overlay1": "#e3e1e9",
+    "overlay2": "#e3e1e9",
+    "text": "#e3e1e9",
+    "subtext0": "#c6c6d0",
+    "subtext1": "#90909a",
+    "blue": "#b6c4ff",
+    "sapphire": "#354479",
+    "teal": "#c2c5dd",
+    "green": "#c2c5dd",
+    "yellow": "#424659",
+    "peach": "#e3bada",
+    "maroon": "#93000a",
+    "red": "#ffb4ab",
+    "pink": "#5b3d57",
+    "mauve": "#b6c4ff"
+  },
+  "settings": {
+    "bar": {
+      "autohide": false,
+      "autohideTimeout": 1000,
+      "groupColors": {
+        "g_kb": "#f6bc70",
+        "g_wifi": "#80d4da",
+        "g_weather": "#374764",
+        "g_media": "#004f54",
+        "g_workspaces": "#b1cccd",
+        "g_time": "#324b4d"
+      },
+      "modules": {
+        "left": [
+          [
+            "workspaces",
+            "media",
+            "vis"
+          ]
+        ],
+        "center": [
+          [
+            "time",
+            "weather"
+          ]
+        ],
+        "right": [
+          [
+            "wifi",
+            "bt",
+            "vol"
+          ]
+        ]
+      },
+      "opacity": 100,
+      "position": "top",
+      "style": "solid",
+      "time": {
+        "format": "HH:mm:ss"
+      },
+      "width": 100,
+      "workspaceCount": 9,
+      "height": 36,
+      "distinctPills": false,
+      "centerByEdges": true,
+      "menuItems": [
+        "settings",
+        "shuffle",
+        "caffeine"
+      ],
+      "hideEmptyWorkspaces": true,
+      "timeStyle": "material",
+      "visBarCount": 8,
+      "visContinuous": true,
+      "sysmonStyle": "wave",
+      "wifiStyle": "button",
+      "btStyle": "text",
+      "volStyle": "text",
+      "mediaHideWhenIdle": true,
+      "menuStyle": "button",
+      "workspacesStyle": "pills",
+      "batStyle": "classic",
+      "btShowIcon": true,
+      "btShowName": false,
+      "wifiShowName": false,
+      "mediaInfoMode": "duration"
+    },
+    "display": {
+      "monitors": {
+        "eDP-1": {
+          "enabled": false,
+          "scale": 1
+        },
+        "DP-5": {
+          "powerEnabled": true,
+          "enabled": false,
+          "scale": 1
+        },
+        "DP-4": {
+          "scale": 1
+        }
+      }
+    },
+    "general": {
+      "language": "en",
+      "muteSfx": false,
+      "weatherInterval": 30,
+      "weatherUnit": "metric",
+      "screenshotCaptureOnRelease": true
+    },
+    "idle": {
+      "actions": {
+        "dim": {
+          "command": "",
+          "enabled": true,
+          "id": "dim",
+          "isCustom": false,
+          "mprisInhibit": false,
+          "respectInhibitors": true,
+          "resumeCommand": "",
+          "timeout": 150
+        },
+        "dpms": {
+          "command": "",
+          "enabled": true,
+          "id": "dpms",
+          "isCustom": false,
+          "mprisInhibit": false,
+          "respectInhibitors": true,
+          "resumeCommand": "",
+          "timeout": 450
+        },
+        "lock": {
+          "command": "",
+          "enabled": true,
+          "id": "lock",
+          "isCustom": false,
+          "mprisInhibit": false,
+          "respectInhibitors": true,
+          "resumeCommand": "",
+          "timeout": 300
+        },
+        "suspend": {
+          "command": "",
+          "enabled": false,
+          "id": "suspend",
+          "isCustom": false,
+          "mprisInhibit": false,
+          "respectInhibitors": true,
+          "resumeCommand": "",
+          "timeout": 600
+        }
+      },
+      "enabled": true,
+      "manualInhibit": false,
+      "customActions": []
+    },
+    "notifications": {
+      "dnd": false,
+      "position": "top right",
+      "sound": true
+    },
+    "syspanel": {
+      "clipExpandProgress": 0,
+      "clipExpanded": false,
+      "clipState": 1
+    },
+    "theme": {
+      "activePreset": "Matugen",
+      "borderRadius": 13,
+      "colors": {},
+      "fontFamily": "Ubuntu Nerd Font",
+      "matugen": true,
+      "blurBackground": true,
+      "blurStyle": "blur",
+      "apps": [
+        "alacritty",
+        "bat",
+        "cava",
+        "fastfetch",
+        "fish",
+        "fzf",
+        "gtk",
+        "kitty",
+        "lsd",
+        "neovim",
+        "qt",
+        "starship",
+        "superfile",
+        "vim"
+      ],
+      "elementOpacity": 55
+    },
+    "lockscreen": {
+      "fingerprintEnabled": true,
+      "attemptLimitEnabled": false,
+      "passwordMaxAttempts": 5,
+      "fingerprintMaxAttempts": 5,
+      "backgroundMode": "custom",
+      "customBackground": "",
+      "promptBackdropMode": "wallpaper"
+    },
+    "dock": {
+      "enabled": false,
+      "position": "bottom",
+      "onTop": true,
+      "elementSize": 44,
+      "floating": false,
+      "background": true,
+      "exclusive": false,
+      "autohide": false,
+      "smartAutohide": true,
+      "autohideTimeout": 1000,
+      "editing": false,
+      "apps": [
+        {
+          "name": "Kitty",
+          "comment": "Fast, feature-rich, GPU based terminal",
+          "desktop_id": "kitty.desktop",
+          "icon": "kitty"
+        },
+        {
+          "name": "Files",
+          "comment": "Access and organize files",
+          "desktop_id": "org.gnome.Nautilus.desktop",
+          "icon": "org.gnome.Nautilus"
+        }
+      ],
+      "overrideBoundsCorrection": false,
+      "enableScrolling": false,
+      "visibleElements": 7,
+      "hoverScale": 120,
+      "cascadeScale": false,
+      "focusRunning": true,
+      "showRunningIndicators": true,
+      "showRunningApps": true,
+      "runningScope": "auto"
+    },
+    "launcher": {
+      "position": "center",
+      "width": 600,
+      "itemCount": 6,
+      "terminalCommand": "alacritty -e",
+      "smartRanking": true,
+      "searchProvider": "brave"
+    },
+    "wallpaperTransition": {
+      "mode": "custom",
+      "pool": [
+        "paint"
+      ],
+      "effects": {
+        "fade": {
+          "duration": 1000
+        },
+        "wipe": {
+          "duration": 1600,
+          "orientation": "random"
+        },
+        "circle": {
+          "duration": 1600,
+          "origin": "random"
+        },
+        "swipe": {
+          "duration": 1600,
+          "direction": "random"
+        },
+        "paint": {
+          "duration": 2400
+        }
+      }
+    }
+  },
+  "snapshot": {
+    "screen": "DP-4",
+    "width": 2560,
+    "height": 1440,
+    "bar": {
+      "file": "megatronmus_bar.png",
+      "x": 4,
+      "y": 4,
+      "w": 2552,
+      "h": 36
+    }
+  },
+  "widgets": {
+    "DP-4": [],
+    "DP-5": [
+      {
+        "type": "cpu",
+        "wType": "cpu",
+        "wVariant": "default",
+        "wX": 1700,
+        "wY": 940,
+        "wWidth": 180,
+        "wHeight": 120,
+        "wOpacity": 1,
+        "wRotation": 0,
+        "wImagePath": "",
+        "imagePath": "",
+        "wId": "w_1794883839109_714",
+        "stretchWidth": false,
+        "stretchHeight": false
+      },
+      {
+        "type": "ram",
+        "wType": "ram",
+        "wVariant": "default",
+        "wX": 1500,
+        "wY": 940,
+        "wWidth": 180,
+        "wHeight": 120,
+        "wOpacity": 1,
+        "wRotation": 0,
+        "wImagePath": "",
+        "imagePath": "",
+        "wId": "w_1794883829548_165",
+        "stretchWidth": false,
+        "stretchHeight": false
+      },
+      {
+        "type": "temp",
+        "wType": "temp",
+        "wVariant": "default",
+        "wX": 1300,
+        "wY": 940,
+        "wWidth": 180,
+        "wHeight": 120,
+        "wOpacity": 1,
+        "wRotation": 0,
+        "wImagePath": "",
+        "imagePath": "",
+        "wId": "w_1794883857182_684",
+        "stretchWidth": false,
+        "stretchHeight": false
+      },
+      {
+        "type": "weather",
+        "wType": "weather",
+        "wVariant": "full",
+        "wX": 20,
+        "wY": 900,
+        "wWidth": 340,
+        "wHeight": 160,
+        "wOpacity": 1,
+        "wRotation": 0,
+        "wImagePath": "",
+        "imagePath": "",
+        "wId": "w_1794883749869_402",
+        "stretchWidth": false,
+        "stretchHeight": false
+      }
+    ],
+    "eDP-1": [
+      {
+        "type": "battery",
+        "wType": "battery",
+        "wVariant": "default",
+        "wX": 1700,
+        "wY": 64,
+        "wWidth": 200,
+        "wHeight": 60,
+        "wOpacity": 1,
+        "wRotation": 0,
+        "wImagePath": "",
+        "imagePath": "",
+        "wId": "w_1794883514776_0_387",
+        "stretchWidth": false,
+        "stretchHeight": false
+      },
+      {
+        "type": "disk",
+        "wType": "disk",
+        "wVariant": "default",
+        "wX": 1330,
+        "wY": 1030,
+        "wWidth": 130,
+        "wHeight": 130,
+        "wOpacity": 1,
+        "wRotation": 0,
+        "wImagePath": "",
+        "imagePath": "",
+        "wId": "w_1794883514776_1_319",
+        "stretchWidth": false,
+        "stretchHeight": false
+      },
+      {
+        "type": "temp",
+        "wType": "temp",
+        "wVariant": "default",
+        "wX": 1470,
+        "wY": 1030,
+        "wWidth": 130,
+        "wHeight": 130,
+        "wOpacity": 1,
+        "wRotation": 0,
+        "wImagePath": "",
+        "imagePath": "",
+        "wId": "w_1794883514776_2_679",
+        "stretchWidth": false,
+        "stretchHeight": false
+      },
+      {
+        "type": "ram",
+        "wType": "ram",
+        "wVariant": "default",
+        "wX": 1610,
+        "wY": 1030,
+        "wWidth": 130,
+        "wHeight": 130,
+        "wOpacity": 1,
+        "wRotation": 0,
+        "wImagePath": "",
+        "imagePath": "",
+        "wId": "w_1794883514776_3_514",
+        "stretchWidth": false,
+        "stretchHeight": false
+      },
+      {
+        "type": "cpu",
+        "wType": "cpu",
+        "wVariant": "default",
+        "wX": 1750,
+        "wY": 1030,
+        "wWidth": 130,
+        "wHeight": 130,
+        "wOpacity": 1,
+        "wRotation": 0,
+        "wImagePath": "",
+        "imagePath": "",
+        "wId": "w_1794883514776_4_106",
+        "stretchWidth": false,
+        "stretchHeight": false
+      },
+      {
+        "type": "weather",
+        "wType": "weather",
+        "wVariant": "full",
+        "wX": 1460,
+        "wY": 760,
+        "wWidth": 420,
+        "wHeight": 260,
+        "wOpacity": 1,
+        "wRotation": 0,
+        "wImagePath": "",
+        "imagePath": "",
+        "wId": "w_1794883514776_5_212",
+        "stretchWidth": false,
+        "stretchHeight": false
+      }
+    ]
+  }
+}

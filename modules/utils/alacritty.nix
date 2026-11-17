@@ -7,6 +7,7 @@
     settings = {
       general = {
         live_config_reload = true;
+        import = ["~/.config/alacritty/themes/serpantinum.toml"];
       };
 
       colors = {
