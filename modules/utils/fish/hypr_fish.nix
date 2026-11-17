@@ -35,9 +35,6 @@
 
     shellAliases = {
       n = "nvim";
-      cd = "z";
-      cdi = "zi";
-      ls = "lsd";
       cat = "bat";
       grep = "rg";
       find = "fd";
