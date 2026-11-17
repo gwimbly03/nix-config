@@ -41,58 +41,104 @@ hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 -- Switch workspaces with mod + [0-9]
 -- Move active window to a workspace with mod + SHIFT + [0-9]
 for i = 1, 10 do
-    local key = i % 10 -- 10 maps to key 0
-    hl.bind(mod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+    -- local key = i % 10 -- 10 maps to key 0
+    -- hl.bind(mod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
+    -- hl.bind(mod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+    hl.bind("SUPER + " .. (i % 10), hl.dsp.exec_cmd("serpantinum msg workspace " .. i))
+    hl.bind("SUPER + SHIFT + " .. (i % 10), hl.dsp.exec_cmd("serpantinum msg workspace " .. i .. " move"))
+
 end
 
---DMS keys 
-hl.bind("ALT + SPACE", hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
-hl.bind(mod .. " + V", hl.dsp.exec_cmd("dms ipc call clipboard toggle"))
-hl.bind(mod .. " + M", hl.dsp.exec_cmd("dms ipc call processlist focus"))
-hl.bind(mod .. " + comma", hl.dsp.exec_cmd("dms ipc call settings focus"))
-hl.bind(mod .. " + X", hl.dsp.exec_cmd("dms ipc call powermenu toggle"))
-hl.bind(mod .. " + P", hl.dsp.exec_cmd("dms ipc call notepad toggle"))
-hl.bind(mod .. " + N", hl.dsp.exec_cmd("dms ipc call notifications toggle"))
-hl.bind(mod .. " + Y", hl.dsp.exec_cmd("dms ipc call dankdash wallpaper"))
-hl.bind(mod .. " + TAB", hl.dsp.exec_cmd("dms ipc call hypr toggleOverview"))
-hl.bind(mod .. " + PRINT", hl.dsp.exec_cmd("dms screenshot -d ~/Pictures/Screenshots"))
-hl.bind(mod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("dms screenshot full -d ~/Pictures/Screenshots"))
-hl.bind(mod .. " + ALT + L", hl.dsp.exec_cmd("dms ipc call lock lock"))
+-- SERPANTINUM KEYBINDS
+hl.bind("ALT + SPACE", hl.dsp.exec_cmd("serpantinum msg toggle launcher"))
 
--- Multimedia keys
+hl.bind(mod .. " + V", hl.dsp.exec_cmd("serpantinum msg toggle clipboard"))
+
+hl.bind(mod .. " + M", hl.dsp.exec_cmd("serpantinum msg toggle music"))
+
+hl.bind(mod .. " + comma", hl.dsp.exec_cmd("serpantinum msg toggle settings"))
+
+hl.bind(mod .. " + X", hl.dsp.exec_cmd("serpantinum msg toggle system"))
+
+hl.bind(mod .. " + W", hl.dsp.exec_cmd("serpantinum msg toggle wallpaper"))
+
+-- Additional Serpantinum modules
+hl.bind(mod .. " + C", hl.dsp.exec_cmd("serpantinum msg toggle calendar"))
+
+hl.bind(mod .. " + O", hl.dsp.exec_cmd("serpantinum msg toggle network"))
+
+hl.bind(mod .. " + U", hl.dsp.exec_cmd("serpantinum msg toggle volume"))
+
+-- Lock screen
+hl.bind(mod .. " + ALT + L", hl.dsp.exec_cmd("serpantinum lock"))
+
+-- Screenshots
+hl.bind(mod .. " + PRINT", hl.dsp.exec_cmd("serpantinum screenshot"))
+
+hl.bind(mod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("serpantinum screenshot --full"))
+
+-- SERPANTINUM MULTIMEDIA KEYS
 hl.bind("XF86AudioRaiseVolume",
-    hl.dsp.exec_cmd("dms ipc call audio increment 3"),
+    hl.dsp.exec_cmd("serpantinum volume raise"),
     { locked = true, repeating = true }
 )
 
 hl.bind("XF86AudioLowerVolume",
-    hl.dsp.exec_cmd("dms ipc call audio decrement 3"),
+    hl.dsp.exec_cmd("serpantinum volume lower"),
     { locked = true, repeating = true }
 )
 
 hl.bind("XF86AudioMute",
-    hl.dsp.exec_cmd("dms ipc call audio mute"),
+    hl.dsp.exec_cmd("serpantinum volume mute-toggle"),
     { locked = true }
 )
 
-hl.bind("XF86AudioMicMute",
-    hl.dsp.exec_cmd("dms ipc call audio micmute"),
-    { locked = true }
-)
+-- DMS KEYBINDS 
+-- hl.bind("ALT + SPACE", hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
+-- hl.bind(mod .. " + V", hl.dsp.exec_cmd("dms ipc call clipboard toggle"))
+-- hl.bind(mod .. " + M", hl.dsp.exec_cmd("dms ipc call processlist focus"))
+-- hl.bind(mod .. " + comma", hl.dsp.exec_cmd("dms ipc call settings focus"))
+-- hl.bind(mod .. " + X", hl.dsp.exec_cmd("dms ipc call powermenu toggle"))
+-- hl.bind(mod .. " + P", hl.dsp.exec_cmd("dms ipc call notepad toggle"))
+-- hl.bind(mod .. " + N", hl.dsp.exec_cmd("dms ipc call notifications toggle"))
+-- hl.bind(mod .. " + Y", hl.dsp.exec_cmd("dms ipc call dankdash wallpaper"))
+-- hl.bind(mod .. " + TAB", hl.dsp.exec_cmd("dms ipc call hypr toggleOverview"))
+-- hl.bind(mod .. " + PRINT", hl.dsp.exec_cmd("dms screenshot -d ~/Pictures/Screenshots"))
+-- hl.bind(mod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("dms screenshot full -d ~/Pictures/Screenshots"))
+-- hl.bind(mod .. " + ALT + L", hl.dsp.exec_cmd("dms ipc call lock lock"))
 
-hl.bind("XF86AudioPrev",
-    hl.dsp.exec_cmd("dms ipc call previous"),
-    { locked = true }
-)
+-- Old DMS multimedia keys
+-- hl.bind("XF86AudioRaiseVolume",
+--     hl.dsp.exec_cmd("dms ipc call audio increment 3"),
+--     { locked = true, repeating = true }
+-- )
 
-hl.bind("XF86AudioPlay",
-    hl.dsp.exec_cmd("dms ipc call mpris playPause"),
-    { locked = true }
-)
+-- hl.bind("XF86AudioLowerVolume",
+--     hl.dsp.exec_cmd("dms ipc call audio decrement 3"),
+--     { locked = true, repeating = true }
+-- )
 
-hl.bind("XF86AudioNext",
-    hl.dsp.exec_cmd("dms ipc call mpris next"),
-    { locked = true }
-)
+-- hl.bind("XF86AudioMute",
+--     hl.dsp.exec_cmd("dms ipc call audio mute"),
+--     { locked = true }
+-- )
 
+-- hl.bind("XF86AudioMicMute",
+--     hl.dsp.exec_cmd("dms ipc call audio micmute"),
+--     { locked = true }
+-- )
+
+-- hl.bind("XF86AudioPrev",
+--     hl.dsp.exec_cmd("dms ipc call previous"),
+--     { locked = true }
+-- )
+
+-- hl.bind("XF86AudioPlay",
+--     hl.dsp.exec_cmd("dms ipc call mpris playPause"),
+--     { locked = true }
+-- )
+
+-- hl.bind("XF86AudioNext",
+--     hl.dsp.exec_cmd("dms ipc call mpris next"),
+--     { locked = true }
+-- )
