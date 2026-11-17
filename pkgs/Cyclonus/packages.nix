@@ -64,14 +64,12 @@
     wireshark
     nmap
     arandr
-    terraform
 
     # Niri
     xwayland-satellite
     wl-mirror
     valent
 
-    codex
 
   ];
 }

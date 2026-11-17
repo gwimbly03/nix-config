@@ -235,14 +235,14 @@ binds {
     XF86AudioRaiseVolume { spawn "serpantinum" "volume" "raise"; }
 
     Mod+R { spawn "serpantinum" "reload"; }
-    Mod+C { spawn "serpantinum" "msg" "toggle" "clipboard"; }
+    Mod+V { spawn "serpantinum" "msg" "toggle" "clipboard"; }
     Alt+Space { spawn "serpantinum" "msg" "toggle" "launcher"; }
     Mod+M { spawn "serpantinum" "msg" "toggle" "music"; }
     Mod+Shift+B { spawn "serpantinum" "msg" "toggle" "system"; }
     Mod+W { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
     Mod+S { spawn "serpantinum" "msg" "toggle" "calendar"; }
     Mod+N { spawn "serpantinum" "msg" "toggle" "network"; }
-    Mod+V { spawn "serpantinum" "msg" "toggle" "volume"; }
+    Mod+Shift+V { spawn "serpantinum" "msg" "toggle" "volume"; }
     Mod+H { spawn "serpantinum" "msg" "toggle" "guide"; }
     Mod+A { spawn "serpantinum" "msg" "toggle" "autohide"; }
 
