@@ -1,4 +1,3 @@
-
 {
   programs.fzf = {
     enable = true;
@@ -21,26 +20,21 @@
 
     fileWidget = {
       command = "fd --type f --hidden --follow --exclude .git";
-
       options = [
         "--preview 'bat --color=always --style=numbers --line-range=:500 {} 2>/dev/null || file {}'"
       ];
     };
 
     changeDirWidget = {
-      command = "fd --type d --hidden --follow --exclude .git";
-
+      command = "fd --type d --hidden --follow --no-ignore --exclude .git";
       options = [
         "--preview 'lsd --tree --depth 2 --color=always {} 2>/dev/null'"
       ];
     };
 
-    historyWidget = {
-      options = [
-        "--sort"
-        "--exact"
-      ];
-    };
+    historyWidget.options = [
+      "--sort"
+      "--exact"
+    ];
   };
 }
-
