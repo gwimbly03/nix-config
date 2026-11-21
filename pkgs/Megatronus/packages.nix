@@ -24,6 +24,7 @@
     satty
     glaze
     playerctl
+    easyeffects
 
     # Utilities
     jq
