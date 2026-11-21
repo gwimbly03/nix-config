@@ -18,7 +18,7 @@
       plugins = {
         alwaysAnimate.enable = true;
         readAllNotifications.enable = true;
-        fixYoutubeEmbeds.enable = true;
+        #fixYoutubeEmbeds.enable = true;
 
         hideMedia.enable = true;
 
