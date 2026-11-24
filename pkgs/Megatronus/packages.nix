@@ -12,6 +12,7 @@
     # TUI
     htop
     valent
+    ladybird
 
     # Desktop
     nwg-look
