@@ -8,7 +8,7 @@
     adw-gtk3
     telegram-desktop
     feishin
-
+    codex
     # TUI
     htop
     valent
