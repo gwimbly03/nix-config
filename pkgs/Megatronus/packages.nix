@@ -8,12 +8,7 @@
     adw-gtk3
     telegram-desktop
     feishin
-<<<<<<< HEAD
     codex
-=======
-    android-tools
-
->>>>>>> 2e6228f1f783af0a883dcf9745fcef2d93929137
     # TUI
     htop
     valent
