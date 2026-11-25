@@ -8,6 +8,7 @@
     adw-gtk3
     telegram-desktop
     feishin
+    android-tools
 
     # TUI
     htop
