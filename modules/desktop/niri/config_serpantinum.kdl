@@ -35,6 +35,11 @@ layer-rule {
     place-within-backdrop true
     }
 
+layer-rule {
+    match namespace="wallpaper-overview$" 
+    place-within-backdrop true
+    }
+
 
 layout {
     // Set gaps around windows in logical pixels.
