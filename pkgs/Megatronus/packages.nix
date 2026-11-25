@@ -13,6 +13,7 @@
     # TUI
     htop
     valent
+    ladybird
 
     # Desktop
     nwg-look
@@ -24,6 +25,8 @@
     black
     satty
     glaze
+    playerctl
+    easyeffects
 
     # Utilities
     jq
@@ -54,7 +57,6 @@
     microfetch
     pulsemixer
     pavucontrol
-    easyeffects
     picard
     spek
     flac

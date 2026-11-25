@@ -1,48 +1,163 @@
-format = """
-$username\
-$hostname\
-$directory\
-$git_branch\
-$git_state\
-$git_status\
-$cmd_duration\
-$line_break\
-$python\
-$character"""
+"$schema" = 'https://starship.rs/config-schema.json'
 
-[directory]
-style = "blue"
+[bun]
+format = "via [$symbol]($style)"
 
-[character]
-success_symbol = "[❯](purple)"
-error_symbol = "[❯](red)"
-vimcmd_symbol = "[❮](green)"
+[buf]
+format = "with [$symbol]($style)"
 
-[git_branch]
-format = "[$branch]($style)"
-style = "bright-black"
+[c]
+format = "via [$symbol($name)]($style)"
 
-[git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
-style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = "≡"
+[cmake]
+format = "via [$symbol]($style)"
 
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "bright-black"
+[cobol]
+format = "via [$symbol]($style)"
 
-[cmd_duration]
-format = "[$duration]($style) "
-style = "yellow"
+[cpp]
+format = "via [$symbol($name)]($style)"
+
+[crystal]
+format = "via [$symbol]($style)"
+
+[daml]
+format = "via [$symbol]($style)"
+
+[dart]
+format = "via [$symbol]($style)"
+
+[deno]
+format = "via [$symbol]($style)"
+
+[dotnet]
+format = "[$symbol(🎯 $tfm )]($style)"
+
+[elixir]
+format = 'via [$symbol]($style)'
+
+[elm]
+format = 'via [$symbol]($style)'
+
+[erlang]
+format = 'via [$symbol]($style)'
+
+[fennel]
+format = 'via [$symbol]($style)'
+
+[fortran]
+format = 'via [$symbol]($style)'
+
+[gleam]
+format = 'via [$symbol]($style)'
+
+[golang]
+format = 'via [$symbol]($style)'
+
+[gradle]
+format = 'via [$symbol]($style)'
+
+[haskell]
+format = 'via [$symbol]($style)'
+
+[haxe]
+format = 'via [$symbol]($style)'
+
+[helm]
+format = 'via [$symbol]($style)'
+
+[java]
+format = 'via [$symbol]($style)'
+
+[julia]
+format = 'via [$symbol]($style)'
+
+[kotlin]
+format = 'via [$symbol]($style)'
+
+[lua]
+format = 'via [$symbol]($style)'
+
+[maven]
+format = 'via [$symbol]($style)'
+
+[meson]
+format = 'via [$symbol]($style)'
+
+[mojo]
+format = 'with [$symbol]($style)'
+
+[nim]
+format = 'via [$symbol]($style)'
+
+[nodejs]
+format = 'via [$symbol]($style)'
+
+[ocaml]
+format = 'via [$symbol(\($switch_indicator$switch_name\) )]($style)'
+
+[odin]
+format = 'via [$symbol]($style)'
+
+[opa]
+format = 'via [$symbol]($style)'
+
+[perl]
+format = 'via [$symbol]($style)'
+
+[php]
+format = 'via [$symbol]($style)'
+
+[pixi]
+format = 'via [$symbol($environment )]($style)'
+
+[pulumi]
+format = 'via [$symbol$stack]($style)'
+
+[purescript]
+format = 'via [$symbol]($style)'
 
 [python]
-format = "[$virtualenv]($style) "
-style = "bright-black"
-detect_extensions = []
-detect_files = []
+format = 'via [$symbol]($style)'
+
+[quarto]
+format = 'via [$symbol]($style)'
+
+[raku]
+format = 'via [$symbol]($style)'
+
+[red]
+format = 'via [$symbol]($style)'
+
+[rlang]
+format = 'via [$symbol]($style)'
+
+[ruby]
+format = 'via [$symbol]($style)'
+
+[rust]
+format = 'via [$symbol]($style)'
+
+[scala]
+format = 'via [$symbol]($style)'
+
+[solidity]
+format = 'via [$symbol]($style)'
+
+[swift]
+format = 'via [$symbol]($style)'
+
+[typst]
+format = 'via [$symbol]($style)'
+
+[vagrant]
+format = 'via [$symbol]($style)'
+
+[vlang]
+format = 'via [$symbol]($style)'
+
+[xmake]
+format = "via [$symbol]($style)"
+
+[zig]
+format = 'via [$symbol]($style)'

@@ -26,17 +26,19 @@ in
 
   imports = [
     inputs.stylix.homeModules.stylix
-    inputs.dms.homeModules.dank-material-shell
-    inputs.dms-plugin-registry.homeModules.default
+    #inputs.dms.homeModules.dank-material-shell
+    #inputs.dms-plugin-registry.homeModules.default
     inputs.serpantinum.homeManagerModules.default
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
 
 
     ../../env/stylix/stylix.nix
+    ../../modules/utils/zoxide.nix
+    ../../modules/utils/fzf.nix
     ../../modules/utils/fish/hypr_fish.nix
     ../../modules/desktop/hypr/hypr_lua.nix
-    ../../modules/desktop/dms/dms-shell.nix
+    #../../modules/desktop/dms/dms-shell.nix
     ../../modules/desktop/serpantinum/serpantinum.nix
     ../../modules/apps/nixcord.nix
     ../../modules/nixvim/nixvim.nix
@@ -47,6 +49,7 @@ in
     ../../modules/apps/obs.nix
     ../../modules/utils/superfile.nix
     ../../modules/utils/starship/starship.nix
+    ../../modules/utils/lsd.nix
 
   ];
 
@@ -59,16 +62,6 @@ in
 
   programs = {
     home-manager.enable = true;
-
-    zoxide = {
-      enable = true;
-      enableFishIntegration = true;
-    };
-
-    fzf = {
-      enable = true;
-      enableFishIntegration = true;
-    };
 
     nixvim = {
       extraPackages = with pkgs; [ wl-clipboard ];
