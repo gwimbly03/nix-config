@@ -9,7 +9,7 @@
     lm_sensors
     power-profiles-daemon
     networkmanagerapplet
-
+    codex
     adw-gtk3
     feishin
     brave-origin
