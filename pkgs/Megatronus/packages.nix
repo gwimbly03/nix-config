@@ -13,6 +13,8 @@
     htop
     valent
     ladybird
+    android-tools
+
 
     # Desktop
     nwg-look
