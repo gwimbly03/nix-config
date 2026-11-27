@@ -147,11 +147,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795661103,
-        "narHash": "sha256-LezR2HxqN/+8ULqxGrMUgwJt4W2Z8fPh+dV1gyq0R0s=",
+        "lastModified": 1795796193,
+        "narHash": "sha256-08gKJdKGRO/7irUeOkFVxSZLTuQYJueJ/Eg2WSszhx8=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "dfdf8779f4d058318ed063b21335c528ef16ea06",
+        "rev": "585d64ccfbd1f3b63b119bbff412c599a5bf86eb",
         "type": "github"
       },
       "original": {
@@ -451,11 +451,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795618997,
-        "narHash": "sha256-d9Osol//t6hqeo1xlspsYMbhTJK507h6t0EmPyF5Db0=",
+        "lastModified": 1795748630,
+        "narHash": "sha256-J1iQ1QMnkFwZFXnlPt2t3Qx7TsGjw08/0L3QMqNt+Wg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "6a13737c0ed27c7c285f59e3be423ed972aa605f",
+        "rev": "54f903fdaaf5d5720ed36706fe75332af69eb793",
         "type": "github"
       },
       "original": {
@@ -564,11 +564,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1795615055,
-        "narHash": "sha256-348lB6kUwiSzMO6UCcb+0H3aW67643DlVLMN5w61/a0=",
+        "lastModified": 1795693842,
+        "narHash": "sha256-QLEXTg5DzVweldER27L+ou/ElxQlD1kI6dpz7lu2FM4=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "c58dd14e8a826a130bbe71194215ae63881569cc",
+        "rev": "e537b2fce29e4bac191e73fd3c77ec3de80b7ffe",
         "type": "github"
       },
       "original": {
@@ -942,11 +942,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1795420353,
-        "narHash": "sha256-Ao87Pft+njjk6rc5MCRpWekU+WUI5MgZaUI/udBapbE=",
+        "lastModified": 1795765283,
+        "narHash": "sha256-TWf82dJLhbxSlfZVX6TwAn8i83/LqEGakTzGsK7J5/8=",
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "rev": "980a5716bcb59b3011382df13309553f27ea2b25",
+        "rev": "dce762bfd816caec61eb3dd8485a7f00d2b9d00f",
         "type": "github"
       },
       "original": {
@@ -967,11 +967,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1795661483,
-        "narHash": "sha256-SktRjXzA67fpW+OJOk6stbBeZPiprSGX8e4Ct+fdoVg=",
+        "lastModified": 1795786858,
+        "narHash": "sha256-R46UOm6Rk5+8tLkc2mRzqm4o3/6fw2fukMh0NUG51Os=",
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "7d03a13b368ec35524cd5f4c5111d33d2b1ddac3",
+        "rev": "1a78753f3f2c343d22125dcfae22e401261b4949",
         "type": "github"
       },
       "original": {
@@ -1142,11 +1142,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1795667118,
-        "narHash": "sha256-q/kQPL0+uBNsTUo1H8SuqPpbWDbmCfGiabHFs7m9yr0=",
+        "lastModified": 1795812202,
+        "narHash": "sha256-itIhxWayzHd0T/+GAc3ZrRSZaIFMUy5Emv9knDCzzvA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "9bfc61a6f5206809714cff7d26afd224697ad44f",
+        "rev": "a8082b185dc10cac629f92ada6ddb7b840406a65",
         "type": "github"
       },
       "original": {
@@ -1229,11 +1229,11 @@
         "ski": "ski"
       },
       "locked": {
-        "lastModified": 1795646010,
-        "narHash": "sha256-6JZZEpCWZHIZLQ1a7WENIuHQeY84rgdca1Kt4LB8OrE=",
+        "lastModified": 1795812975,
+        "narHash": "sha256-DvKy3m0q/KywWTVX01eYajOCvSa5NQP+6g9L+gNcry4=",
         "owner": "ilyamiro",
         "repo": "serpantinum",
-        "rev": "916ec606ebf14aee128b2f1ba2a62f2791b86fbc",
+        "rev": "7515537b6eeb2f069b8ad89baf7fcb616ef013a3",
         "type": "github"
       },
       "original": {
@@ -1261,11 +1261,11 @@
     "ski": {
       "flake": false,
       "locked": {
-        "lastModified": 1795092052,
-        "narHash": "sha256-qzrhOr4RDBebnc+JF4QjRszlHYxA4vLp2o/7RbMZKwQ=",
+        "lastModified": 1795695431,
+        "narHash": "sha256-ZimO04tpS/HcPlruqDSKo33qmsJUtzievmnzQAKRMVI=",
         "owner": "ilyamiro",
         "repo": "Ski",
-        "rev": "d269abcb1ba87ef98467b64c86d07440c9d7a996",
+        "rev": "807bc8e834ec754bea4122db266cee8573caf668",
         "type": "github"
       },
       "original": {
