@@ -1,6 +1,7 @@
-{ pkgs, uname, ... }: {
+{ uname, ... }: {
   programs.git = {
     enable = true;
+    includes = [{ path = "~/.config/git/local.conf"; }];
 
     signing = {
       signByDefault = true;
@@ -8,7 +9,6 @@
 
     settings = {
       user.name = "towelie03";
-      user.email = "dbalsara2003@gmail.com";
       init.defaultBranch = "main";
 
       commit.gpgSign = true;
