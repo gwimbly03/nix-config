@@ -1,11 +1,10 @@
-{ config, pkgs, inputs, lib, self, uname, ... }:
+{ config, pkgs, inputs, lib, self, uname, envVars, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-citizen.nixosModules.default
-    ../../env/env.nix
     ../../pkgs/Megatronus/packages.nix
     ../../modules/steam/steam.nix
     ../../modules/utils/lact.nix
@@ -64,7 +63,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs uname; };
+    extraSpecialArgs = { inherit inputs uname envVars; };
     users.${uname} = import ./home.nix;
     backupFileExtension = "bak";
   };
@@ -257,12 +256,7 @@
       bluez tlp lm_sensors openssl nh pciutils libva-utils vdpauinfo mesa vulkan-tools glib-networking openrazer-daemon
  polychromatic android-tools
     ];
-    variables = {
-      NVD_BACKEND = "direct";
-      WLR_NO_HARDWARE_CURSORS = "1";
-      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-      GSK_RENDERER = "ngl";
-    };
+    variables = envVars.system;
   };
 
   services.udev.packages = [ pkgs.rwedid ];

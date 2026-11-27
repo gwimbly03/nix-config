@@ -3,9 +3,6 @@ local fileManager = "nautilus"
 -- local menu        = "dms ipc call spotlight toggle"
 local home = os.getenv("HOME")
 
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
-
 -- Autostart applications
 hl.on("hyprland.start", function()
   hl.exec_cmd("discord")

@@ -77,7 +77,10 @@ outputs = { self, nixpkgs, home-manager, nixvim, nur, hyprland, nixcord, niri, s
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit self inputs uname; };
+        specialArgs = {
+          inherit self inputs uname;
+          envVars = import ./env/Cyclonus.nix;
+        };
         modules = [
           ./hosts/Cyclonus/configuration.nix
           inputs.stylix.nixosModules.stylix
@@ -86,7 +89,10 @@ outputs = { self, nixpkgs, home-manager, nixvim, nur, hyprland, nixcord, niri, s
       };
 
       Megatronus = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit self inputs uname; };
+          specialArgs = {
+            inherit self inputs uname;
+            envVars = import ./env/Megatronus.nix;
+          };
           modules = [
             ./hosts/Megatronus/configuration.nix
             inputs.stylix.nixosModules.stylix

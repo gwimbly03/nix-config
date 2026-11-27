@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, envVars, ... }:
 
 {
   programs.alacritty = {
@@ -22,9 +22,7 @@
         };
       };
 
-      env = {
-        TERM = "xterm-256color";
-      };
+      env = envVars.alacritty;
 
       scrolling = {
         history = 5000;

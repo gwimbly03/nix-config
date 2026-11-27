@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, envVars, ... }:
 
 {
   programs.steam = {
@@ -17,10 +17,7 @@
 
   programs.steam.protontricks.enable = true;
 
-  environment.sessionVariables = {
-    SDL_VIDEODRIVER = "wayland";
-    MOZ_ENABLE_WAYLAND = "1";
-  };
+  environment.sessionVariables = envVars.steamSession;
 
   environment.systemPackages = [
     pkgs.steam-run

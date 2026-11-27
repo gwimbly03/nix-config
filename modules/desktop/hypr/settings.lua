@@ -1,9 +1,3 @@
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("QT_QPA_PLATFORM", "wayland")
-hl.env("QT_QPA_PLATFORMTHEME", "gtk3")
-hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
-
 local benq = "desc BenQ EX3210R"
 local lg = "desc Electronics 27GL650F"
 

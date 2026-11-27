@@ -1,4 +1,10 @@
-{ inputs, pkgs, ... }:
+{ inputs, lib, pkgs, envVars, ... }:
+
+let
+  envLines = lib.mapAttrsToList
+    (name: value: "hl.env(${builtins.toJSON name}, ${builtins.toJSON value})")
+    envVars.hyprland;
+in
 
 {
   wayland.windowManager.hyprland = {
@@ -26,7 +32,8 @@
   xdg.configFile."hypr/binds.lua".source = ./binds.lua;
   xdg.configFile."hypr/animations.lua".source = ./animations.lua;
   xdg.configFile."hypr/rules.lua".source = ./rules.lua;
-  xdg.configFile."hypr/settings.lua".source = ./settings.lua;
+  xdg.configFile."hypr/settings.lua".text =
+    lib.concatStringsSep "\n" envLines + "\n\n" + builtins.readFile ./settings.lua;
   xdg.configFile."hypr/autostart.lua".source = ./autostart.lua;
 
 

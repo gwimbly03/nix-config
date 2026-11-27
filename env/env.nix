@@ -1,9 +1,14 @@
+let
+  editor = "nvim";
+in
 {
-  environment.variables = {
-    QT_QPA_PLATFORM = "wayland";
-    ELECTRON_OZONE_PLATFORM_HINT = "auto";
-    QT_QPA_PLATFORMTHEME = "gtk3";
-    QT_QPA_PLATFORMTHEME_QT6 = "gtk3";
-    GDK_SCALE = "1";
+  home = {
+    EDITOR = editor;
+    VISUAL = editor;
+    NIXOS_OZONE_WL = "1";
+  };
+
+  alacritty = {
+    TERM = "xterm-256color";
   };
 }

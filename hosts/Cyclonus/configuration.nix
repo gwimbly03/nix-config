@@ -1,9 +1,8 @@
-{ config, pkgs, inputs, lib, self, uname, ... }:
+{ config, pkgs, inputs, lib, self, uname, envVars, ... }:
 {
   imports = [
     ./hardware-configuration.nix
     #inputs.home-manager.nixosModules.home-manager
-    #../../env/env.nix
     ../../pkgs/Cyclonus/packages.nix
     ../../modules/utils/nautilus.nix
   ];
@@ -47,7 +46,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs uname; };
+    extraSpecialArgs = { inherit inputs uname envVars; };
     users.${uname} = import ./home.nix;
     backupFileExtension = "bak";
   };
@@ -171,6 +170,7 @@
   };
 
   environment = {
+    variables = envVars.system;
     shellAliases.sudo = "doas";
     systemPackages = with pkgs; [
       bluez tlp lm_sensors openssl nh

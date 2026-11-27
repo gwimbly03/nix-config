@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, uname, ... }:
+{ config, pkgs, inputs, uname, envVars, ... }:
 
 let
   #inherit (pkgs.stdenv.hostPlatform) system;
@@ -12,11 +12,7 @@ in
 
     packages = allPackages;
 
-    sessionVariables = {
-      EDITOR = "nvim";
-      VISUAL = "nvim";
-      NIXOS_OZONE_WL = "1";
-    };
+    sessionVariables = envVars.home;
   };
 
   nixpkgs.config.allowUnfree = true;
