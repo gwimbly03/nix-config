@@ -45,11 +45,11 @@ format = '[[ 󱑍 $time ](bg:#1C3A5E fg:#8DFBD2)]($style)'
 format = 'last command: [$duration](bold yellow)'
 
 [os]
-format = '[ ](bold white) '
+format = '[ ](bold white) '
 disabled = false
 
 [os.symbols]
-Linux = ''
+Linux = ''
 
 # Shows the hostname
 [hostname]
