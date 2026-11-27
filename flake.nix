@@ -23,12 +23,6 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    scrolloverview = {
-      url = "github:yayuuu/hyprland-scroll-overview/new-release";
-      inputs.hyprland.follows = "hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     
     niri = {
       url = "github:sodiboo/niri-flake";

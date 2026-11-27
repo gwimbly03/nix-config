@@ -25,7 +25,6 @@ in
     require("animations")
     require("rules")
     require("settings")
-    require("overview")
     require("autostart")
   '';
 
@@ -35,7 +34,6 @@ in
   xdg.configFile."hypr/rules.lua".source = ./rules.lua;
   xdg.configFile."hypr/settings.lua".text =
     lib.concatStringsSep "\n" envLines + "\n\n" + builtins.readFile ./settings.lua;
-  xdg.configFile."hypr/overview.lua".text = import ./overview.nix { inherit inputs pkgs; };
   xdg.configFile."hypr/autostart.lua".source = ./autostart.lua;
 
 
