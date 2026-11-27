@@ -1,163 +1,154 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+# ~/.config/starship.toml
 
-[bun]
-format = "via [$symbol]($style)"
+add_newline = true
+
+format = """
+$character\
+$os$hostname\
+$directory\
+[](#1C3A5E)$time[ ](#1C3A5E)$cmd_duration\
+$git_branch\
+$git_status \
+$python\
+$aws\
+$golang\
+$java\
+$rust\
+$ruby\
+$scala\
+$dart\
+$conda\
+$pijul_channel\
+$lua\
+$rlang\
+$package\
+$buf\
+$memory_usage\
+$docker_context
+[└─>](bold green)
+"""
+
+
+continuation_prompt = '▶▶ '
+
+[character]
+# success_symbol = "🚀 "
+error_symbol = "X "
+
+[time]
+disabled = false
+time_format = "%r"                                      # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[ 󱑍 $time ](bg:#1C3A5E fg:#8DFBD2)]($style)'
+
+[cmd_duration]
+format = 'last command: [$duration](bold yellow)'
+
+[os]
+format = '[ ](bold white) '
+disabled = false
+
+[os.symbols]
+Linux = ''
+
+# Shows the hostname
+[hostname]
+ssh_only = false
+format = 'on [$hostname](bold yellow) '
+disabled = false
+# ssh_symbol = " "
+
+# Shows current directory
+[directory]
+truncation_length = 3
+fish_style_pwd_dir_length = 2
+home_symbol = '󰋜 ~'
+read_only_style = '197'
+read_only = '  '
+format = 'at [$path]($style)[$read_only]($read_only_style) '
+
+# Shows current git branch
+[git_branch]
+symbol = " "
+format = '[$symbol$branch]($style)'
+# truncation_length = 4
+truncation_symbol = '…/'
+style = 'bold green'
+
+# Shows current git status
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+style = 'bold green'
+conflicted = '🏳'
+up_to_date = ''
+untracked = ' '
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+stashed = ' '
+modified = ' '
+staged = '[++\($count\)](green)'
+renamed = '襁 '
+deleted = ' '
+
+
+# ---
+
+[aws]
+symbol = " "
 
 [buf]
-format = "with [$symbol]($style)"
+symbol = " "
 
 [c]
-format = "via [$symbol($name)]($style)"
+symbol = " "
 
-[cmake]
-format = "via [$symbol]($style)"
-
-[cobol]
-format = "via [$symbol]($style)"
-
-[cpp]
-format = "via [$symbol($name)]($style)"
-
-[crystal]
-format = "via [$symbol]($style)"
-
-[daml]
-format = "via [$symbol]($style)"
+[conda]
+symbol = " "
 
 [dart]
-format = "via [$symbol]($style)"
+symbol = " "
 
-[deno]
-format = "via [$symbol]($style)"
-
-[dotnet]
-format = "[$symbol(🎯 $tfm )]($style)"
-
-[elixir]
-format = 'via [$symbol]($style)'
-
-[elm]
-format = 'via [$symbol]($style)'
-
-[erlang]
-format = 'via [$symbol]($style)'
-
-[fennel]
-format = 'via [$symbol]($style)'
-
-[fortran]
-format = 'via [$symbol]($style)'
-
-[gleam]
-format = 'via [$symbol]($style)'
+[docker_context]
+symbol = " "
 
 [golang]
-format = 'via [$symbol]($style)'
-
-[gradle]
-format = 'via [$symbol]($style)'
-
-[haskell]
-format = 'via [$symbol]($style)'
-
-[haxe]
-format = 'via [$symbol]($style)'
-
-[helm]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [java]
-format = 'via [$symbol]($style)'
-
-[julia]
-format = 'via [$symbol]($style)'
-
-[kotlin]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [lua]
-format = 'via [$symbol]($style)'
+symbol = " "
 
-[maven]
-format = 'via [$symbol]($style)'
-
-[meson]
-format = 'via [$symbol]($style)'
-
-[mojo]
-format = 'with [$symbol]($style)'
-
-[nim]
-format = 'via [$symbol]($style)'
+[memory_usage]
+symbol = "󰍛 "
+disabled = true
+style = 'bold dimmed white'
+threshold = 1
+format = "$symbol [${ram}(|${swap})]($style) "
 
 [nodejs]
-format = 'via [$symbol]($style)'
+symbol = " "
 
-[ocaml]
-format = 'via [$symbol(\($switch_indicator$switch_name\) )]($style)'
+[package]
+symbol = "󰏗 "
 
-[odin]
-format = 'via [$symbol]($style)'
-
-[opa]
-format = 'via [$symbol]($style)'
-
-[perl]
-format = 'via [$symbol]($style)'
-
-[php]
-format = 'via [$symbol]($style)'
-
-[pixi]
-format = 'via [$symbol($environment )]($style)'
-
-[pulumi]
-format = 'via [$symbol$stack]($style)'
-
-[purescript]
-format = 'via [$symbol]($style)'
+[pijul_channel]
+symbol = " "
 
 [python]
-format = 'via [$symbol]($style)'
-
-[quarto]
-format = 'via [$symbol]($style)'
-
-[raku]
-format = 'via [$symbol]($style)'
-
-[red]
-format = 'via [$symbol]($style)'
-
-[rlang]
-format = 'via [$symbol]($style)'
+symbol = " "
+pyenv_version_name = true
 
 [ruby]
-format = 'via [$symbol]($style)'
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
 
 [rust]
-format = 'via [$symbol]($style)'
+symbol = " "
 
 [scala]
-format = 'via [$symbol]($style)'
-
-[solidity]
-format = 'via [$symbol]($style)'
-
-[swift]
-format = 'via [$symbol]($style)'
-
-[typst]
-format = 'via [$symbol]($style)'
-
-[vagrant]
-format = 'via [$symbol]($style)'
-
-[vlang]
-format = 'via [$symbol]($style)'
-
-[xmake]
-format = "via [$symbol]($style)"
-
-[zig]
-format = 'via [$symbol]($style)'
+symbol = " "
