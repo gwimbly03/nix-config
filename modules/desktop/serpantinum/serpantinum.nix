@@ -1,4 +1,4 @@
-{ serpantinum, ... }:
+{ serpantinum, uname, ... }:
 
 {
   programs.serpantinum = {
@@ -6,7 +6,7 @@
     systemd.enable = true;
 
     settings = {
-      wallpaperDir = "/home/gwimbly/.nix-config/assets/wallpapers/";
+      wallpaperDir = "/home/${uname}/.nix-config/assets/wallpapers/";
 
       general = {
         language = "en";

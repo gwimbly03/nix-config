@@ -1,3 +1,4 @@
+{ uname, ... }:
 {
   programs.nh = {
     enable = true;
@@ -8,6 +9,6 @@
       extraArgs = "--keep-since 4d --keep 3";
     };
 
-    flake = "/home/gwimbly/.nix-config";
+    flake = "/home/${uname}/.nix-config";
   };
 }

@@ -71,10 +71,13 @@
 
 
 outputs = { self, nixpkgs, home-manager, nixvim, nur, hyprland, nixcord, niri, stylix, dms, dms-plugin-registry, dsearch, serpantinum, ... }@inputs:
+  let
+    uname = "gwimbly";
+  in
   {
     nixosConfigurations = {
       Cyclonus = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit self inputs; };
+        specialArgs = { inherit self inputs uname; };
         modules = [
           ./hosts/Cyclonus/configuration.nix
           inputs.stylix.nixosModules.stylix
@@ -83,7 +86,7 @@ outputs = { self, nixpkgs, home-manager, nixvim, nur, hyprland, nixcord, niri, s
       };
 
       Megatronus = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit self inputs; };
+          specialArgs = { inherit self inputs uname; };
           modules = [
             ./hosts/Megatronus/configuration.nix
             inputs.stylix.nixosModules.stylix

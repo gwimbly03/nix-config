@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, self, ... }:
+{ config, pkgs, inputs, lib, self, uname, ... }:
 
 {
   imports = [
@@ -38,9 +38,9 @@
     };
 
     users = {
-      gwimbly = {
+      ${uname} = {
         isNormalUser = true;
-        description = "gwimbly";
+        description = uname;
         shell = pkgs.fish;
         extraGroups = [
           "wheel" "networkmanager" "audio" "video" "input"
@@ -56,7 +56,7 @@
       enable = true;
       wheelNeedsPassword = false;
       extraRules = [{
-        users = [ "gwimbly" ];
+        users = [ uname ];
         keepEnv = true;
         persist = true;
       }];
@@ -64,8 +64,8 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users."gwimbly" = import ./home.nix;
+    extraSpecialArgs = { inherit inputs uname; };
+    users.${uname} = import ./home.nix;
     backupFileExtension = "bak";
   };
 
@@ -238,7 +238,7 @@
     ssh.startAgent = true;
     nh = {
       enable = true;
-      flake = "/home/gwimbly/.nixos-config/";
+      flake = "/home/${uname}/.nix-config";
       clean = {
         enable = true;
         extraArgs = "--keep-since 4d --keep 3";

@@ -1,4 +1,4 @@
-{  pkgs, inputs, lib, ... }:
+{  pkgs, inputs, lib, uname, ... }:
 
 let
   inherit (pkgs.stdenv.hostPlatform) system;
@@ -7,8 +7,8 @@ let
 in
 {
   home = {
-    username = "gwimbly";
-    homeDirectory = "/home/gwimbly";
+    username = uname;
+    homeDirectory = "/home/${uname}";
     stateVersion = "26.05";
 
     pointerCursor.enable = true;

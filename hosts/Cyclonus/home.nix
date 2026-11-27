@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, uname, ... }:
 
 let
   #inherit (pkgs.stdenv.hostPlatform) system;
@@ -6,8 +6,8 @@ let
 in
 {
   home = {
-    username = "gwimbly";
-    homeDirectory = "/home/gwimbly";
+    username = uname;
+    homeDirectory = "/home/${uname}";
     stateVersion = "25.11";
 
     packages = allPackages;
