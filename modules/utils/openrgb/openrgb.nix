@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
+
+let
+  cfg = config.services.hardware.openrgb;
+in
 
 {
   services.hardware.openrgb = {
@@ -7,4 +11,8 @@
     motherboard = "amd";
     server.port = 6742;
   };
+
+  systemd.services.openrgb.serviceConfig.ExecStart = lib.mkForce (
+    "${cfg.package}/bin/openrgb --config /var/lib/OpenRGB --server --server-port ${toString cfg.server.port} --profile main"
+  );
 }
